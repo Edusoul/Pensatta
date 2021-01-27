@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://assets/memoriaRAM.png" type="Texture" id=2]
+[ext_resource path="res://assets/disco duro.png" type="Texture" id=3]
+[ext_resource path="res://assets/fuente de poder.png" type="Texture" id=4]
+[ext_resource path="res://assets/mother board.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 579.266, 354.316 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 506.713, 356.167 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 191.382, 446.947 )
+scale = Vector2( 1.26228, 1.49025 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="Area2D"]
+position = Vector2( 194.927, 607.549 )
+scale = Vector2( 1.37489, 1.43262 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="Area2D"]
+position = Vector2( 185.889, 275.227 )
+scale = Vector2( 1.06421, 1.08441 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="Area2D"]
+position = Vector2( 191.467, 95.8747 )
+scale = Vector2( 1.14983, 1.41813 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = 643.888
+margin_top = 49.1434
+margin_right = 830.888
+margin_bottom = 182.143
+text = "tarjeta de circuito impreso que permite la integración de todos los componentes de una computadora. Para esto, cuenta con un software básico conocido como BIOS, que le permite cumplir con sus funciones."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Area2D"]
+margin_left = 637.861
+margin_top = 235.543
+margin_right = 827.861
+margin_bottom = 300.543
+text = "hace referencia al sistema que otorga la electricidad imprescindible para alimentar a equipos"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Area2D"]
+margin_left = 637.533
+margin_top = 359.551
+margin_right = 831.533
+margin_bottom = 492.551
+text = "es conocida como memoria volátil lo cual quiere decir que los datos no se guardan de manera permanente, es por ello, que cuando deja de existir una fuente de energía en el dispositivo la información se pierde"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Area2D"]
+margin_left = 643.066
+margin_top = 536.962
+margin_right = 833.066
+margin_bottom = 686.962
+text = "dispositivo de almacenamiento de datos no volátil (porque los contenidos almacenados no se pierden aunque no se encuentre energizado) y que emplea un sistema de grabación magnético para guardar los datos digitales."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Area2D"]
+margin_left = 902.768
+margin_top = 638.417
+margin_right = 982.768
+margin_bottom = 675.417
+text = "Registrar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Area2D/Button" to="." method="_on_Button_pressed"]
