@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://end.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1022.0
+margin_bottom = 603.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Congratulations" type="Label" parent="ColorRect"]
+margin_left = 234.0
+margin_top = 214.0
+margin_right = 731.0
+margin_bottom = 349.0
+custom_colors/font_color = Color( 0.0823529, 0.054902, 0.905882, 1 )
+text = "Ejercicio completado"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BadLuck" type="Label" parent="ColorRect"]
+margin_left = 190.652
+margin_top = 181.744
+margin_right = 772.652
+margin_bottom = 291.744
+custom_colors/font_color = Color( 0.101961, 0.909804, 0.576471, 1 )
+text = "ejercicio sin terminar"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
