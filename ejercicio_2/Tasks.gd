@@ -13,7 +13,7 @@ func _ready():
 	for child in get_children():
 		if child is Sprite:
 			programs.append(child);
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
