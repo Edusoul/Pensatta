@@ -1,0 +1,647 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/variations/2/youtube.png" type="Texture" id=1]
+[ext_resource path="res://scenes/FinishedButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/variations/2/google.png" type="Texture" id=3]
+[ext_resource path="res://assets/variations/2/wikipedia.png" type="Texture" id=4]
+[ext_resource path="res://assets/variations/2/amazon.png" type="Texture" id=5]
+[ext_resource path="res://scenes/variations/2/Youtube.gd" type="Script" id=6]
+[ext_resource path="res://assets/variations/2/facebook.png" type="Texture" id=7]
+[ext_resource path="res://scenes/variations/2/Facebook.gd" type="Script" id=8]
+[ext_resource path="res://scenes/variations/2/Google.gd" type="Script" id=9]
+[ext_resource path="res://scenes/variations/2/Wikipedia.gd" type="Script" id=10]
+[ext_resource path="res://scenes/variations/2/Amazon.gd" type="Script" id=11]
+[ext_resource path="res://scenes/variations/1/Var1.gd" type="Script" id=12]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=6]
+outline_color = Color( 0.396078, 0.839216, 0.807843, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = ExtResource( 13 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -0.943878
+margin_right = 901.0
+margin_bottom = 600.056
+color = Color( 1, 0.913725, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Youtube" type="Sprite" parent="."]
+position = Vector2( 156.137, 147.723 )
+scale = Vector2( 0.503106, 0.503106 )
+texture = ExtResource( 1 )
+script = ExtResource( 6 )
+
+[node name="CheckBox" type="CheckBox" parent="Youtube"]
+margin_left = -224.477
+margin_top = 181.742
+margin_right = -200.477
+margin_bottom = 205.742
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Youtube/CheckBox"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hacer búsquedas sobre cualquier tema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox2" type="CheckBox" parent="Youtube"]
+margin_left = -223.98
+margin_top = 216.029
+margin_right = -199.98
+margin_bottom = 240.029
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Youtube/CheckBox2"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Realizar compras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox3" type="CheckBox" parent="Youtube"]
+margin_left = -223.98
+margin_top = 249.159
+margin_right = -199.98
+margin_bottom = 273.159
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Youtube/CheckBox3"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Ver actualizaciones de amigos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox4" type="CheckBox" parent="Youtube"]
+margin_left = -223.98
+margin_top = 283.077
+margin_right = -199.98
+margin_bottom = 307.077
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Youtube/CheckBox4"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Visualizar videos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="Youtube"]
+margin_left = -224.507
+margin_top = 316.017
+margin_right = -200.507
+margin_bottom = 340.017
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Youtube/CheckBox5"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Leer y aprender sobre algo específico"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Facebook" type="Sprite" parent="."]
+position = Vector2( 441.754, 148.038 )
+scale = Vector2( 0.496894, 0.496894 )
+texture = ExtResource( 7 )
+script = ExtResource( 8 )
+
+[node name="CheckBox6" type="CheckBox" parent="Facebook"]
+margin_left = -220.046
+margin_top = 187.273
+margin_right = -196.046
+margin_bottom = 211.273
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Facebook/CheckBox6"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hacer búsquedas sobre cualquier tema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox7" type="CheckBox" parent="Facebook"]
+margin_left = -219.543
+margin_top = 221.989
+margin_right = -195.543
+margin_bottom = 245.989
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Facebook/CheckBox7"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Realizar compras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox8" type="CheckBox" parent="Facebook"]
+margin_left = -219.543
+margin_top = 255.533
+margin_right = -195.543
+margin_bottom = 279.533
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Facebook/CheckBox8"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Ver actualizaciones de amigos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox9" type="CheckBox" parent="Facebook"]
+margin_left = -219.543
+margin_top = 289.875
+margin_right = -195.543
+margin_bottom = 313.875
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Facebook/CheckBox9"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Visualizar videos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox10" type="CheckBox" parent="Facebook"]
+margin_left = -220.076
+margin_top = 323.226
+margin_right = -196.076
+margin_bottom = 347.226
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Facebook/CheckBox10"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Leer y aprender sobre algo específico"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Google" type="Sprite" parent="."]
+position = Vector2( 727.459, 149.989 )
+scale = Vector2( 0.482648, 0.482648 )
+texture = ExtResource( 3 )
+script = ExtResource( 9 )
+
+[node name="CheckBox11" type="CheckBox" parent="Google"]
+margin_left = -216.497
+margin_top = 189.015
+margin_right = -192.497
+margin_bottom = 213.015
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Google/CheckBox11"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hacer búsquedas sobre cualquier tema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox12" type="CheckBox" parent="Google"]
+margin_left = -215.98
+margin_top = 224.755
+margin_right = -191.98
+margin_bottom = 248.755
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Google/CheckBox12"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Realizar compras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox13" type="CheckBox" parent="Google"]
+margin_left = -215.98
+margin_top = 259.289
+margin_right = -191.98
+margin_bottom = 283.289
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Google/CheckBox13"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Ver actualizaciones de amigos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox14" type="CheckBox" parent="Google"]
+margin_left = -215.98
+margin_top = 294.645
+margin_right = -191.98
+margin_bottom = 318.645
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Google/CheckBox14"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Visualizar videos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox15" type="CheckBox" parent="Google"]
+margin_left = -216.528
+margin_top = 328.981
+margin_right = -192.528
+margin_bottom = 352.981
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Google/CheckBox15"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Leer y aprender sobre algo específico"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wikipedia" type="Sprite" parent="."]
+position = Vector2( 298.903, 408.75 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+script = ExtResource( 10 )
+
+[node name="CheckBox16" type="CheckBox" parent="Wikipedia"]
+margin_left = -233.278
+margin_top = 184.425
+margin_right = -209.278
+margin_bottom = 208.425
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Wikipedia/CheckBox16"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hacer búsquedas sobre cualquier tema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox17" type="CheckBox" parent="Wikipedia"]
+margin_left = -232.778
+margin_top = 218.925
+margin_right = -208.778
+margin_bottom = 242.925
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Wikipedia/CheckBox17"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Realizar compras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox18" type="CheckBox" parent="Wikipedia"]
+margin_left = -232.778
+margin_top = 252.26
+margin_right = -208.778
+margin_bottom = 276.26
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Wikipedia/CheckBox18"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Ver actualizaciones de amigos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox19" type="CheckBox" parent="Wikipedia"]
+margin_left = -232.778
+margin_top = 286.389
+margin_right = -208.778
+margin_bottom = 310.389
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Wikipedia/CheckBox19"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Visualizar videos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox20" type="CheckBox" parent="Wikipedia"]
+margin_left = -233.308
+margin_top = 319.533
+margin_right = -209.308
+margin_bottom = 343.533
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Wikipedia/CheckBox20"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Leer y aprender sobre algo específico"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amazon" type="Sprite" parent="."]
+position = Vector2( 591.264, 408.25 )
+scale = Vector2( 0.496894, 0.496894 )
+texture = ExtResource( 5 )
+script = ExtResource( 11 )
+
+[node name="CheckBox21" type="CheckBox" parent="Amazon"]
+margin_left = -222.075
+margin_top = 182.087
+margin_right = -198.075
+margin_bottom = 206.087
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Amazon/CheckBox21"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hacer búsquedas sobre cualquier tema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox22" type="CheckBox" parent="Amazon"]
+margin_left = -221.572
+margin_top = 216.803
+margin_right = -197.572
+margin_bottom = 240.803
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Amazon/CheckBox22"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Realizar compras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox23" type="CheckBox" parent="Amazon"]
+margin_left = -221.572
+margin_top = 250.347
+margin_right = -197.572
+margin_bottom = 274.347
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Amazon/CheckBox23"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Ver actualizaciones de amigos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox24" type="CheckBox" parent="Amazon"]
+margin_left = -221.572
+margin_top = 284.689
+margin_right = -197.572
+margin_bottom = 308.689
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Amazon/CheckBox24"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Visualizar videos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox25" type="CheckBox" parent="Amazon"]
+margin_left = -222.105
+margin_top = 318.04
+margin_right = -198.105
+margin_bottom = 342.04
+rect_pivot_offset = Vector2( 32.3267, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Amazon/CheckBox25"]
+margin_left = 32.3267
+margin_top = -5.80875
+margin_right = 402.327
+margin_bottom = 28.1913
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Leer y aprender sobre algo específico"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishedButton" type="Button" parent="."]
+margin_left = 748.384
+margin_top = 526.0
+margin_right = 847.384
+margin_bottom = 553.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
+text = "Terminado"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Label" parent="."]
+margin_left = 52.0812
+margin_top = 18.0
+margin_right = 883.081
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Selecciona una actividad realizable en cada página web mostrada"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]
