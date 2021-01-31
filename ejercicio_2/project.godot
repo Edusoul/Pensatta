@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Tasks Check"
-run/main_scene="res://Ready.tscn"
+run/main_scene="res://scenes/Setup.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,4 +1,9 @@
 extends Node
 
+var answered_correctly
+var possible_variations = 2
+var variation_number
 
-var answered_correctly;
+func pick_random_variation_number():
+	randomize()
+	return randi() % possible_variations
