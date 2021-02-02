@@ -1,15 +1,58 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/cpu.png" type="Texture" id=1]
+[ext_resource path="res://assets/pc-tower.png" type="Texture" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="Theme" id=1]
+[sub_resource type="DynamicFont" id=2]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2.0
+margin_top = 2.0
+margin_right = 1028.0
+margin_bottom = 600.0
+color = Color( 0, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 12.0
+margin_top = 60.0
+margin_right = 612.0
+margin_bottom = 500.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 305.876, 256.837 )
+position = Vector2( 309.652, 278.571 )
 scale = Vector2( 2.37704, 2.0371 )
 texture = ExtResource( 1 )
 
@@ -24,13 +67,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Sprite"]
+[node name="Mother_Board" type="Label" parent="Sprite"]
 visible = false
-margin_left = 36.8324
-margin_top = -133.304
-margin_right = 281.832
-margin_bottom = 38.696
-theme = SubResource( 1 )
+margin_left = 37.833
+margin_top = -114.623
+margin_right = 282.833
+margin_bottom = 57.3768
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "\"La placa base, también conocida como tarjeta madre, placa madre o placa principal, es una tarjeta de circuito impreso a la que se conectan los componentes que constituyen la computadora. Es una parte fundamental para montar cualquier computadora personal de escritorio o portátil o algún dispositivo.\""
 align = 1
@@ -40,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Sprite"]
+[node name="Power_Font" type="Label" parent="Sprite"]
 visible = false
 margin_left = 28.3326
 margin_top = -118.387
@@ -54,11 +96,93 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CPU" type="Label" parent="Sprite"]
+visible = false
+margin_left = 31.1659
+margin_top = -143.159
+margin_right = 302.166
+margin_bottom = 90.8405
+text = "La unidad central de procesamiento (conocida por las siglas CPU, del inglés: Central Processing Unit), es el hardware dentro de un ordenador u otros dispositivos programables, su trabajo es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas y externas (provenientes de la unidad de entrada/salida)"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Memory_RAM" type="Label" parent="Sprite"]
+visible = false
+margin_left = 24.7225
+margin_top = -128.388
+margin_right = 289.723
+margin_bottom = 75.6121
+text = "La memoria RAM es la memoria principal de un dispositivo, es donde se almacenan de forma temporal los datos de los programas que estás utilizando en este momento. Sus siglas significan Random Access Memory, lo que traducido al español sería Memoria de Acceso Aleatorio, y es un tipo de memoria que te puedes encontrar en cualquier dispositivo, desde ordenadores de sobremesa hasta teléfonos móviles."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hard_DisK" type="Label" parent="Sprite"]
+visible = false
+margin_left = 47.0271
+margin_top = -106.074
+margin_right = 283.027
+margin_bottom = 51.9259
+text = "Los discos duros, también conocidos como HDD, son un componente informático que sirve para almacenar de forma permanente tus datos. Esto quiere decir, que los datos no se borran cuando se apaga la unidad como pasa en los almacenados por la memoria RAM."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="Sprite"]
-margin_left = -66.9444
-margin_top = 46.6939
-margin_right = -24.9444
-margin_bottom = 66.6939
+margin_left = -33.0008
+margin_top = 8.42929
+margin_right = 8.99917
+margin_bottom = 28.4293
+text = "Click"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Sprite"]
+margin_left = -105.775
+margin_top = -88.1615
+margin_right = -63.7752
+margin_bottom = -68.1615
+text = "Click"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Sprite"]
+margin_left = -80.2219
+margin_top = -53.6939
+margin_right = -38.2219
+margin_bottom = -33.6939
+text = "Click"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Sprite"]
+margin_left = -30.0
+margin_top = -64.0
+margin_right = -7.0
+margin_bottom = -44.0
+text = "Click"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="Sprite"]
+margin_left = 15.9988
+margin_top = 10.0
+margin_right = 57.9988
+margin_bottom = 30.0
 text = "Click"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -68,61 +192,142 @@ __meta__ = {
 wait_time = 10.0
 autostart = true
 
-[node name="Button2" type="Button" parent="Sprite"]
-margin_left = -67.9983
-margin_top = -85.9575
-margin_right = -25.9983
-margin_bottom = -65.9575
-text = "Click"
+[node name="CheckBox" type="CheckBox" parent="Sprite"]
+visible = false
+margin_left = -111.056
+margin_top = 126.0
+margin_right = -87.056
+margin_bottom = 150.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 703.0
-margin_top = 78.6739
-margin_right = 727.0
-margin_bottom = 102.674
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -88.9873
+margin_top = 110.822
+margin_right = -39.9873
+margin_bottom = 158.822
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mother Board"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox2" type="CheckBox" parent="."]
-margin_left = 707.49
-margin_top = 139.287
-margin_right = 731.49
-margin_bottom = 163.287
+[node name="CheckBox2" type="CheckBox" parent="Sprite"]
+visible = false
+margin_left = -40.0
+margin_top = 126.0
+margin_right = -16.0
+margin_bottom = 150.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox3" type="CheckBox" parent="."]
-margin_left = 709.245
-margin_top = 199.613
-margin_right = 733.245
-margin_bottom = 223.613
+[node name="Label2" type="Label" parent="Sprite"]
+margin_left = -17.9462
+margin_top = 110.822
+margin_right = 31.0538
+margin_bottom = 158.822
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Power Font"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox4" type="CheckBox" parent="."]
-margin_left = 709.245
-margin_top = 269.206
-margin_right = 733.245
-margin_bottom = 293.206
+[node name="CheckBox3" type="CheckBox" parent="Sprite"]
+visible = false
+margin_left = 25.0
+margin_top = 126.0
+margin_right = 49.0
+margin_bottom = 150.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox5" type="CheckBox" parent="."]
-margin_left = 707.0
-margin_top = 345.533
-margin_right = 731.0
-margin_bottom = 369.533
+[node name="Label3" type="Label" parent="Sprite"]
+margin_left = 52.0942
+margin_top = 108.487
+margin_right = 101.094
+margin_bottom = 156.487
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CPU"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CheckBox4" type="CheckBox" parent="Sprite"]
+visible = false
+margin_left = 100.0
+margin_top = 126.0
+margin_right = 124.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Sprite"]
+margin_left = 130.002
+margin_top = 107.497
+margin_right = 188.002
+margin_bottom = 155.497
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "RAM Memory"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="Sprite"]
+visible = false
+margin_left = 195.0
+margin_top = 126.0
+margin_right = 219.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Sprite"]
+margin_left = 212.0
+margin_top = 115.005
+margin_right = 261.0
+margin_bottom = 150.005
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Hard Disk"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
-[connection signal="timeout" from="Sprite/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="visibility_changed" from="CheckBox" to="." method="_on_CheckBox_visibility_changed"]
+[connection signal="pressed" from="Sprite/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Sprite/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Sprite/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="timeout" from="Sprite/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Sprite/CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="visibility_changed" from="Sprite/CheckBox" to="." method="_on_CheckBox_visibility_changed"]
+[connection signal="pressed" from="Sprite/CheckBox2" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="Sprite/CheckBox3" to="." method="_on_CheckBox3_pressed"]
+[connection signal="pressed" from="Sprite/CheckBox4" to="." method="_on_CheckBox4_pressed"]
+[connection signal="pressed" from="Sprite/CheckBox5" to="." method="_on_CheckBox5_pressed"]
