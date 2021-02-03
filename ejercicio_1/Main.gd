@@ -1,6 +1,6 @@
 extends Node
 
-
+var checks = []
 # Load the custom images for the mouse cursor.
 var arrow = load("res://assets/arrow.png")
 var hand = load("res://assets/mano.png")
@@ -24,13 +24,10 @@ var check3
 var check4
 var check5
 
-
-
 func _ready():
 	# Changes only the arrow shape of the cursor.
 	# This is similar to changing it in the project settings.
 	Input.set_custom_mouse_cursor(hand)
-
 	# Changes a specific shape of the cursor (here, the I-beam shape).
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_IBEAM)
 	
@@ -41,20 +38,19 @@ func _ready():
 #	$Sprite/Button.set("custom_styles/normal", style)
 
 func _on_Button_pressed():
-	label = get_node("Sprite/Mother_Board")
-	color = get_node("Sprite/ColorRect")
+	label = $Sprite/Mother_Board
+	color = $Sprite/ColorRect
 	make = true
-	
 	if make:
 		label.visible = true
 		color.visible = true
-		btn = get_node("Sprite/Button")
+		btn = $Sprite/Button
 		btn.visible = false
-		btn2 = get_node("Sprite/Button2")	
+		btn2 = $Sprite/Button2	
 		btn2.visible = false
-		btn3 = get_node("Sprite/Button3")
+		btn3 = $Sprite/Button3
 		btn3.visible = false
-		btn4 = get_node("Sprite/Button4")
+		btn4 = $Sprite/Button4
 		btn4.visible = false
 		btn5 = get_node("Sprite/Button5")
 		btn5.visible = false
@@ -206,28 +202,43 @@ func _on_Button5_pressed():
 func _on_CheckBox_pressed():
 	check = get_node("Sprite/CheckBox")
 	check.disabled = true
+	checks.push_back(1)
+	Globales.answer_correctly = checks
 	pass # Replace with function body.
 
 
 func _on_CheckBox2_pressed():
 	check2 = get_node("Sprite/CheckBox2")
 	check2.disabled = true
+	checks.push_back(2)
+	Globales.answer_correctly = checks
 	pass # Replace with function body.
 
 
 func _on_CheckBox3_pressed():
 	check3 = get_node("Sprite/CheckBox3")
 	check3.disabled = true
+	checks.push_back(3)
+	Globales.answer_correctly = checks
 	pass # Replace with function body.
 
 
 func _on_CheckBox4_pressed():
 	check4 = get_node("Sprite/CheckBox4")
 	check4.disabled = true
+	checks.push_back(4)
+	Globales.answer_correctly = checks
 	pass # Replace with function body.
 
 
 func _on_CheckBox5_pressed():
 	check5 = get_node("Sprite/CheckBox5")
 	check5.disabled = true
+	checks.push_back(5)
+	Globales.answer_correctly = checks
+	pass # Replace with function body.
+
+
+func _on_Timer_end():
+	get_tree().change_scene("res://end.tscn")
 	pass # Replace with function body.

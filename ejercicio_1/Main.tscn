@@ -4,6 +4,11 @@
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
 
+[sub_resource type="DynamicFont" id=1]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=2]
 size = 12
 use_filter = true
@@ -15,11 +20,6 @@ use_filter = true
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 12
-use_filter = true
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=1]
 size = 12
 use_filter = true
 font_data = ExtResource( 3 )
@@ -207,7 +207,7 @@ margin_left = -88.9873
 margin_top = 110.822
 margin_right = -39.9873
 margin_bottom = 158.822
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Mother Board"
 align = 1
@@ -232,7 +232,7 @@ margin_left = -17.9462
 margin_top = 110.822
 margin_right = 31.0538
 margin_bottom = 158.822
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Power Font"
 align = 1
@@ -257,7 +257,7 @@ margin_left = 52.0942
 margin_top = 108.487
 margin_right = 101.094
 margin_bottom = 156.487
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "CPU"
 align = 1
@@ -282,7 +282,7 @@ margin_left = 130.002
 margin_top = 107.497
 margin_right = 188.002
 margin_bottom = 155.497
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "RAM Memory"
 align = 1
@@ -319,6 +319,8 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 55.0
+autostart = true
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Sprite/Button3" to="." method="_on_Button3_pressed"]
@@ -331,3 +333,4 @@ __meta__ = {
 [connection signal="pressed" from="Sprite/CheckBox3" to="." method="_on_CheckBox3_pressed"]
 [connection signal="pressed" from="Sprite/CheckBox4" to="." method="_on_CheckBox4_pressed"]
 [connection signal="pressed" from="Sprite/CheckBox5" to="." method="_on_CheckBox5_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_end"]
