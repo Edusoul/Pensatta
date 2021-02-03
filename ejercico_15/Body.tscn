@@ -95,7 +95,7 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="Label5"]
-wait_time = 15.9
+wait_time = 10.9
 autostart = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
