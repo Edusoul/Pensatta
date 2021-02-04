@@ -203,7 +203,7 @@ func _on_CheckBox_pressed():
 	check = get_node("Sprite/CheckBox")
 	check.disabled = true
 	checks.push_back(1)
-	Globales.answer_correctly = checks
+	global.answered_correctly = checks
 	pass # Replace with function body.
 
 
@@ -211,7 +211,7 @@ func _on_CheckBox2_pressed():
 	check2 = get_node("Sprite/CheckBox2")
 	check2.disabled = true
 	checks.push_back(2)
-	Globales.answer_correctly = checks
+	global.answer_correctly = checks
 	pass # Replace with function body.
 
 
@@ -219,7 +219,7 @@ func _on_CheckBox3_pressed():
 	check3 = get_node("Sprite/CheckBox3")
 	check3.disabled = true
 	checks.push_back(3)
-	Globales.answer_correctly = checks
+	global.answer_correctly = checks
 	pass # Replace with function body.
 
 
@@ -227,7 +227,7 @@ func _on_CheckBox4_pressed():
 	check4 = get_node("Sprite/CheckBox4")
 	check4.disabled = true
 	checks.push_back(4)
-	Globales.answer_correctly = checks
+	global.answered_correctly = checks
 	pass # Replace with function body.
 
 
@@ -235,10 +235,11 @@ func _on_CheckBox5_pressed():
 	check5 = get_node("Sprite/CheckBox5")
 	check5.disabled = true
 	checks.push_back(5)
-	Globales.answer_correctly = checks
+	global.answered_correctly = checks
 	pass # Replace with function body.
 
 
 func _on_Timer_end():
 	get_tree().change_scene("res://end.tscn")
 	pass # Replace with function body.
+

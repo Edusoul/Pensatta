@@ -18,11 +18,11 @@
 size = 27
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 outline_color = Color( 0.396078, 0.839216, 0.807843, 1 )
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=3]
 size = 22
 font_data = ExtResource( 13 )
 
@@ -623,7 +623,7 @@ margin_left = 748.384
 margin_top = 526.0
 margin_right = 847.384
 margin_bottom = 553.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
 text = "Terminado"
@@ -637,7 +637,7 @@ margin_left = 52.0812
 margin_top = 18.0
 margin_right = 883.081
 margin_bottom = 49.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 text = "Selecciona una actividad realizable en cada página web mostrada"
 autowrap = true
