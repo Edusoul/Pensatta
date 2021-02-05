@@ -24,10 +24,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 307.0
-margin_top = 158.0
-margin_right = 574.0
-margin_bottom = 419.0
+margin_left = 309.119
+margin_top = 164.357
+margin_right = 521.119
+margin_bottom = 370.357
 icon = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

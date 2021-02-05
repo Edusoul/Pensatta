@@ -45,10 +45,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 307.0
-margin_top = 158.0
-margin_right = 574.0
-margin_bottom = 419.0
+margin_left = 338.784
+margin_top = 223.687
+margin_right = 450.784
+margin_bottom = 329.687
 icon = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

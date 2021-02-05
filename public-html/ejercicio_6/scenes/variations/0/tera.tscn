@@ -23,10 +23,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 307.447
-margin_top = 158.415
-margin_right = 574.447
-margin_bottom = 419.415
+margin_left = 225.011
+margin_top = 106.249
+margin_right = 667.011
+margin_bottom = 570.249
 icon = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -34,10 +34,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="ColorRect"]
-margin_left = 657.935
-margin_top = 33.1189
-margin_right = 860.935
-margin_bottom = 132.119
+margin_left = 675.946
+margin_top = 23.5837
+margin_right = 878.946
+margin_bottom = 122.584
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Debes dar click sobre el cubo para observar la siguiente medida"
