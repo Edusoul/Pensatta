@@ -1,4 +1,4 @@
-extends Node2D
+extends Button
 
 
 # Declare member variables here. Examples:
@@ -17,10 +17,5 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/kilo.tscn")
-	pass # Replace with function body.
-
-
-func _on_Button2_anterior():
-	get_tree().change_scene("res://scenes/giga.tscn")
+	get_tree().change_scene("res://scenes/variations/0/giga.tscn")
 	pass # Replace with function body.

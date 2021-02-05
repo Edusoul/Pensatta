@@ -16,11 +16,18 @@ func _ready():
 #	pass
 
 
+
+
+
+
+
+
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/mega.tscn")
+	get_tree().change_scene("res://scenes/variations/0/byte.tscn")
+#	global.timer_on = false
 	pass # Replace with function body.
 
 
 func _on_Button2_anterior():
-	get_tree().change_scene("res://scenes/tera.tscn")
+	get_tree().change_scene("res://scenes/variations/0/mega.tscn")
 	pass # Replace with function body.
