@@ -16,8 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="ejercicio_6"
-run/main_scene="res://tera.tscn"
+run/main_scene="res://scenes/Ready.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
+
+[display]
+
+window/size/width=900
 
 [rendering]
 

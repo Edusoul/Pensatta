@@ -1,0 +1,18 @@
+extends Label
+
+var timer
+
+func _ready():
+	timer = get_child(0)
+	pass # Replace with function body.
+	
+func _process(delta):
+	set_text(str(int(timer.get_time_left())))	
+
+
+func _on_Timer_timeout():
+#	get_tree().change_scene("res://scenes/variations/" + \
+#		str(global.variation_number) + "/Var" + str(global.variation_number) + \
+#		".tscn")
+	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
+	pass # Replace with function body.

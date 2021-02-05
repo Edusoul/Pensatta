@@ -16,10 +16,19 @@ _global_script_class_icons={
 [application]
 
 config/name="Drawing Line"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://scenes/variations/0/Ready.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
+
+[display]
+
+window/size/width=900
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
+environment/default_clear_color=Color( 1, 0.913725, 0.839216, 1 )
 environment/default_environment="res://default_env.tres"

@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/Label2.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 235.201
+margin_top = 214.012
+margin_right = 683.201
+margin_bottom = 300.012
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.839216, 0.807843, 1 )
+text = "¿Preparado?"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_bottom = 0.012
+margin_left = 375.05
+margin_top = 343.266
+margin_right = 498.05
+margin_bottom = 401.066
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "5"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="ColorRect/Label2"]
+wait_time = 5.9
+autostart = true
+[connection signal="timeout" from="ColorRect/Label2/Timer" to="ColorRect/Label2" method="_on_Timer_timeout"]
