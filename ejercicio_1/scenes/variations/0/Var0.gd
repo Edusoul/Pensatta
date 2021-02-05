@@ -9,6 +9,7 @@ var checkboxes = []
 var correct_checkboxes = ["1", "3", "5", "6", "9", "11", "12", "13"]
 
 func _ready():
+	$FinishedButton.visible = false
 	for child in get_children():
 #		if child is CheckBox:
 #			child.visible = false
@@ -18,18 +19,6 @@ func _ready():
 				checkboxes.append(child)
 			elif child.get_name() != "FinishedButton":
 				buttons[child.get_name()] = false
-			
-	# Changes only the arrow shape of the cursor.
-	# This is similar to changing it in the project settings.
-#	Input.set_custom_mouse_cursor(hand)
-	# Changes a specific shape of the cursor (here, the I-beam shape).
-#	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_IBEAM)
-	
-#Con esta parte del codigo puedo cambiar los colores de los botones	
-#	style = StyleBoxFlat.new()
-#	color_btn = Color(0, 255, 255)
-#	style.set_bg_color(color_btn)
-#	$Sprite/Button.set("custom_styles/normal", style)
 
 func all_pressed():
 	var left = 0
@@ -39,50 +28,6 @@ func all_pressed():
 			return false
 	
 	return true
-
-
-
-
-#func _on_CheckBox_pressed():
-#	check = get_node("Sprite/CheckBox")
-#	check.disabled = true
-#	checks.push_back(1)
-#	global.answered_correctly = checks
-#	pass # Replace with function body.
-#
-#
-#func _on_CheckBox2_pressed():
-#	check2 = get_node("Sprite/CheckBox2")
-#	check2.disabled = true
-#	checks.push_back(2)
-#	global.answer_correctly = checks
-#	pass # Replace with function body.
-#
-#
-#func _on_CheckBox3_pressed():
-#	check3 = get_node("Sprite/CheckBox3")
-#	check3.disabled = true
-#	checks.push_back(3)
-#	global.answer_correctly = checks
-#	pass # Replace with function body.
-#
-#
-#func _on_CheckBox4_pressed():
-#	check4 = get_node("Sprite/CheckBox4")
-#	check4.disabled = true
-#	checks.push_back(4)
-#	global.answered_correctly = checks
-#	pass # Replace with function body.
-#
-#
-#func _on_CheckBox5_pressed():
-#	check5 = get_node("Sprite/CheckBox5")
-#	check5.disabled = true
-#	checks.push_back(5)
-#	global.answered_correctly = checks
-#	pass # Replace with function body.
-#
-#
 
 func _on_PowerButton_pressed():
 	if not buttons["PowerButton"]:
@@ -178,6 +123,8 @@ func _on_Timer_timeout():
 	$SelectLabel.visible = true
 	for child in get_children():
 		if child is CheckBox:
+			child.visible = true
+		if child.get_name() == "FinishedButton":
 			child.visible = true
 	
 func all_labels_invisible():

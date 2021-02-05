@@ -1,7 +1,7 @@
 extends Node
 
 var answered_correctly
-var possible_variations = 3
+var possible_variations = 2
 var variation_number
 
 func pick_random_variation_number():

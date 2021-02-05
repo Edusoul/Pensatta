@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TasksCheck.png-884650970fa7c9a51965ce5c52954ba1.stex"
+path="res://.import/ejercicio_2.png-4921ad1fa3b462bf23f233286e86f37e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/TasksCheck.png"
-dest_files=[ "res://.import/TasksCheck.png-884650970fa7c9a51965ce5c52954ba1.stex" ]
+source_file="res://export/ejercicio_2.png"
+dest_files=[ "res://.import/ejercicio_2.png-4921ad1fa3b462bf23f233286e86f37e.stex" ]
 
 [params]
 

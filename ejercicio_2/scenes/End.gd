@@ -13,8 +13,11 @@ func _ready():
 		bad_luck.visible = false;
 	else:
 		congratulations.visible = false;
-	JavaScript.eval("window.top.postMessage('hello', '*')")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Timer_timeout():
+	JavaScript.eval("window.top.postMessage('finished_problem', '*')")
