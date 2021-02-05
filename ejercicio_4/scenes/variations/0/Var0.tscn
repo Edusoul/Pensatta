@@ -1,0 +1,141 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
+[ext_resource path="res://assets/memoriaRAM.png" type="Texture" id=2]
+[ext_resource path="res://assets/fuente de poder.png" type="Texture" id=3]
+[ext_resource path="res://assets/mother board.png" type="Texture" id=4]
+[ext_resource path="res://assets/disco duro.png" type="Texture" id=5]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 461.909, 309.401 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 6 )
+
+[node name="Node2d" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 450, 300 )
+z_as_relative = false
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 90.0071, 74.3736 )
+scale = Vector2( 1.26228, 1.49025 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="Area2D"]
+position = Vector2( 80.5228, 198.838 )
+scale = Vector2( 1.37489, 1.43262 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="Area2D"]
+position = Vector2( 91.2583, 355.11 )
+scale = Vector2( 1.06421, 1.08441 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="Area2D"]
+position = Vector2( 86.0428, 486.583 )
+scale = Vector2( 1.14983, 1.41813 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = 316.674
+margin_top = 78.8388
+margin_right = 724.674
+margin_bottom = 195.839
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Tarjeta de circuito impreso que permite la integración de todos los componentes de una computadora. Para esto, cuenta con un software básico conocido como BIOS, que le permite cumplir con sus funciones."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Area2D"]
+margin_left = 317.375
+margin_top = 224.028
+margin_right = 676.375
+margin_bottom = 296.028
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Hace referencia al sistema que otorga la electricidad imprescindible para alimentar a equipos"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Area2D"]
+margin_left = 320.0
+margin_top = 322.406
+margin_right = 726.0
+margin_bottom = 439.406
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Es conocida como memoria volátil lo cual quiere decir que los datos no se guardan de manera permanente, es por ello, que cuando deja de existir una fuente de energía en el dispositivo la información se pierde"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Area2D"]
+margin_left = 323.0
+margin_top = 467.0
+margin_right = 719.0
+margin_bottom = 584.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Dispositivo de almacenamiento de datos no volátil (porque los contenidos almacenados no se pierden aunque no se encuentre energizado) y que emplea un sistema de grabación magnético para guardar los datos digitales."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Area2D"]
+margin_left = 802.413
+margin_top = 531.215
+margin_right = 882.413
+margin_bottom = 568.215
+custom_fonts/font = SubResource( 6 )
+text = "Registrar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Area2D"]
+margin_left = 90.3798
+margin_top = 7.13527
+margin_right = 806.38
+margin_bottom = 45.1353
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Relaciona las dos columnas mediante una linea"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Area2D/Button" to="." method="_on_Button_pressed"]

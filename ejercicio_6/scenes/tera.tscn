@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/tera.gd" type="Script" id=1]
+[ext_resource path="res://assets/cuboTera.png" type="Texture" id=2]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="tera" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 307.447
+margin_top = 158.415
+margin_right = 574.447
+margin_bottom = 419.415
+icon = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 657.935
+margin_top = 33.1189
+margin_right = 860.935
+margin_bottom = 132.119
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Debes dar click sobre el cubo para observar la siguiente medida"
+align = 1
+valign = 1
+autowrap = true
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_Button_pressed"]

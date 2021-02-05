@@ -6,7 +6,7 @@ func _ready():
 
 
 func _on_Button2_anterior():
-	get_tree().change_scene("res://kilo.tscn")
+	get_tree().change_scene("res://scenes/kilo.tscn")
 	pass # Replace with function body.
 
 

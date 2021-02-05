@@ -17,10 +17,10 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://kilo.tscn")
+	get_tree().change_scene("res://scenes/kilo.tscn")
 	pass # Replace with function body.
 
 
 func _on_Button2_anterior():
-	get_tree().change_scene("res://giga.tscn")
+	get_tree().change_scene("res://scenes/giga.tscn")
 	pass # Replace with function body.
