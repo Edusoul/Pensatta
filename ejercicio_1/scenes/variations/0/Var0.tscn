@@ -1,0 +1,721 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/variations/0/pc-tower.png" type="Texture" id=2]
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0.588235, 0.262745, 0.262745, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 19
+outline_color = Color( 0.588235, 0.262745, 0.262745, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+color = Color( 1, 0.913725, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 608.809
+margin_top = 216.951
+margin_right = 775.809
+margin_bottom = 237.951
+custom_fonts/font = SubResource( 1 )
+text = "Selecciona una pieza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Power" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 553.803
+margin_top = 76.6605
+margin_right = 825.804
+margin_bottom = 409.66
+custom_fonts/font = SubResource( 1 )
+text = "La FUENTE DE PODER es el sistema que otorga la electricidad imprescindible para alimentar a equipos como ordenadores o computadoras. Generalmente, en las PC de escritorio, la ya citada fuente de poder se localiza en la parte posterior del gabinete y es complementada por un ventilador que impide que el dispositivo se recaliente."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Mother_Board"
+}
+
+[node name="CD" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 572.818
+margin_top = 123.275
+margin_right = 808.818
+margin_bottom = 360.275
+custom_fonts/font = SubResource( 1 )
+text = "Un LECTOR DE CD es un dispositivo electrónico que permite la lectura de estos mediante el empleo de un rayo láser y la posterior transformación de este en impulsos eléctricos que la computadora interpreta, escritos por grabadoras de CD."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPU" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 572.934
+margin_top = 91.1871
+margin_right = 843.934
+margin_bottom = 400.187
+custom_fonts/font = SubResource( 1 )
+text = "La Unidad Central de Procesamiento (conocida por las siglas CPU, del inglés: Central Processing Unit), es el hardware dentro de un ordenador cuyo trabajo es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas y externas (provenientes de la unidad de entrada/salida)."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RAM" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 559.622
+margin_top = 76.7568
+margin_right = 849.622
+margin_bottom = 413.757
+custom_fonts/font = SubResource( 1 )
+text = "La memoria RAM es la memoria principal de un dispositivo, es donde se almacenan de forma temporal los datos de los programas que estás utilizando en este momento. Sus siglas significan Random Access Memory, lo que traducido al español sería Memoria de Acceso Aleatorio, y es un tipo de memoria que te puedes encontrar en cualquier dispositivo, desde ordenadores de sobremesa hasta teléfonos móviles."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fan" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 561.903
+margin_top = 154.548
+margin_right = 797.903
+margin_bottom = 312.547
+custom_fonts/font = SubResource( 1 )
+text = "El VENTILADOR de CPU o fan cooler disipa el calor de la PC o sus componentes para evitar sobrecalentamiento y fallas."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graphics" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 565.922
+margin_top = 94.6838
+margin_right = 801.922
+margin_bottom = 403.684
+custom_fonts/font = SubResource( 1 )
+text = "Una TARJETA GRÁFICA es una tarjeta de expansión de la placa base del ordenador que se encarga de procesar los datos provenientes de la unidad central de procesamiento (CPU) y transformarlos en información comprensible y representable en el dispositivo de salida (por ejemplo: monitor, televisor o proyector)."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Drive" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 565.433
+margin_top = 130.263
+margin_right = 801.433
+margin_bottom = 367.263
+custom_fonts/font = SubResource( 1 )
+text = "El DISCO DURO, también conocido como HDD, es un componente informático que sirve para almacenar de forma permanente tus datos. Esto quiere decir, que los datos no se borran cuando se apaga la unidad como pasa en los almacenados por la memoria RAM."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Motherboard" type="Label" parent="."]
+visible = false
+modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 569.588
+margin_top = 72.1917
+margin_right = 852.588
+margin_bottom = 381.192
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "La PLACA BASE, también conocida como tarjeta madre, placa madre o placa principal, es una tarjeta de circuito impreso a la que se conectan los componentes que constituyen la computadora. Es una parte fundamental para montar cualquier computadora personal de escritorio o portátil o algún dispositivo."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 298.422, 251.151 )
+scale = Vector2( 1.80742, 1.64102 )
+texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="Sprite"]
+visible = false
+margin_left = 18.0
+margin_top = -129.0
+margin_right = 302.0
+margin_bottom = 75.0
+color = Color( 0.0392157, 0.243137, 0.941176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Sprite"]
+wait_time = 10.0
+autostart = true
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 87.7727
+margin_top = 442.29
+margin_right = 111.773
+margin_bottom = 466.29
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CheckBox"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+self_modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 21.3786
+margin_top = -1.97485
+margin_right = 125.379
+margin_bottom = 27.0251
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Tarjeta madre"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox2" type="CheckBox" parent="."]
+margin_left = 87.9107
+margin_top = 499.308
+margin_right = 111.911
+margin_bottom = 523.309
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CheckBox2"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.8897
+margin_top = -11.7982
+margin_right = 133.89
+margin_bottom = 36.2018
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Fuente de poder"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox3" type="CheckBox" parent="."]
+margin_left = 271.32
+margin_top = 442.29
+margin_right = 295.32
+margin_bottom = 466.29
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CheckBox3"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 21.2527
+margin_top = -3.35834
+margin_right = 70.2527
+margin_bottom = 29.6417
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "CPU"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox4" type="CheckBox" parent="."]
+margin_left = 270.569
+margin_top = 500.199
+margin_right = 294.569
+margin_bottom = 524.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="CheckBox4"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 18.8728
+margin_top = -13.1091
+margin_right = 127.873
+margin_bottom = 34.8909
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Memoria RAM"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="."]
+margin_left = 421.783
+margin_top = 440.182
+margin_right = 445.783
+margin_bottom = 464.182
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox5"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox6" type="CheckBox" parent="."]
+margin_left = 421.349
+margin_top = 500.571
+margin_right = 445.349
+margin_bottom = 524.571
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox6"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox7" type="CheckBox" parent="."]
+margin_left = 699.314
+margin_top = 502.728
+margin_right = 723.314
+margin_bottom = 526.728
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox7"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox8" type="CheckBox" parent="."]
+margin_left = 699.314
+margin_top = 444.242
+margin_right = 723.314
+margin_bottom = 468.242
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox8"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox9" type="CheckBox" parent="."]
+margin_left = 559.465
+margin_top = 499.453
+margin_right = 583.465
+margin_bottom = 523.453
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox9"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox10" type="CheckBox" parent="."]
+margin_left = 559.465
+margin_top = 442.242
+margin_right = 583.465
+margin_bottom = 466.242
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox10"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox11" type="CheckBox" parent="."]
+margin_left = 422.376
+margin_top = 472.75
+margin_right = 446.376
+margin_bottom = 496.75
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox11"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox12" type="CheckBox" parent="."]
+margin_left = 270.705
+margin_top = 471.859
+margin_right = 294.705
+margin_bottom = 495.859
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox12"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 21.6546
+margin_top = -4.8909
+margin_right = 103.655
+margin_bottom = 30.1091
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox13" type="CheckBox" parent="."]
+margin_left = 87.2887
+margin_top = 470.969
+margin_right = 111.289
+margin_bottom = 494.969
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox13"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 24.3273
+margin_top = -4.89087
+margin_right = 106.327
+margin_bottom = 30.1091
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox14" type="CheckBox" parent="."]
+margin_left = 698.445
+margin_top = 474.531
+margin_right = 722.445
+margin_bottom = 498.531
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox14"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.341176, 0.168627, 0.168627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox15" type="CheckBox" parent="."]
+margin_left = 559.465
+margin_top = 471.641
+margin_right = 583.465
+margin_bottom = 495.641
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CheckBox15"]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 27.0
+margin_top = -4.0
+margin_right = 109.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Disco duro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerButton" type="Button" parent="."]
+margin_left = 120.336
+margin_top = 103.863
+margin_right = 162.336
+margin_bottom = 123.863
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CDButton" type="Button" parent="."]
+margin_left = 392.727
+margin_top = 104.145
+margin_right = 462.727
+margin_bottom = 124.145
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPUButton" type="Button" parent="."]
+margin_left = 173.836
+margin_top = 167.363
+margin_right = 216.836
+margin_bottom = 187.363
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RAMButton" type="Button" parent="."]
+margin_left = 241.836
+margin_top = 153.363
+margin_right = 281.836
+margin_bottom = 173.363
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FanButton" type="Button" parent="."]
+margin_left = 92.7143
+margin_top = 279.924
+margin_right = 135.714
+margin_bottom = 299.924
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GraphicsButton" type="Button" parent="."]
+margin_left = 235.836
+margin_top = 265.363
+margin_right = 314.836
+margin_bottom = 285.363
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DriveButton" type="Button" parent="."]
+margin_left = 318.836
+margin_top = 272.863
+margin_right = 400.836
+margin_bottom = 292.863
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoardButton" type="Button" parent="."]
+margin_left = 122.836
+margin_top = 372.363
+margin_right = 214.836
+margin_bottom = 392.363
+text = "Ver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 55.0
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 68.8717
+margin_top = 29.563
+margin_right = 780.872
+margin_bottom = 53.563
+custom_fonts/font = SubResource( 7 )
+text = "Observa todas las partes del computador y después selecciónalas en la lista"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Sprite/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="visibility_changed" from="CheckBox" to="." method="_on_CheckBox_visibility_changed"]
+[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="CheckBox3" to="." method="_on_CheckBox3_pressed"]
+[connection signal="pressed" from="CheckBox4" to="." method="_on_CheckBox4_pressed"]
+[connection signal="pressed" from="CheckBox5" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox6" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox7" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox8" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox9" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox10" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox11" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox12" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox13" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox14" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox15" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="PowerButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CDButton" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="CPUButton" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="RAMButton" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="FanButton" to="." method="_on_Button5_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_end"]

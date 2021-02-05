@@ -7,21 +7,21 @@ func _ready():
 	l1 = $Label
 	l2 = $Label2
 	l3 = $Label3
-	if Globales.answer_correctly == null:
+	if global.answer_correctly == null:
 		print("No marcaste ninguna casilla")
 		l1.visible = true
 	else:	
-		for i in Globales.answer_correctly.size():
-			print(Globales.answer_correctly[i])
-			if Globales.answer_correctly.size() == 5:
+		for i in global.answered_correctly.size():
+			print(global.answered_correctly[i])
+			if global.answered_correctly.size() == 5:
 				l3.visible = true
-			elif Globales.answer_correctly.size() == 4:
+			elif global.answered_correctly.size() == 4:
 				l1.visible = true
-			elif Globales.answer_correctly.size() == 3:
+			elif global.answered_correctly.size() == 3:
 				l1.visible = true
-			elif Globales.answer_correctly.size() == 2:
+			elif global.answered_correctly.size() == 2:
 				l1.visible = true
-			elif Globales.answer_correctly.size() == 1:
+			elif global.answered_correctly.size() == 1:
 				l1.visible = true			
 			else:
 				l2.visible = true		
