@@ -14,6 +14,12 @@ outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 12
+outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=3]
 size = 12
 use_filter = true
@@ -26,12 +32,6 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 12
-use_filter = true
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 12
-outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
@@ -51,7 +51,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
+[node name="SelectLabel" type="Label" parent="."]
 modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
 margin_left = 608.809
 margin_top = 216.951
@@ -177,7 +177,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Motherboard" type="Label" parent="."]
+[node name="Board" type="Label" parent="."]
 visible = false
 modulate = Color( 0.980392, 0.584314, 0.47451, 1 )
 margin_left = 569.588
@@ -199,37 +199,22 @@ position = Vector2( 298.422, 251.151 )
 scale = Vector2( 1.80742, 1.64102 )
 texture = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="Sprite"]
-visible = false
-margin_left = 18.0
-margin_top = -129.0
-margin_right = 302.0
-margin_bottom = 75.0
-color = Color( 0.0392157, 0.243137, 0.941176, 1 )
+[node name="CheckBox1" type="CheckBox" parent="."]
+margin_left = 67.8321
+margin_top = 439.768
+margin_right = 91.8321
+margin_bottom = 463.768
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="Sprite"]
-wait_time = 10.0
-autostart = true
-
-[node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 87.7727
-margin_top = 442.29
-margin_right = 111.773
-margin_bottom = 466.29
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CheckBox"]
+[node name="Label1" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
 self_modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 21.3786
-margin_top = -1.97485
-margin_right = 125.379
-margin_bottom = 27.0251
+margin_left = 89.2107
+margin_top = 437.793
+margin_right = 193.211
+margin_bottom = 466.793
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 text = "Tarjeta madre"
@@ -241,20 +226,46 @@ __meta__ = {
 }
 
 [node name="CheckBox2" type="CheckBox" parent="."]
-margin_left = 87.9107
-margin_top = 499.308
-margin_right = 111.911
-margin_bottom = 523.309
+margin_left = 67.3481
+margin_top = 468.446
+margin_right = 91.3481
+margin_bottom = 492.446
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CheckBox2"]
+[node name="Label2" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.8897
-margin_top = -11.7982
-margin_right = 133.89
-margin_bottom = 36.2018
+margin_left = 98.4026
+margin_top = 463.555
+margin_right = 180.402
+margin_bottom = 498.555
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Puertos USB"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox3" type="CheckBox" parent="."]
+margin_left = 67.9701
+margin_top = 496.786
+margin_right = 91.9701
+margin_bottom = 520.786
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 95.8598
+margin_top = 484.988
+margin_right = 201.86
+margin_bottom = 532.988
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 text = "Fuente de poder"
@@ -265,23 +276,49 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox3" type="CheckBox" parent="."]
-margin_left = 271.32
-margin_top = 442.29
-margin_right = 295.32
-margin_bottom = 466.29
+[node name="CheckBox4" type="CheckBox" parent="."]
+margin_left = 251.379
+margin_top = 439.768
+margin_right = 275.379
+margin_bottom = 463.768
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="CheckBox3"]
+[node name="Label4" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 21.2527
-margin_top = -3.35834
-margin_right = 70.2527
-margin_bottom = 29.6417
+margin_left = 272.061
+margin_top = 435.45
+margin_right = 362.061
+margin_bottom = 468.45
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Disco sólido"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="."]
+margin_left = 250.764
+margin_top = 469.337
+margin_right = 274.764
+margin_bottom = 493.337
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
+margin_left = 275.605
+margin_top = 465.178
+margin_right = 317.605
+margin_bottom = 500.178
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "CPU"
 align = 1
 valign = 1
@@ -290,21 +327,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox4" type="CheckBox" parent="."]
-margin_left = 270.569
-margin_top = 500.199
-margin_right = 294.569
-margin_bottom = 524.2
+[node name="CheckBox6" type="CheckBox" parent="."]
+margin_left = 250.628
+margin_top = 497.677
+margin_right = 274.628
+margin_bottom = 521.677
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label4" type="Label" parent="CheckBox4"]
+[node name="Label6" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 18.8728
-margin_top = -13.1091
-margin_right = 127.873
-margin_bottom = 34.8909
+margin_left = 269.501
+margin_top = 484.568
+margin_right = 378.501
+margin_bottom = 532.568
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 text = "Memoria RAM"
@@ -315,77 +352,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox5" type="CheckBox" parent="."]
-margin_left = 421.783
-margin_top = 440.182
-margin_right = 445.783
-margin_bottom = 464.182
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="CheckBox5"]
-modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CheckBox6" type="CheckBox" parent="."]
-margin_left = 421.349
-margin_top = 500.571
-margin_right = 445.349
-margin_bottom = 524.571
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="CheckBox6"]
-modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
-align = 1
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="CheckBox7" type="CheckBox" parent="."]
-margin_left = 699.314
-margin_top = 502.728
-margin_right = 723.314
-margin_bottom = 526.728
+margin_left = 401.842
+margin_top = 437.659
+margin_right = 425.842
+margin_bottom = 461.659
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox7"]
+[node name="Label7" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 428.842
+margin_top = 433.659
+margin_right = 510.842
+margin_bottom = 468.659
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "DVD-ROM"
 align = 1
 valign = 1
 autowrap = true
@@ -394,24 +379,24 @@ __meta__ = {
 }
 
 [node name="CheckBox8" type="CheckBox" parent="."]
-margin_left = 699.314
-margin_top = 444.242
-margin_right = 723.314
-margin_bottom = 468.242
+margin_left = 402.435
+margin_top = 470.227
+margin_right = 426.435
+margin_bottom = 494.227
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox8"]
+[node name="Label8" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 429.0
+margin_top = 465.159
+margin_right = 516.0
+margin_bottom = 500.159
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Bus en serie"
 align = 1
 valign = 1
 autowrap = true
@@ -420,24 +405,24 @@ __meta__ = {
 }
 
 [node name="CheckBox9" type="CheckBox" parent="."]
-margin_left = 559.465
-margin_top = 499.453
-margin_right = 583.465
-margin_bottom = 523.453
+margin_left = 401.408
+margin_top = 498.049
+margin_right = 425.408
+margin_bottom = 522.049
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox9"]
+[node name="Label9" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 433.453
+margin_top = 494.049
+margin_right = 526.453
+margin_bottom = 529.049
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Tarjeta gráfica"
 align = 1
 valign = 1
 autowrap = true
@@ -446,24 +431,24 @@ __meta__ = {
 }
 
 [node name="CheckBox10" type="CheckBox" parent="."]
-margin_left = 559.465
-margin_top = 442.242
-margin_right = 583.465
-margin_bottom = 466.242
+margin_left = 539.524
+margin_top = 439.719
+margin_right = 563.524
+margin_bottom = 463.719
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox10"]
+[node name="Label10" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 566.524
+margin_top = 435.719
+margin_right = 648.524
+margin_bottom = 470.719
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Ranura PCI"
 align = 1
 valign = 1
 autowrap = true
@@ -472,24 +457,24 @@ __meta__ = {
 }
 
 [node name="CheckBox11" type="CheckBox" parent="."]
-margin_left = 422.376
-margin_top = 472.75
-margin_right = 446.376
-margin_bottom = 496.75
+margin_left = 539.524
+margin_top = 469.118
+margin_right = 563.524
+margin_bottom = 493.118
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox11"]
+[node name="Label11" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 567.433
+margin_top = 465.118
+margin_right = 638.433
+margin_bottom = 500.118
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "CD-ROM"
 align = 1
 valign = 1
 autowrap = true
@@ -498,20 +483,20 @@ __meta__ = {
 }
 
 [node name="CheckBox12" type="CheckBox" parent="."]
-margin_left = 270.705
-margin_top = 471.859
-margin_right = 294.705
-margin_bottom = 495.859
+margin_left = 539.524
+margin_top = 496.93
+margin_right = 563.524
+margin_bottom = 520.93
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox12"]
+[node name="Label12" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 21.6546
-margin_top = -4.8909
-margin_right = 103.655
-margin_bottom = 30.1091
+margin_left = 566.524
+margin_top = 492.93
+margin_right = 648.524
+margin_bottom = 527.93
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -524,24 +509,24 @@ __meta__ = {
 }
 
 [node name="CheckBox13" type="CheckBox" parent="."]
-margin_left = 87.2887
-margin_top = 470.969
-margin_right = 111.289
-margin_bottom = 494.969
+margin_left = 679.373
+margin_top = 441.719
+margin_right = 703.373
+margin_bottom = 465.719
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox13"]
+[node name="Label13" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 24.3273
-margin_top = -4.89087
-margin_right = 106.327
-margin_bottom = 30.1091
+margin_left = 706.373
+margin_top = 437.719
+margin_right = 788.373
+margin_bottom = 472.719
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Ventilador"
 align = 1
 valign = 1
 autowrap = true
@@ -550,24 +535,24 @@ __meta__ = {
 }
 
 [node name="CheckBox14" type="CheckBox" parent="."]
-margin_left = 698.445
-margin_top = 474.531
-margin_right = 722.445
-margin_bottom = 498.531
+margin_left = 678.504
+margin_top = 472.009
+margin_right = 702.504
+margin_bottom = 496.009
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox14"]
+[node name="Label14" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 712.663
+margin_top = 468.009
+margin_right = 799.663
+margin_bottom = 503.009
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.341176, 0.168627, 0.168627, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Puerto HDMI"
 align = 1
 valign = 1
 autowrap = true
@@ -576,24 +561,24 @@ __meta__ = {
 }
 
 [node name="CheckBox15" type="CheckBox" parent="."]
-margin_left = 559.465
-margin_top = 471.641
-margin_right = 583.465
-margin_bottom = 495.641
+margin_left = 679.373
+margin_top = 500.206
+margin_right = 703.373
+margin_bottom = 524.206
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="CheckBox15"]
+[node name="Label15" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
-margin_left = 27.0
-margin_top = -4.0
-margin_right = 109.0
-margin_bottom = 31.0
+margin_left = 706.373
+margin_top = 495.365
+margin_right = 762.373
+margin_bottom = 530.365
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Disco duro"
+text = "Cache"
 align = 1
 valign = 1
 autowrap = true
@@ -612,10 +597,10 @@ __meta__ = {
 }
 
 [node name="CDButton" type="Button" parent="."]
-margin_left = 392.727
-margin_top = 104.145
-margin_right = 462.727
-margin_bottom = 124.145
+margin_left = 393.522
+margin_top = 106.217
+margin_right = 463.522
+margin_bottom = 126.217
 text = "Ver"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -672,20 +657,16 @@ __meta__ = {
 }
 
 [node name="BoardButton" type="Button" parent="."]
-margin_left = 122.836
-margin_top = 372.363
-margin_right = 214.836
-margin_bottom = 392.363
+margin_left = 128.0
+margin_top = 374.0
+margin_right = 220.0
+margin_bottom = 394.0
 text = "Ver"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 55.0
-autostart = true
-
-[node name="Label" type="Label" parent="."]
+[node name="InstructionLabel" type="Label" parent="."]
 modulate = Color( 0.396078, 0.25098, 0.384314, 1 )
 margin_left = 68.8717
 margin_top = 29.563
@@ -696,14 +677,28 @@ text = "Observa todas las partes del computador y después selecciónalas en la 
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="timeout" from="Sprite/Timer" to="." method="_on_Timer_timeout"]
-[connection signal="pressed" from="CheckBox" to="." method="_on_CheckBox_pressed"]
-[connection signal="visibility_changed" from="CheckBox" to="." method="_on_CheckBox_visibility_changed"]
-[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox2_pressed"]
-[connection signal="pressed" from="CheckBox3" to="." method="_on_CheckBox3_pressed"]
-[connection signal="pressed" from="CheckBox4" to="." method="_on_CheckBox4_pressed"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="FinishedButton" type="Button" parent="."]
+margin_left = 753.443
+margin_top = 539.856
+margin_right = 833.443
+margin_bottom = 559.856
+custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
+text = "Terminado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CheckBox1" to="." method="_on_CheckBox_pressed"]
+[connection signal="visibility_changed" from="CheckBox1" to="." method="_on_CheckBox_visibility_changed"]
+[connection signal="pressed" from="CheckBox2" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox3" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="CheckBox4" to="." method="_on_CheckBox3_pressed"]
 [connection signal="pressed" from="CheckBox5" to="." method="_on_CheckBox5_pressed"]
-[connection signal="pressed" from="CheckBox6" to="." method="_on_CheckBox5_pressed"]
+[connection signal="pressed" from="CheckBox6" to="." method="_on_CheckBox4_pressed"]
 [connection signal="pressed" from="CheckBox7" to="." method="_on_CheckBox5_pressed"]
 [connection signal="pressed" from="CheckBox8" to="." method="_on_CheckBox5_pressed"]
 [connection signal="pressed" from="CheckBox9" to="." method="_on_CheckBox5_pressed"]
@@ -713,9 +708,13 @@ __meta__ = {
 [connection signal="pressed" from="CheckBox13" to="." method="_on_CheckBox5_pressed"]
 [connection signal="pressed" from="CheckBox14" to="." method="_on_CheckBox5_pressed"]
 [connection signal="pressed" from="CheckBox15" to="." method="_on_CheckBox5_pressed"]
-[connection signal="pressed" from="PowerButton" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="CDButton" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="CPUButton" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="RAMButton" to="." method="_on_Button4_pressed"]
-[connection signal="pressed" from="FanButton" to="." method="_on_Button5_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_end"]
+[connection signal="pressed" from="PowerButton" to="." method="_on_PowerButton_pressed"]
+[connection signal="pressed" from="CDButton" to="." method="_on_CDButton_pressed"]
+[connection signal="pressed" from="CPUButton" to="." method="_on_CPUButton_pressed"]
+[connection signal="pressed" from="RAMButton" to="." method="_on_RAMButton_pressed"]
+[connection signal="pressed" from="FanButton" to="." method="_on_FanButton_pressed"]
+[connection signal="pressed" from="GraphicsButton" to="." method="_on_GraphicsButton_pressed"]
+[connection signal="pressed" from="DriveButton" to="." method="_on_DriveButton_pressed"]
+[connection signal="pressed" from="BoardButton" to="." method="_on_BoardButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]

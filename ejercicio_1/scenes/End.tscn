@@ -47,3 +47,18 @@ __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[node name="MissedSome" type="Label" parent="."]
+margin_left = 22.2704
+margin_top = 216.739
+margin_right = 882.27
+margin_bottom = 379.739
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
+text = "Marcaste una cantidad incorrecta de casillas"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
