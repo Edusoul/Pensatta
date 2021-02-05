@@ -11,15 +11,81 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = 6.0
 margin_top = 195.0
 margin_right = 894.0
 margin_bottom = 377.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "¡Se termino tu tiempo!!!"
+text = "¡No organizaste bien la lista!!!!"
 align = 1
 valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 6.0
+margin_top = 195.0
+margin_right = 894.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "¡Felicitaciones ordenaste la lista correctamente!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = 6.0
+margin_top = 195.0
+margin_right = 894.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "¡Colocaste 3 respuestas en el orden correcto!!!!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+margin_left = 6.0
+margin_top = 195.0
+margin_right = 894.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "¡Colocaste 2 respuestas en el orden correcto!!!!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+margin_left = 6.0
+margin_top = 195.0
+margin_right = 894.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "¡Colocaste 1 respuestas en el orden correcto!!!!!"
+align = 1
+valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
