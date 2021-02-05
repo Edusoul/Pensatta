@@ -14,3 +14,8 @@ func _on_Button2_anterior():
 
 
 
+
+
+func _on_Button3_pressed():
+	JavaScript.eval("window.top.postMessage('finished_problem', '*')")
+	pass # Replace with function body.
