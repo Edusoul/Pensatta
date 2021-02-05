@@ -1,20 +1,12 @@
 extends Label
 
-#var time
-#
-#func _ready():
-#	time = get_child(00)
-#	pass
-#
-#func _process(delta):
-#	set_text(str(int(time.get_time_left())))
 
-var time = 0
-var timer_on = true
+
+#this function initializes the global 
+#counter for all scenes
 
 func _process(delta):
-	if (timer_on):
-		time += delta
-		text = var2str(int(time))
-		
+	if (global.timer_on):
+		global.counter += delta
+		text = var2str(int(global.counter))
 	pass
