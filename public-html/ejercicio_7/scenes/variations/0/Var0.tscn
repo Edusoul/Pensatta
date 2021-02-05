@@ -1,0 +1,396 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/variations/0/Sprite.gd" type="Script" id=3]
+[ext_resource path="res://scenes/variations/0/Sprite2.gd" type="Script" id=4]
+[ext_resource path="res://scenes/variations/0/Sprite3.gd" type="Script" id=5]
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = -2.0
+margin_right = 900.0
+margin_bottom = 600.0
+color = Color( 1, 0.913725, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 196.767, 175.508 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="CheckBox" type="CheckBox" parent="Sprite"]
+margin_left = -115.637
+margin_top = 106.58
+margin_right = -91.6374
+margin_bottom = 132.58
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite/CheckBox"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.3188
+margin_top = -8.31824
+margin_right = -188.673
+margin_bottom = -0.326241
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Imágenes violentas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox2" type="CheckBox" parent="Sprite"]
+margin_left = -115.637
+margin_top = 177.215
+margin_right = -91.6374
+margin_bottom = 203.215
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite/CheckBox2"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.0
+margin_top = -8.0
+margin_right = -165.992
+margin_bottom = -0.00801849
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Contenido pornográfico"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox3" type="CheckBox" parent="Sprite"]
+margin_left = -113.955
+margin_top = 246.169
+margin_right = -89.9554
+margin_bottom = 272.169
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite/CheckBox3"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.0
+margin_top = -8.0
+margin_right = -172.992
+margin_bottom = -0.00799942
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Inducción a las drogas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox4" type="CheckBox" parent="Sprite"]
+margin_left = -113.955
+margin_top = 315.122
+margin_right = -89.9554
+margin_bottom = 341.122
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite/CheckBox4"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.0
+margin_top = -8.0
+margin_right = -201.992
+margin_bottom = -0.00799942
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Discrimación racial"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 437.47, 173.641 )
+texture = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="CheckBox" type="CheckBox" parent="Sprite2"]
+margin_left = -102.145
+margin_top = 105.412
+margin_right = -78.1453
+margin_bottom = 131.412
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite2/CheckBox"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 18.1404
+margin_top = -8.31824
+margin_right = -191.851
+margin_bottom = -0.326241
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Imágenes violentas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox2" type="CheckBox" parent="Sprite2"]
+margin_left = -102.145
+margin_top = 176.047
+margin_right = -78.1453
+margin_bottom = 202.047
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite2/CheckBox2"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 22.0594
+margin_top = -6.94055
+margin_right = -162.933
+margin_bottom = 1.05143
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Contenido pornográfico"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox3" type="CheckBox" parent="Sprite2"]
+margin_left = -100.463
+margin_top = 245.001
+margin_right = -76.4633
+margin_bottom = 271.001
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite2/CheckBox3"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 22.0594
+margin_top = -8.00006
+margin_right = -176.933
+margin_bottom = -0.00806046
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Inducción a las drogas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox4" type="CheckBox" parent="Sprite2"]
+margin_left = -100.463
+margin_top = 313.954
+margin_right = -76.4633
+margin_bottom = 339.954
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite2/CheckBox4"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.3188
+margin_top = -8.31824
+margin_right = -188.673
+margin_bottom = -0.326241
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Discriminación racial"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 692.013, 178.063 )
+texture = ExtResource( 2 )
+script = ExtResource( 5 )
+
+[node name="CheckBox" type="CheckBox" parent="Sprite3"]
+margin_left = -92.8045
+margin_top = 101.023
+margin_right = -68.8045
+margin_bottom = 127.023
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite3/CheckBox"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.3188
+margin_top = -8.31824
+margin_right = -188.673
+margin_bottom = -0.326241
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Imágenes violentas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox2" type="CheckBox" parent="Sprite3"]
+margin_left = -92.8045
+margin_top = 171.658
+margin_right = -68.8045
+margin_bottom = 197.658
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite3/CheckBox2"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.0
+margin_top = -8.0
+margin_right = -159.992
+margin_bottom = -0.00801849
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Contenido pornográfico"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox3" type="CheckBox" parent="Sprite3"]
+margin_left = -91.1225
+margin_top = 240.612
+margin_right = -67.1225
+margin_bottom = 266.612
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite3/CheckBox3"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.0
+margin_top = -8.0
+margin_right = -175.992
+margin_bottom = -0.00799942
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Inducción a las drogas"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox4" type="CheckBox" parent="Sprite3"]
+margin_left = -91.1225
+margin_top = 309.565
+margin_right = -67.1225
+margin_bottom = 335.565
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sprite3/CheckBox4"]
+anchor_right = 15.958
+anchor_bottom = 1.308
+margin_left = 21.3188
+margin_top = -8.31824
+margin_right = -188.673
+margin_bottom = -0.326241
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Discriminación racial"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 798.903
+margin_top = 552.178
+margin_right = 860.903
+margin_bottom = 579.178
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0.980392, 0.584314, 0.47451, 1 )
+custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
+text = "Enviar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 69.3082
+margin_top = 32.1189
+margin_right = 822.308
+margin_bottom = 77.1189
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Selecciona las casillas con riesgo de publicación de contenido sensible que corresponden a cada imagen:"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
