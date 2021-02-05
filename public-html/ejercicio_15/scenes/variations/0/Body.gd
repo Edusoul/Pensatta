@@ -34,4 +34,4 @@ func _on_LineEdit4_text_changed(new_text):
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://scenes/end.tscn")
+	get_tree().change_scene("res://scenes/End.tscn")
