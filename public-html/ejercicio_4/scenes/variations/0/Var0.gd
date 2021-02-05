@@ -63,7 +63,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			
 func _on_Button_pressed():
 	global.answered_correctly = answers
-	get_tree().change_scene("res://scenes//End.tscn")
+	get_tree().change_scene("res://scenes/End.tscn")
 
 func start_component_match(start):
 	for i in range(components.size()):
