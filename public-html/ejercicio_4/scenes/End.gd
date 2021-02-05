@@ -19,7 +19,6 @@ func _ready():
 		answer_5.visible = true
 	else:	
 		for i in global.answered_correctly.size():
-			print(global.answered_correctly[i])
 			if global.answered_correctly.size() == 4:
 				answer_1.visible = true
 			elif global.answered_correctly.size() == 3:
@@ -30,7 +29,6 @@ func _ready():
 				answer_4.visible = true			
 			else:
 				answer_6.visible = true
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,3 +38,6 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
+
+func _on_Button2_pressed():
+	JavaScript.eval("window.top.postMessage('finished_problem', '*')")

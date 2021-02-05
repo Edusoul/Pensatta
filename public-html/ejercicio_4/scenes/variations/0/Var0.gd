@@ -39,22 +39,14 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			var end = (get_viewport().get_mouse_position())
 			var start_match = start_component_match(line_start)
 			var end_match = end_component_match(end)
-			print(start_match)
-			print(end_match)
 			if start_match == 0 and end_match == 1:
-				print("acertaste")
 				answers.push_back(1)
 			elif start_match == 3 and end_match == 0:
-				print("Acertaste")
 				answers.push_back(2)	
 			elif start_match == 2 and end_match == 2:
-				print("Acertaste")
 				answers.push_back(3)
 			elif start_match == 1 and end_match == 3:
-				print("Acertaste")
 				answers.push_back(4)	
-			else:
-				print("Fallaste")	
 			
 			if (start_match == 0 or start_match) and \
 			   (end_match == 0 or end_match):
@@ -71,8 +63,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			
 func _on_Button_pressed():
 	global.answered_correctly = answers
-	print(global.answered_correctly)
-	get_tree().change_scene("res://scenes/variations/0/End.tscn")
+	get_tree().change_scene("res://scenes//End.tscn")
 
 func start_component_match(start):
 	for i in range(components.size()):
