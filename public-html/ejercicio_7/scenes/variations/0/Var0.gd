@@ -8,10 +8,11 @@ var count = 3
 func _ready():
 	for i in get_children():
 		if i is Sprite:
-			answers.append(i);		
+			answers.append(i);
 	var l = Label.new()
 	l.text = str(count)
 	self.add_child(l)
+	
 func _on_Button_pressed():
 	correct = true;
 	for answer in answers:
@@ -24,8 +25,6 @@ func _on_Button_pressed():
 					count -=1
 					correct = true;
 
-	Global.answered_correctly = correct;
-	print(correct)
-	print(count)
-	get_tree().change_scene("res://end.tscn")					
+	global.answered_correctly = correct;
+	get_tree().change_scene("res://scenes/End.tscn")					
 	
