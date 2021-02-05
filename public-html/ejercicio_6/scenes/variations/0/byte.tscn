@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/cuboByte.png" type="Texture" id=1]
+[ext_resource path="res://scenes/variations/0/byte.gd" type="Script" id=2]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/contador.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Label
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = ExtResource( 3 )
+
+[node name="byte" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 900.0
+margin_bottom = 600.0
+color = Color( 1, 0.913725, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 307.0
+margin_top = 158.0
+margin_right = 574.0
+margin_bottom = 419.0
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ColorRect"]
+margin_left = 686.921
+margin_top = 438.811
+margin_right = 767.921
+margin_bottom = 477.811
+custom_fonts/font = SubResource( 1 )
+text = "Si"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ColorRect"]
+margin_left = 686.921
+margin_top = 510.854
+margin_right = 767.921
+margin_bottom = 549.854
+custom_fonts/font = SubResource( 1 )
+text = "No"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 375.05
+margin_top = 63.5678
+margin_right = 476.05
+margin_bottom = 113.568
+script = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 650.511
+margin_top = 156.801
+margin_right = 825.511
+margin_bottom = 238.801
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "¿Quieres repasar de nuevo las unidades de medida de la informacion?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 97.0
+margin_top = 57.0
+margin_right = 372.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
+text = "Tiempo que llevas estudiando:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button2_anterior"]
+[connection signal="pressed" from="ColorRect/Button3" to="." method="_on_Button3_pressed"]
