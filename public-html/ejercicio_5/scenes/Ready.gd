@@ -1,15 +1,24 @@
-extends Label
+extends Node2D
 
-var time
 
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	time = get_child(0)
 	pass # Replace with function body.
 
-func _process(delta):
-	set_text(str(int(time.get_time_left())))
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
 
 
-
-func _on_Timer_change_scene():
+func _on_Timer_timeout():
+	get_tree().change_scene("res://scenes/variations/" + \
+		str(global.variation_number) + "/Var" + str(global.variation_number) + \
+		".tscn")
+#	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
 	pass # Replace with function body.

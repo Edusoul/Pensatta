@@ -1,16 +1,9 @@
 extends Node
 
-var frase
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var answered_correctly
+var possible_variations = 1
+var variation_number
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func pick_random_variation_number():
+	randomize()
+	return randi() % possible_variations
