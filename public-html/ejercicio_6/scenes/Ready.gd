@@ -15,8 +15,8 @@ func _process(delta):
 
 
 func _on_Timer_timeout():
-#	get_tree().change_scene("res://scenes/variations/" + \
-#		str(global.variation_number) + "/Var" + str(global.variation_number) + \
-#		".tscn")
-	get_tree().change_scene("res://scenes/variations/0/tera.tscn")
+	get_tree().change_scene("res://scenes/variations/" + \
+		str(global.variation_number) + "/Var" + str(global.variation_number) + \
+		".tscn")
+#	get_tree().change_scene("res://scenes/variations/0/tera.tscn")
 #	pass # Replace with function body.
