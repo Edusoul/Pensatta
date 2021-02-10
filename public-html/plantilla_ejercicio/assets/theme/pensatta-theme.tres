@@ -1,0 +1,76 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.839216, 0.443137, 0.341176, 1 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+expand_margin_left = 47.0
+expand_margin_right = 47.0
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color( 0, 0, 0, 0.25098 )
+shadow_size = 4
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.933333, 0.486275, 0.372549, 1 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+expand_margin_left = 47.0
+expand_margin_right = 47.0
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color( 0, 0, 0, 0.25098 )
+shadow_size = 4
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.752941, 0.396078, 0.305882, 1 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+expand_margin_left = 47.0
+expand_margin_right = 47.0
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color( 0, 0, 0, 0.25098 )
+shadow_size = 4
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 2 )
+
+[resource]
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
+Label/colors/font_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 5 )
+Label/styles/normal = null

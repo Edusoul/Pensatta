@@ -25,7 +25,8 @@ global="*res://global.gd"
 
 [display]
 
-window/size/width=900
+window/size/width=1440
+window/size/height=1024
 
 [rendering]
 

@@ -15,7 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_FinishedButton_pressed():
-#	global.answered_correctly = 
-	get_tree().change_scene("res://scenes/End.tscn")
+func _on_NextButton_pressed():
+	get_tree().change_scene("res://scenes/variations/0/Var0_2.tscn")
