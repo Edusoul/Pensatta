@@ -19,4 +19,4 @@ func _ready():
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/" + \
 		str(global.variation_number) + "/Var" + str(global.variation_number) + \
-		"_1.tscn")
+		"_0.tscn")
