@@ -37,13 +37,22 @@ func _on_LineEdit_text_changed(new_text):
 	
 func _encode():
 	answer = []
+	var joined = []
+	$RichTextLabel.visible = false
+	$Button2.visible = false
+	$Button.visible = false
 	for letter in sentence:
 		for i in code.keys():
 			if i == letter:
 				answer.append(code[i])
-				var splitted = answer
-				var joined = PoolStringArray(splitted).join("")
-				$RichTextLabel.bbcode_text = str(joined)
+				if answer.size() > 0:
+					$Button.visible = true
+					$Button2.visible = true
+					$RichTextLabel.visible = true
+					var splitted = answer
+					joined = PoolStringArray(splitted).join("")
+					$RichTextLabel.bbcode_text = str(joined)
+					print(joined)
 			
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
