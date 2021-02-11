@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/img/f1.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Var0" type="Control"]
+margin_right = 1024.0
+margin_bottom = 599.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 691.017
+margin_top = 348.809
+margin_right = 828.017
+margin_bottom = 392.809
+custom_fonts/font = SubResource( 1 )
+text = "Cerrado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 684.282
+margin_top = 171.605
+margin_right = 821.282
+margin_bottom = 215.605
+custom_fonts/font = SubResource( 2 )
+text = "Abierto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 255.917, 289.498 )
+scale = Vector2( 1.19292, 1.34208 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_cerrado"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_abierto"]
