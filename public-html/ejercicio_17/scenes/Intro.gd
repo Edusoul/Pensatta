@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 
-func _on_Timer_timeout():
+func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/" + \
 		str(global.variation_number) + "/Var" + str(global.variation_number) + \
 		".tscn")

@@ -38,7 +38,7 @@ func _ready():
 	else:
 		global.variation_number = global.pick_random_variation_number()
 		
-	get_tree().change_scene("res://scenes/Ready.tscn")
+	get_tree().change_scene("res://scenes/Intro.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

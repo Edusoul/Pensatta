@@ -11,8 +11,7 @@ func _ready():
 
 func _checkSecurity(guess):
 	if guess == secure:
-		emit_signal("toggled",true)
-		
+		emit_signal("toggled",true)	
 	else:
 		emit_signal("toggled",false)	
 	hide()

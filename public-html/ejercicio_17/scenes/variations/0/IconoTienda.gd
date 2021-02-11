@@ -9,7 +9,7 @@ func _ready():
 	i = 100
 	getBack = false
 	dragPosition = null
-	$Info.hide()
+	$Node2D/Info.hide()
 
 func _on_Tienda_gui_input(event):
 	if !getBack:
@@ -24,11 +24,11 @@ func _on_Tienda_gui_input(event):
 
 
 func _on_Tienda_mouse_entered():
-	$Info.show()
+	$Node2D/Info.show()
 	
 
 func _on_Tienda_mouse_exited():
-	$Info.hide()
+	$Node2D/Info.hide()
 
 func _on_VisibilityNotifier2D_screen_exited():
 	getBack = true
