@@ -52,7 +52,6 @@ func _encode():
 					var splitted = answer
 					joined = PoolStringArray(splitted).join("")
 					$RichTextLabel.bbcode_text = str(joined)
-					print(joined)
 			
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")

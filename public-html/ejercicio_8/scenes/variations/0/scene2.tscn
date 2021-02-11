@@ -33,9 +33,9 @@ position = Vector2( 337, 505 )
 texture = ExtResource( 4 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1130.0
+margin_left = 1017.0
 margin_top = 480.0
-margin_right = 1270.0
+margin_right = 1355.0
 margin_bottom = 530.0
 theme = ExtResource( 5 )
 text = "Cerrado"
@@ -44,10 +44,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 1130.0
+margin_left = 1017.0
 margin_top = 342.0
-margin_right = 1267.51
-margin_bottom = 385.005
+margin_right = 1348.0
+margin_bottom = 389.0
 theme = ExtResource( 5 )
 text = "Abierto"
 __meta__ = {

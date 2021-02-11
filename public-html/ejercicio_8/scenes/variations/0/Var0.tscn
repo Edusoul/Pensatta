@@ -23,10 +23,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1130.0
-margin_top = 500.0
-margin_right = 1267.0
-margin_bottom = 549.0
+margin_left = 1062.73
+margin_top = 493.273
+margin_right = 1400.73
+margin_bottom = 542.273
 theme = ExtResource( 6 )
 text = "Cerrado"
 __meta__ = {
@@ -34,10 +34,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 1130.0
-margin_top = 360.0
-margin_right = 1267.0
-margin_bottom = 413.0
+margin_left = 1062.73
+margin_top = 353.273
+margin_right = 1393.73
+margin_bottom = 406.273
 theme = ExtResource( 6 )
 text = "Abierto"
 __meta__ = {

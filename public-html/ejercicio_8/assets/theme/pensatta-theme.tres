@@ -8,43 +8,43 @@ size = 24
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 120.0
+content_margin_right = 120.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
 bg_color = Color( 0.87451, 0.458824, 0.352941, 1 )
 corner_radius_top_left = 47
 corner_radius_top_right = 47
 corner_radius_bottom_right = 47
 corner_radius_bottom_left = 47
-expand_margin_left = 120.0
-expand_margin_right = 120.0
-expand_margin_top = 8.0
-expand_margin_bottom = 8.0
 shadow_color = Color( 0, 0, 0, 0.25098 )
 shadow_size = 4
 shadow_offset = Vector2( 0, 2 )
 
 [sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 120.0
+content_margin_right = 120.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
 bg_color = Color( 0.933333, 0.486275, 0.372549, 1 )
 corner_radius_top_left = 47
 corner_radius_top_right = 47
 corner_radius_bottom_right = 47
 corner_radius_bottom_left = 47
-expand_margin_left = 120.0
-expand_margin_right = 120.0
-expand_margin_top = 8.0
-expand_margin_bottom = 8.0
 shadow_color = Color( 0, 0, 0, 0.25098 )
 shadow_size = 4
 shadow_offset = Vector2( 0, 2 )
 
 [sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 120.0
+content_margin_right = 120.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
 bg_color = Color( 0.733333, 0.380392, 0.294118, 1 )
 corner_radius_top_left = 47
 corner_radius_top_right = 47
 corner_radius_bottom_right = 47
 corner_radius_bottom_left = 47
-expand_margin_left = 120.0
-expand_margin_right = 120.0
-expand_margin_top = 8.0
-expand_margin_bottom = 8.0
 shadow_color = Color( 0, 0, 0, 0.25098 )
 shadow_size = 4
 shadow_offset = Vector2( 0, 2 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/Label.gd" type="Script" id=1]
 [ext_resource path="res://scenes/End.gd" type="Script" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://assets/img/ThoughtBubble2.png" type="Texture" id=6]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=7]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=8]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 9 )
 
 [node name="End" type="Control"]
 margin_left = -3.5636
@@ -131,21 +136,6 @@ autowrap = true
 position = Vector2( -428.759, 24 )
 texture = ExtResource( 3 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 334.79, 65.4271 )
-texture = ExtResource( 8 )
-
-[node name="Label" type="Label" parent="Sprite2"]
-margin_left = -97.4707
-margin_top = -21.1893
-margin_right = 58.5293
-margin_bottom = 16.8107
-theme = ExtResource( 7 )
-text = "Asegurate"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Button" type="Button" parent="."]
 margin_left = 1030.0
 margin_top = 776.0
@@ -153,3 +143,23 @@ margin_right = 1203.0
 margin_bottom = 829.0
 theme = ExtResource( 7 )
 text = "Siguiente"
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 4.36653
+margin_right = 507.263
+margin_bottom = 56.3665
+theme = ExtResource( 7 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Asegurate"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
