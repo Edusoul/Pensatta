@@ -1,0 +1,117 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/variations/0/CDROM.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/variations/0/CPU.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/variations/0/InputDevices.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/variations/0/HardDrive.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/variations/0/GPU.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/variations/0/Board.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/variations/0/OutputDevice.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/variations/0/RAM.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+mouse_filter = 2
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.0
+margin_top = 8.0
+margin_right = 557.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "¿Qué hay por dentro?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1139.0
+margin_top = 794.0
+margin_right = 1273.0
+margin_bottom = 825.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Computer" type="Node" parent="."]
+
+[node name="Board" type="Area2D" parent="Computer"]
+
+[node name="Board" type="Sprite" parent="Computer/Board"]
+material = SubResource( 2 )
+position = Vector2( 442.156, 456.474 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/Board"]
+position = Vector2( 254.504, 214.187 )
+polygon = PoolVector2Array( -42.4168, 253.196, 198.228, 112.085, 416.194, 244.377, 181.849, 381.708 )
+
+[node name="CDROM" type="Area2D" parent="Computer"]
+
+[node name="CDROM" type="Sprite" parent="Computer/CDROM"]
+position = Vector2( 614.632, 600.038 )
+texture = ExtResource( 5 )
+
+[node name="CPU" type="Area2D" parent="Computer"]
+
+[node name="CPU" type="Sprite" parent="Computer/CPU"]
+position = Vector2( 577.778, 299.856 )
+texture = ExtResource( 6 )
+
+[node name="GPU" type="Area2D" parent="Computer"]
+
+[node name="GPU" type="Sprite" parent="Computer/GPU"]
+position = Vector2( 193.054, 395.949 )
+texture = ExtResource( 9 )
+
+[node name="HardDrive" type="Area2D" parent="Computer"]
+
+[node name="HardDrive" type="Sprite" parent="Computer/HardDrive"]
+position = Vector2( 177.534, 567.724 )
+texture = ExtResource( 8 )
+
+[node name="InputDevices" type="Area2D" parent="Computer"]
+
+[node name="InputDevices" type="Sprite" parent="Computer/InputDevices"]
+position = Vector2( 379.513, 633.455 )
+texture = ExtResource( 7 )
+
+[node name="OutputDevice" type="Area2D" parent="Computer"]
+
+[node name="OutputDevice" type="Sprite" parent="Computer/OutputDevice"]
+position = Vector2( 782.695, 392.203 )
+texture = ExtResource( 11 )
+
+[node name="RAM" type="Area2D" parent="Computer"]
+
+[node name="RAM" type="Sprite" parent="Computer/RAM"]
+position = Vector2( 365.849, 293.543 )
+texture = ExtResource( 12 )
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="mouse_entered" from="Computer/Board" to="." method="_on_Board_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/Board" to="." method="_on_Board_mouse_exited"]

@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
 [ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 41
 font_data = ExtResource( 4 )
 
@@ -42,7 +42,7 @@ margin_left = 88.2626
 margin_top = 7.93414
 margin_right = 507.263
 margin_bottom = 58.9341
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "Título del problema"
 __meta__ = {
 "_edit_use_anchors_": false
