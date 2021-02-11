@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ejercicio_6"
-run/main_scene="res://scenes/Ready.tscn"
+run/main_scene="res://scenes/Setup.tscn"
 config/icon="res://icon.png"
 
 [autoload]
