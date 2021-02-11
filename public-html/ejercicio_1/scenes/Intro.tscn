@@ -63,7 +63,7 @@ margin_top = -40.9603
 margin_right = 373.0
 margin_bottom = 38.0397
 theme = ExtResource( 5 )
-text = "Aquí va la descripción del problema. Haz algo para avanzar a la siguiente pantalla."
+text = "Explora el interior del computador y selecciona en la lista al final las partes que identifiques."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=1]
 [ext_resource path="res://scenes/variations/0/Var0_1.gd" type="Script" id=2]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=4]
+[ext_resource path="res://assets/img/Shadow.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Katty1.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/ThoughtBubble3.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/CheckboxRect.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
@@ -26,7 +31,7 @@ margin_top = 794.0
 margin_right = 1391.0
 margin_bottom = 841.0
 theme = ExtResource( 4 )
-text = "RESPONDER"
+text = "FINALIZAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,4 +51,53 @@ text = "¿Qué hay por dentro?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="KattySprite" type="Sprite" parent="."]
+position = Vector2( 346.057, 492.878 )
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="Shadow" type="Sprite" parent="KattySprite"]
+modulate = Color( 0.188235, 0.431373, 0.403922, 0.537255 )
+position = Vector2( -16.284, 329.819 )
+z_as_relative = false
+texture = ExtResource( 5 )
+
+[node name="ThoughtBubble3" type="Sprite" parent="."]
+position = Vector2( 798.878, 216.812 )
+z_index = 1
+texture = ExtResource( 7 )
+
+[node name="BubbleTail2" type="Sprite" parent="ThoughtBubble3"]
+position = Vector2( -243.479, 24.4572 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="TailShadow" type="Sprite" parent="ThoughtBubble3/BubbleTail2"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 2.61438, 3.03958 )
+z_as_relative = false
+texture = ExtResource( 8 )
+
+[node name="Shadow" type="Sprite" parent="ThoughtBubble3"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 1.31177, 2.9446 )
+z_as_relative = false
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="ThoughtBubble3"]
+margin_left = -214.0
+margin_top = -42.0
+margin_right = 218.0
+margin_bottom = 37.0
+theme = ExtResource( 4 )
+text = "Selecciona en la lista las partes que has descubierto."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckboxRect" type="Sprite" parent="."]
+position = Vector2( 976.219, 533.609 )
+texture = ExtResource( 9 )
 [connection signal="pressed" from="AnswerButton" to="." method="_on_AnswerButton_pressed"]

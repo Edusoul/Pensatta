@@ -175,7 +175,7 @@ margin_top = -266.996
 margin_right = -62.0427
 margin_bottom = -228.996
 custom_fonts/font = SubResource( 10 )
-text = "Haz click en un elemento"
+text = "Clickea los elementos"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -186,7 +186,7 @@ margin_top = -210.556
 margin_right = 160.243
 margin_bottom = 218.444
 custom_fonts/font = SubResource( 11 )
-text = "Mira su descripción."
+text = "Mira sus descripciones y dale a siguiente."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -194,3 +194,17 @@ __meta__ = {
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="mouse_entered" from="Computer/Board" to="." method="_on_Board_mouse_entered"]
 [connection signal="mouse_exited" from="Computer/Board" to="." method="_on_Board_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/CDROM" to="." method="_on_CDROM_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/CDROM" to="." method="_on_CDROM_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/CPU" to="." method="_on_CPU_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/CPU" to="." method="_on_CPU_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/GPU" to="." method="_on_GPU_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/GPU" to="." method="_on_GPU_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/HardDrive" to="." method="_on_HardDrive_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/HardDrive" to="." method="_on_HardDrive_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/InputDevices" to="." method="_on_InputDevices_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/InputDevices" to="." method="_on_InputDevices_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/OutputDevice" to="." method="_on_OutputDevice_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/OutputDevice" to="." method="_on_OutputDevice_mouse_exited"]
+[connection signal="mouse_entered" from="Computer/RAM" to="." method="_on_RAM_mouse_entered"]
+[connection signal="mouse_exited" from="Computer/RAM" to="." method="_on_RAM_mouse_exited"]
