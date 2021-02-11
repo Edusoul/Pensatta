@@ -28,4 +28,4 @@ func _input(event):
 	if event is InputEventMouseButton and inside:
 		if event.button_index == BUTTON_LEFT and not event.pressed: #Mouse Released
 			pos = shopNode.get_global_position()
-			shopNode.set_global_position(global_position-Vector2(87.5,24))
+			shopNode.set_global_position(global_position-Vector2(125,50))
