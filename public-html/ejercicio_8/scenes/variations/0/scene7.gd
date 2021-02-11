@@ -24,7 +24,6 @@ func _random_scene():
 
 func _on_Button2_abierto():
 	global.answers.append(7)
-	print(global.answers)
 	if global.answers.size() == 5 or global.answers_wrong.size() == 5:
 		get_tree().change_scene("res://scenes/End.tscn")
 	elif global.answers.size() == 4 and global.answers_wrong.size() == 1:
@@ -41,7 +40,6 @@ func _on_Button2_abierto():
 
 func _on_Button_cerrado():
 	global.answers_wrong.append(14)
-	print(global.answers_wrong)
 	if global.answers.size() == 5 or global.answers_wrong.size() == 5:
 		get_tree().change_scene("res://scenes/End.tscn")
 	elif global.answers.size() == 4 and global.answers_wrong.size() == 1:
