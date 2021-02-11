@@ -2,26 +2,24 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var congratulations;
-var bad_luck;
+var result_title;
+var result_summary;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	congratulations = get_node("Congratulations")
-	bad_luck = get_node("BadLuck")
+	result_title = $Node2D/ResultLabel
+	result_summary = $Node2D/SummaryLabel
 	if global.answered_correctly:
-		bad_luck.visible = false;
+		result_title.text = "Felicitaciones"
+		result_summary.text = "Identificaste correctamente las contraseñas"
 	else:
-		congratulations.visible = false;
+		result_title.text = "Mala suerte"
+		result_summary.text = "No lograste reconocer la seguridad de las contraseñas"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 
-func _on_Timer_timeout():
-	JavaScript.eval("window.top.postMessage('finished_problem', '*')")
-
-
-func _on_NextButton_pressed():
+func _on_FinishButton_pressed():
 	JavaScript.eval("window.top.postMessage('finished_problem', '*')")

@@ -1,48 +1,71 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
-[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/img/f1.png" type="Texture" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
+[ext_resource path="res://assets/img/Katty1.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/ThoughtBubble.png" type="Texture" id=5]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=6]
 
 [node name="Var0" type="Control"]
-margin_right = 1024.0
-margin_bottom = 599.0
+margin_right = 1440.0
+margin_bottom = 900.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="."]
-margin_left = 691.017
-margin_top = 348.809
-margin_right = 828.017
-margin_bottom = 392.809
-custom_fonts/font = SubResource( 1 )
+margin_left = 1130.0
+margin_top = 500.0
+margin_right = 1267.0
+margin_bottom = 549.0
+theme = ExtResource( 6 )
 text = "Cerrado"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 684.282
-margin_top = 171.605
-margin_right = 821.282
-margin_bottom = 215.605
-custom_fonts/font = SubResource( 2 )
+margin_left = 1130.0
+margin_top = 360.0
+margin_right = 1267.0
+margin_bottom = 413.0
+theme = ExtResource( 6 )
 text = "Abierto"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 255.917, 289.498 )
-scale = Vector2( 1.19292, 1.34208 )
+[node name="image" type="Sprite" parent="."]
+position = Vector2( 815, 492.082 )
+scale = Vector2( 1.4159, 1.90837 )
 texture = ExtResource( 3 )
+
+[node name="Katty1" type="Sprite" parent="."]
+position = Vector2( 337, 505 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 870.5, 142.705 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -228.328
+margin_top = -19.0273
+margin_right = 222.672
+margin_bottom = 18.9727
+theme = ExtResource( 6 )
+text = "¿Cual es el candado correcto?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Button_cerrado"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_abierto"]
