@@ -1,37 +1,49 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/variations/0/IconoTienda.gd" type="Script" id=3]
 [ext_resource path="res://scenes/variations/0/FirstPlace.gd" type="Script" id=4]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 25
-font_data = ExtResource( 2 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 150, 75 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 96, 32 )
-
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.701961, 0.701961, 0.701961, 0.333333 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.701961, 0.701961, 0.701961, 0.784314 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 5 )
 
 [sub_resource type="Gradient" id=6]
 offsets = PoolRealArray( 0.00645161, 1 )
-colors = PoolColorArray( 0.90625, 0.635077, 0.251343, 1, 0.933594, 0.813005, 0.707489, 1 )
+colors = PoolColorArray( 0.933333, 0.486275, 0.372549, 1, 0.933594, 0.813005, 0.707489, 1 )
 
 [sub_resource type="GradientTexture" id=7]
 gradient = SubResource( 6 )
 width = 150
 
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 1, 1, 1, 0.717647 )
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 126, 54 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -44,17 +56,9 @@ corner_radius_bottom_left = 10
 expand_margin_left = 20.0
 expand_margin_top = 10.0
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=11]
+size = 20
 font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=10]
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = 2
-font_data = ExtResource( 2 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 88, 24 )
 
 [sub_resource type="Gradient" id=12]
 offsets = PoolRealArray( 0.00645161, 1 )
@@ -77,23 +81,21 @@ script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 1.0
-margin_right = 901.0
-margin_bottom = 600.0
-color = Color( 1, 0.913725, 0.839216, 1 )
+margin_right = 1441.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="InstructionLabel" type="Label" parent="."]
-margin_left = 44.0
-margin_top = 8.0
-margin_right = 848.0
-margin_bottom = 116.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Organice las Tiendas según qué tan confiables son 
-(Pase el mouse por encima para ver descripción y arrastrelas para moverlas)"
+margin_top = 54.0
+margin_right = 1440.0
+margin_bottom = 139.0
+theme = ExtResource( 6 )
+text = "(Pase el mouse por encima para ver descripción y arrástrelas para moverlas)"
 align = 1
 autowrap = true
 __meta__ = {
@@ -101,12 +103,12 @@ __meta__ = {
 }
 
 [node name="FinishedButton" type="Button" parent="."]
-margin_left = 416.0
-margin_top = 528.0
-margin_right = 552.0
-margin_bottom = 566.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.980392, 0.584314, 0.47451, 1 )
+margin_left = 522.0
+margin_top = 774.0
+margin_right = 922.0
+margin_bottom = 846.0
+theme = ExtResource( 6 )
+custom_fonts/font = SubResource( 1 )
 text = "Realizado"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -115,43 +117,41 @@ __meta__ = {
 [node name="1stPlace" type="Area2D" parent="." groups=[
 "Lugares",
 ]]
-position = Vector2( 480, 168 )
+position = Vector2( 720, 234 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="1stPlace"]
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
+shape = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="1stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 4 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel2" type="Panel" parent="1stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 5 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="1stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
 text = "Primer Lugar
 (Más confiable)"
 align = 1
@@ -163,44 +163,43 @@ __meta__ = {
 [node name="2stPlace" type="Area2D" parent="." groups=[
 "Lugares",
 ]]
-position = Vector2( 480, 304 )
+position = Vector2( 720, 432 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2stPlace"]
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
+shape = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="2stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 4 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel2" type="Panel" parent="2stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 5 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="2stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-text = "Segundo Lugar"
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "Primer Lugar
+(Más confiable)"
 align = 1
 valign = 1
 __meta__ = {
@@ -210,45 +209,43 @@ __meta__ = {
 [node name="3stPlace" type="Area2D" parent="." groups=[
 "Lugares",
 ]]
-position = Vector2( 480, 448 )
+position = Vector2( 720, 630 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3stPlace"]
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
+shape = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="3stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 4 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel2" type="Panel" parent="3stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-custom_styles/panel = SubResource( 5 )
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="3stPlace"]
-margin_left = -96.0
-margin_top = -32.0
-margin_right = 96.0
-margin_bottom = 32.0
-text = "Tercer Lugar
-(Menos confiable)"
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "Primer Lugar
+(Más confiable)"
 align = 1
 valign = 1
 __meta__ = {
@@ -258,10 +255,10 @@ __meta__ = {
 [node name="Shop1" type="TextureRect" parent="." groups=[
 "Shops",
 ]]
-margin_left = 160.0
-margin_top = 104.0
-margin_right = 335.0
-margin_bottom = 152.0
+margin_left = 144.0
+margin_top = 504.0
+margin_right = 394.0
+margin_bottom = 604.0
 texture = SubResource( 7 )
 expand = true
 flip_h = true
@@ -271,29 +268,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Info" type="Label" parent="Shop1"]
-margin_left = -120.0
-margin_top = 64.0
-margin_right = 288.0
-margin_bottom = 229.0
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0.407843, 0.407843, 0.407843, 1 )
-text = "Reputación del vendedor: 2/5
-Tiempo de trabajo desde apertura: 1 mes
-Pago contraentrega: NO
-Aseguramiento de compras: Solo superior a $100.000.
-Seguridad en transacción con reembolso: NO"
-valign = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Title" type="Label" parent="Shop1"]
-margin_right = 175.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 10 )
+margin_right = 250.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Producto
 Tienda 1"
@@ -308,19 +286,42 @@ __meta__ = {
 position = Vector2( 88, 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shop1/AreaT1"]
-shape = SubResource( 11 )
+position = Vector2( 38, 24 )
+shape = SubResource( 9 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Shop1"]
-position = Vector2( 92, 24 )
+position = Vector2( 126, 48 )
 scale = Vector2( 5.2, 0.8 )
+
+[node name="Node2D" type="Node2D" parent="Shop1"]
+z_index = 1
+
+[node name="Info" type="Label" parent="Shop1/Node2D"]
+margin_left = -72.0
+margin_top = 120.0
+margin_right = 336.0
+margin_bottom = 351.0
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.407843, 0.407843, 0.407843, 1 )
+text = "Reputación del vendedor: 2/5
+Tiempo de trabajo desde apertura: 1 mes
+Pago contraentrega: NO
+Aseguramiento de compras: Solo superior a $100.000.
+Seguridad en transacción con reembolso: NO"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Shop2" type="TextureRect" parent="." groups=[
 "Shops",
 ]]
-margin_left = 600.0
-margin_top = 216.0
-margin_right = 775.0
-margin_bottom = 264.0
+margin_left = 1062.0
+margin_top = 324.0
+margin_right = 1312.0
+margin_bottom = 424.0
 texture = SubResource( 13 )
 expand = true
 flip_h = true
@@ -330,13 +331,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Info" type="Label" parent="Shop2"]
-margin_left = -120.0
-margin_top = 64.0
-margin_right = 288.0
-margin_bottom = 229.0
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 9 )
+[node name="Title" type="Label" parent="Shop2"]
+margin_right = 250.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Producto
+Tienda 2"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="Shop2"]
+z_index = 1
+
+[node name="Info" type="Label" parent="Shop2/Node2D"]
+margin_left = -72.0
+margin_top = 120.0
+margin_right = 336.0
+margin_bottom = 322.0
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.407843, 0.407843, 0.407843, 1 )
 text = "Reputación del vendedor: 5/5
 Tiempo de trabajo desde apertura: 10 años y 7 meses
@@ -349,25 +367,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="Shop2"]
-margin_right = 175.0
-margin_bottom = 52.0
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Producto
-Tienda 2"
-align = 1
-valign = 1
-uppercase = true
-
 [node name="AreaT2" type="Area2D" parent="Shop2"]
 position = Vector2( 88, 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shop2/AreaT2"]
-shape = SubResource( 11 )
+position = Vector2( 38, 30 )
+shape = SubResource( 9 )
 
 [node name="VisibilityNotifier2D2" type="VisibilityNotifier2D" parent="Shop2"]
-position = Vector2( 88, 24 )
+position = Vector2( 126, 54 )
 scale = Vector2( 5.2, 0.8 )
 __meta__ = {
 "_edit_group_": true
@@ -376,10 +384,10 @@ __meta__ = {
 [node name="Shop3" type="TextureRect" parent="." groups=[
 "Shops",
 ]]
-margin_left = 160.0
-margin_top = 352.0
-margin_right = 335.0
-margin_bottom = 400.0
+margin_left = 162.0
+margin_top = 144.0
+margin_right = 412.0
+margin_bottom = 244.0
 texture = SubResource( 15 )
 expand = true
 flip_h = true
@@ -389,13 +397,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Info" type="Label" parent="Shop3"]
-margin_left = -116.0
-margin_top = 64.0
-margin_right = 292.0
-margin_bottom = 229.0
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 9 )
+[node name="Title" type="Label" parent="Shop3"]
+margin_right = 252.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Producto
+Tienda 3"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Node2D" type="Node2D" parent="Shop3"]
+z_index = 1
+
+[node name="Info" type="Label" parent="Shop3/Node2D"]
+margin_left = -72.0
+margin_top = 120.0
+margin_right = 336.0
+margin_bottom = 351.0
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0.407843, 0.407843, 0.407843, 1 )
 text = "Reputación del vendedor: 3/5
 Tiempo de trabajo desde apertura:  2 años
@@ -404,26 +426,19 @@ Aseguramiento de compras: Solo superior a $50.000.
 Seguridad en transacción con reembolso: SI"
 valign = 1
 autowrap = true
-
-[node name="Title" type="Label" parent="Shop3"]
-margin_right = 175.0
-margin_bottom = 52.0
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Producto
-Tienda 3"
-align = 1
-valign = 1
-uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AreaT3" type="Area2D" parent="Shop3"]
 position = Vector2( 88, 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shop3/AreaT3"]
-shape = SubResource( 11 )
+position = Vector2( 38, 26 )
+shape = SubResource( 9 )
 
 [node name="VisibilityNotifier2D3" type="VisibilityNotifier2D" parent="Shop3"]
-position = Vector2( 88, 24 )
+position = Vector2( 126, 50 )
 scale = Vector2( 5.2, 0.8 )
 [connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]
 [connection signal="area_shape_entered" from="1stPlace" to="1stPlace" method="_on_FirstPlace_area_shape_entered"]

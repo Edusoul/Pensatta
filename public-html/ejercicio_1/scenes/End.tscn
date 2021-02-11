@@ -100,10 +100,10 @@ __meta__ = {
 }
 
 [node name="FinishButton" type="Button" parent="."]
-margin_left = 1119.0
+margin_left = 1013.0
 margin_top = 794.0
-margin_right = 1253.0
-margin_bottom = 825.0
+margin_right = 1387.0
+margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "FINALIZAR"
 __meta__ = {
