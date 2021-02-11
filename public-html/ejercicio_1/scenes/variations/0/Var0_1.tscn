@@ -21,10 +21,10 @@ __meta__ = {
 }
 
 [node name="AnswerButton" type="Button" parent="."]
-margin_left = 1109.0
+margin_left = 992.0
 margin_top = 794.0
-margin_right = 1268.0
-margin_bottom = 825.0
+margin_right = 1391.0
+margin_bottom = 841.0
 theme = ExtResource( 4 )
 text = "RESPONDER"
 __meta__ = {

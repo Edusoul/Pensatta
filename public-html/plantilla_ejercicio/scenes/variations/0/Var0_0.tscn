@@ -37,10 +37,10 @@ __meta__ = {
 }
 
 [node name="NextButton" type="Button" parent="."]
-margin_left = 1139.0
+margin_left = 1014.0
 margin_top = 794.0
-margin_right = 1273.0
-margin_bottom = 825.0
+margin_right = 1388.0
+margin_bottom = 841.0
 theme = ExtResource( 2 )
 text = "SIGUIENTE"
 __meta__ = {

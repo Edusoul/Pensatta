@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
@@ -12,12 +12,36 @@
 [ext_resource path="res://assets/img/variations/0/Board.png" type="Texture" id=10]
 [ext_resource path="res://assets/img/variations/0/OutputDevice.png" type="Texture" id=11]
 [ext_resource path="res://assets/img/variations/0/RAM.png" type="Texture" id=12]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/img/DescRect.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
 font_data = ExtResource( 4 )
 
 [sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+
+[sub_resource type="ShaderMaterial" id=4]
+
+[sub_resource type="ShaderMaterial" id=5]
+
+[sub_resource type="ShaderMaterial" id=6]
+
+[sub_resource type="ShaderMaterial" id=7]
+
+[sub_resource type="ShaderMaterial" id=8]
+
+[sub_resource type="ShaderMaterial" id=9]
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+font_data = ExtResource( 13 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,10 +72,10 @@ __meta__ = {
 }
 
 [node name="NextButton" type="Button" parent="."]
-margin_left = 1139.0
+margin_left = 1025.0
 margin_top = 794.0
-margin_right = 1273.0
-margin_bottom = 825.0
+margin_right = 1399.0
+margin_bottom = 841.0
 theme = ExtResource( 2 )
 text = "SIGUIENTE"
 __meta__ = {
@@ -74,44 +98,99 @@ polygon = PoolVector2Array( -42.4168, 253.196, 198.228, 112.085, 416.194, 244.37
 [node name="CDROM" type="Area2D" parent="Computer"]
 
 [node name="CDROM" type="Sprite" parent="Computer/CDROM"]
+material = SubResource( 3 )
 position = Vector2( 614.632, 600.038 )
 texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/CDROM"]
+polygon = PoolVector2Array( 510, 628.5, 510.5, 599.5, 641.5, 525.5, 708, 563.5, 709, 595, 578.5, 668 )
 
 [node name="CPU" type="Area2D" parent="Computer"]
 
 [node name="CPU" type="Sprite" parent="Computer/CPU"]
+material = SubResource( 4 )
 position = Vector2( 577.778, 299.856 )
 texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/CPU"]
+polygon = PoolVector2Array( 512.02, 312.336, 556.588, 341.768, 571.724, 335.881, 588.542, 336.722, 597.792, 342.608, 644.041, 314.018, 634.791, 298.882, 645.723, 290.473, 589.383, 261.882, 559.951, 261.041, 512.861, 292.155, 524.634, 299.723 )
 
 [node name="GPU" type="Area2D" parent="Computer"]
 
 [node name="GPU" type="Sprite" parent="Computer/GPU"]
+material = SubResource( 5 )
 position = Vector2( 193.054, 395.949 )
 texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/GPU"]
+polygon = PoolVector2Array( 163.048, 463.697, 292.546, 388.017, 289.183, 345.972, 242.933, 324.95, 91.5721, 405.676, 90.7312, 428.38 )
 
 [node name="HardDrive" type="Area2D" parent="Computer"]
 
 [node name="HardDrive" type="Sprite" parent="Computer/HardDrive"]
+material = SubResource( 6 )
 position = Vector2( 177.534, 567.724 )
 texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/HardDrive"]
+polygon = PoolVector2Array( 169.775, 617.582, 259.751, 567.128, 258.07, 542.742, 191.639, 504.061, 96.6175, 559.56, 96.6175, 588.15, 154.639, 618.422 )
 
 [node name="InputDevices" type="Area2D" parent="Computer"]
 
 [node name="InputDevices" type="Sprite" parent="Computer/InputDevices"]
+material = SubResource( 7 )
 position = Vector2( 379.513, 633.455 )
 texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/InputDevices"]
+polygon = PoolVector2Array( 262.274, 605.809, 439.703, 710.921, 488.475, 705.035, 499.407, 689.058, 491.839, 674.762, 316.932, 575.537 )
 
 [node name="OutputDevice" type="Area2D" parent="Computer"]
 
 [node name="OutputDevice" type="Sprite" parent="Computer/OutputDevice"]
+material = SubResource( 8 )
 position = Vector2( 782.695, 392.203 )
 texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/OutputDevice"]
+polygon = PoolVector2Array( 685.245, 490.606, 737.381, 458.652, 671.791, 424.175, 675.995, 235.815, 690.29, 229.928, 892.106, 340.086, 891.265, 530.128, 876.969, 538.537, 852.583, 526.765, 797.925, 554.514 )
 
 [node name="RAM" type="Area2D" parent="Computer"]
 
 [node name="RAM" type="Sprite" parent="Computer/RAM"]
+material = SubResource( 9 )
 position = Vector2( 365.849, 293.543 )
 texture = ExtResource( 12 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/RAM"]
+polygon = PoolVector2Array( 316.435, 349.307, 419.616, 293.748, 419.616, 246.92, 311.672, 301.685 )
+
+[node name="DescRect" type="Sprite" parent="."]
+position = Vector2( 1208.31, 437.032 )
+texture = ExtResource( 14 )
+
+[node name="Name" type="Label" parent="DescRect"]
+margin_left = -190.043
+margin_top = -266.996
+margin_right = -62.0427
+margin_bottom = -228.996
+custom_fonts/font = SubResource( 10 )
+text = "Haz click en un elemento"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="DescRect"]
+margin_left = -188.757
+margin_top = -210.556
+margin_right = 160.243
+margin_bottom = 218.444
+custom_fonts/font = SubResource( 11 )
+text = "Mira su descripción."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="mouse_entered" from="Computer/Board" to="." method="_on_Board_mouse_entered"]
 [connection signal="mouse_exited" from="Computer/Board" to="." method="_on_Board_mouse_exited"]

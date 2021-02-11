@@ -92,10 +92,10 @@ z_as_relative = false
 texture = ExtResource( 6 )
 
 [node name="StartButton" type="Button" parent="."]
-margin_left = 1154.0
+margin_left = 1040.0
 margin_top = 794.0
-margin_right = 1250.0
-margin_bottom = 825.0
+margin_right = 1376.0
+margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "INICIAR"
 __meta__ = {
