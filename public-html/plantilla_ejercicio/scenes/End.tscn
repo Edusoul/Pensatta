@@ -49,13 +49,39 @@ __meta__ = {
 }
 
 [node name="Katty2Sprite" type="Sprite" parent="."]
-position = Vector2( 472.505, 470.576 )
+position = Vector2( 449.505, 470.576 )
 texture = ExtResource( 3 )
+flip_h = true
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 1087.69, 216.982 )
+position = Vector2( 1136.69, 216.982 )
 z_index = 1
 texture = ExtResource( 2 )
+
+[node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
+margin_left = -199.9
+margin_top = -69.7546
+margin_right = 30.1001
+margin_bottom = -21.7546
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+text = "¡Resultado!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
+margin_left = -202.0
+margin_top = -23.0
+margin_right = 224.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+text = "Resumen de tus respuestas."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ShadowSprite" type="Sprite" parent="ThoughtBubbleSprite"]
 modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
@@ -65,7 +91,6 @@ texture = ExtResource( 2 )
 
 [node name="BubbleTailSprite" type="Sprite" parent="ThoughtBubbleSprite"]
 position = Vector2( -243.786, 26.8106 )
-z_index = 1
 texture = ExtResource( 8 )
 
 [node name="TailShadowSprite" type="Sprite" parent="ThoughtBubbleSprite/BubbleTailSprite"]
@@ -74,35 +99,10 @@ position = Vector2( 3.35968, 4.61673 )
 z_as_relative = false
 texture = ExtResource( 8 )
 
-[node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -190.9
-margin_top = -76.7546
-margin_right = 39.1001
-margin_bottom = -28.7546
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-text = "¡Resultado!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -192.0
-margin_top = -30.0
-margin_right = 154.0
-margin_bottom = 63.0
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-text = "Resumen de tu resultado"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="FinishButton" type="Button" parent="."]
-margin_left = 1020.0
+margin_left = 992.0
 margin_top = 794.0
-margin_right = 1394.0
+margin_right = 1366.0
 margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "FINALIZAR"
