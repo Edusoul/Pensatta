@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/img/Shadow.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Intro.gd" type="Script" id=7]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 41
 font_data = ExtResource( 3 )
 
@@ -28,17 +28,18 @@ __meta__ = {
 }
 
 [node name="RectTitleSprite" type="Sprite" parent="."]
-position = Vector2( 0, 40 )
+position = Vector2( -16.8179, 40 )
+scale = Vector2( 1.25913, 1 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+[node name="TitleLabel" type="Label" parent="."]
 margin_left = 88.2626
-margin_top = 7.93414
-margin_right = 507.263
-margin_bottom = 58.9341
-custom_fonts/font = SubResource( 1 )
-text = "Título del problema"
+margin_top = 47.9341
+margin_right = 784.263
+margin_bottom = 98.9341
+custom_fonts/font = SubResource( 4 )
+text = "Aplicación o Sistema Operativo?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
