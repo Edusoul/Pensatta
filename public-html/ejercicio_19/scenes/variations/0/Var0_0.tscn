@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/variations/0/wordApp.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 4 )
 
@@ -16,7 +16,7 @@ extents = Vector2( 1152.18, 95.3048 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 91.9186, 600.39 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 41
 font_data = ExtResource( 4 )
 
@@ -41,7 +41,7 @@ margin_top = 756.0
 margin_right = 1388.0
 margin_bottom = 841.0
 theme = ExtResource( 2 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "SIGUIENTE"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -72,23 +72,26 @@ rotation = -3.14159
 shape = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_top = 55.0
+margin_top = 40.0
 margin_right = 784.0
-margin_bottom = 106.0
+margin_bottom = 91.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RectTitleSprite" type="Sprite" parent="MarginContainer"]
-scale = Vector2( 1.442, 1 )
+[node name="RectTitleSprite2" type="Sprite" parent="MarginContainer"]
+position = Vector2( -16.8179, 0 )
+scale = Vector2( 1.25913, 1 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="TitleLabel" type="Label" parent="MarginContainer"]
-margin_right = 784.0
-margin_bottom = 51.0
-custom_fonts/font = SubResource( 1 )
-text = "Sistemas Operativos Identificados: 0"
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 88.2626
+margin_top = 47.9341
+margin_right = 784.263
+margin_bottom = 98.9341
+custom_fonts/font = SubResource( 4 )
+text = "Aplicación o Sistema Operativo?"
 __meta__ = {
 "_edit_use_anchors_": false
 }

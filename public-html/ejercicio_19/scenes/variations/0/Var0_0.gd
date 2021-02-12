@@ -10,7 +10,6 @@ var opSystems = ["Windows","Linux","Ubuntu","MacOS"]
 
 func _ready():
 	$NextButton.hide()
-	$MarginContainer/TitleLabel.text = "Sistemas Operativos Identificados: 0"
 	
 	for app in apps:
 		var word = wordApp.instance()
@@ -33,7 +32,6 @@ func _on_NextButton_pressed():
 	
 func _addCounter():
 	counter += 1
-	$MarginContainer/TitleLabel.text = "Sistemas Operativos Identificados: " + str(counter)
 	if counter == len(opSystems):
 		global.answered_correctly = true
 		$NextButton.show()

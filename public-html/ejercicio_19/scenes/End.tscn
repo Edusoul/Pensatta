@@ -10,16 +10,16 @@
 [ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
-size = 41
+size = 36
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 36
-font_data = ExtResource( 4 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 36
-font_data = ExtResource( 6 )
+size = 41
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -28,22 +28,6 @@ script = ExtResource( 1 )
 margin_right = 1440.0
 margin_bottom = 900.0
 color = Color( 0.254902, 0.560784, 0.529412, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RectTitleSprite" type="Sprite" parent="."]
-position = Vector2( 0, 40 )
-texture = ExtResource( 7 )
-centered = false
-
-[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
-margin_left = 88.2626
-margin_top = 7.93414
-margin_right = 507.263
-margin_bottom = 58.9341
-custom_fonts/font = SubResource( 1 )
-text = "Título del problema"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,7 +63,7 @@ margin_left = -190.9
 margin_top = -76.7546
 margin_right = 39.1001
 margin_bottom = -28.7546
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "¡Resultado!"
 __meta__ = {
@@ -91,7 +75,7 @@ margin_left = -192.0
 margin_top = -30.0
 margin_right = 154.0
 margin_bottom = 63.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "Resumen de tu resultado"
 autowrap = true
@@ -106,6 +90,23 @@ margin_right = 1394.0
 margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "FINALIZAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( -16.8179, 40 )
+scale = Vector2( 1.25913, 1 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 88.2626
+margin_top = 47.9341
+margin_right = 784.263
+margin_bottom = 98.9341
+custom_fonts/font = SubResource( 3 )
+text = "Aplicación o Sistema Operativo?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
