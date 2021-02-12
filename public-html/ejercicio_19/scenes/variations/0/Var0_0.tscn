@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/variations/0/wordApp.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1152.18, 95.3048 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 91.9186, 600.39 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+wordApp = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 908.0
+margin_top = 756.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 4 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2( 725.11, 930.868 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+position = Vector2( 0, -812 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2( -2.24487, -214.333 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2( -814.907, 321.024 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2( 803.683, 336.739 )
+rotation = 3.14159
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2( -10.0908, 872.545 )
+rotation = -3.14159
+shape = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 55.0
+margin_right = 784.0
+margin_bottom = 106.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="MarginContainer"]
+scale = Vector2( 1.442, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="MarginContainer"]
+margin_right = 784.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 1 )
+text = "Sistemas Operativos Identificados: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

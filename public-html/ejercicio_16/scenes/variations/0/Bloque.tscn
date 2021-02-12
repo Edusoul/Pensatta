@@ -111,7 +111,7 @@ margin_right = 384.0
 margin_bottom = 143.0
 theme = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Segura"
+text = "SEGURA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -123,7 +123,7 @@ margin_right = 384.0
 margin_bottom = 207.0
 theme = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Insegura"
+text = "INSEGURA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
