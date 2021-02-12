@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/variations/0/dataSquare.gd" type="Script" id=2]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.705882, 0.8, 1, 1 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.12549 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 47
+corner_radius_top_right = 47
+corner_radius_bottom_right = 47
+corner_radius_bottom_left = 47
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 612, 360 )
+script = ExtResource( 2 )
+
+[node name="Data" type="Panel" parent="."]
+margin_right = 180.0
+margin_bottom = 180.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Data"]
+margin_right = 180.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "data"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="Panel" parent="."]
+margin_right = 180.0
+margin_bottom = 180.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoverAlpha" type="Panel" parent="."]
+margin_right = 180.0
+margin_bottom = 180.0
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlPanel" type="Panel" parent="."]
+margin_right = 180.0
+margin_bottom = 180.0
+theme = ExtResource( 3 )
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="ControlPanel" to="." method="_on_ControlPanel_gui_input"]
+[connection signal="mouse_entered" from="ControlPanel" to="." method="_on_Cover_mouse_entered"]
+[connection signal="mouse_exited" from="ControlPanel" to="." method="_on_Cover_mouse_exited"]
