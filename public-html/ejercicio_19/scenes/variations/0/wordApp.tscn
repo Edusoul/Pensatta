@@ -3,17 +3,17 @@
 [ext_resource path="res://scenes/variations/0/wordApp.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 128, 32 )
 
 [node name="Node2D" type="RigidBody2D"]
 input_pickable = true
-mass = 0.00102041
-physics_material_override = SubResource( 2 )
+mass = 100.0
+physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 linear_damp = 0.0
 angular_damp = 0.0
@@ -42,7 +42,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 128, 32 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 [connection signal="input_event" from="." to="." method="_on_Node2D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Node2D_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Node2D_mouse_exited"]

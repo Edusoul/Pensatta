@@ -54,7 +54,7 @@ position = Vector2( 725.11, 930.868 )
 position = Vector2( 0, -812 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D"]
-position = Vector2( -2.24487, -214.333 )
+position = Vector2( -2.24487, -104.844 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D"]

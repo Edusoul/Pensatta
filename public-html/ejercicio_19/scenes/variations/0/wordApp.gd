@@ -34,5 +34,6 @@ func _stop():
 	rotate_back = true
 	
 func _process(delta):
+	self.angular_velocity = lerp(self.angular_velocity,0,0.1*delta)	
 	if rotate_back:
 		self.rotation = lerp(self.rotation,0,delta)
