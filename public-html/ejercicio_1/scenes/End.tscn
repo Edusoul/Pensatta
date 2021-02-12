@@ -49,8 +49,9 @@ __meta__ = {
 }
 
 [node name="Katty2Sprite" type="Sprite" parent="."]
-position = Vector2( 472.505, 470.576 )
+position = Vector2( 432.505, 470.576 )
 texture = ExtResource( 3 )
+flip_h = true
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
 position = Vector2( 1087.69, 216.982 )
@@ -75,9 +76,9 @@ z_as_relative = false
 texture = ExtResource( 8 )
 
 [node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -190.9
+margin_left = -206.9
 margin_top = -76.7546
-margin_right = 39.1001
+margin_right = 23.1001
 margin_bottom = -28.7546
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
@@ -87,9 +88,9 @@ __meta__ = {
 }
 
 [node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -192.0
+margin_left = -206.0
 margin_top = -30.0
-margin_right = 154.0
+margin_right = 215.0
 margin_bottom = 63.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )

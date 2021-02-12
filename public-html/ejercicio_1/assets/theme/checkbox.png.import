@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mano.png-4cbd9310fd9dcf0b81067fd60d309742.stex"
+path="res://.import/checkbox.png-de288cf4d397d9c3760c39f752b264b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ejercicio_1/assets/mano.png"
-dest_files=[ "res://.import/mano.png-4cbd9310fd9dcf0b81067fd60d309742.stex" ]
+source_file="res://assets/theme/checkbox.png"
+dest_files=[ "res://.import/checkbox.png-de288cf4d397d9c3760c39f752b264b0.stex" ]
 
 [params]
 

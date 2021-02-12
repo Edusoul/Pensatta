@@ -23,7 +23,7 @@ var code ={
 	"Y": "z", "Z": "a"
 }
 
-func _ready():
+func _ready(): 
 	var style = StyleBoxFlat.new()
 	var color = Color(0.9, 0.5, 0.2)
 	style.set_bg_color(color)
