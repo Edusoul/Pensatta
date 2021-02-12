@@ -10,7 +10,7 @@ func _ready():
 	result_title = $ThoughtBubbleSprite/ResultLabel
 	result_summary = $ThoughtBubbleSprite/SummaryLabel
 	if global.answered_correctly:
-		result_title = "Felicitaciones"
+		result_title.text = "Felicitaciones"
 		result_summary.text = "Respondiste estas cosas bien"
 	else:
 		result_title.text = "Mala suerte"
