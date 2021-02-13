@@ -9,10 +9,6 @@
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
 [ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=1]
-size = 41
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=2]
 size = 36
 font_data = ExtResource( 4 )
@@ -20,6 +16,10 @@ font_data = ExtResource( 4 )
 [sub_resource type="DynamicFont" id=3]
 size = 36
 font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,28 +32,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RectTitleSprite" type="Sprite" parent="."]
-position = Vector2( 0, 40 )
-texture = ExtResource( 7 )
-centered = false
+[node name="BubbleTailSprite" type="Sprite" parent="."]
+position = Vector2( 843.904, 243.793 )
+z_index = 1
+texture = ExtResource( 8 )
 
-[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
-margin_left = 88.2626
-margin_top = 7.93414
-margin_right = 507.263
-margin_bottom = 58.9341
-custom_fonts/font = SubResource( 1 )
-text = "Título del problema"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Katty2Sprite" type="Sprite" parent="."]
-position = Vector2( 472.505, 470.576 )
-texture = ExtResource( 3 )
+[node name="TailShadowSprite" type="Sprite" parent="BubbleTailSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 3.35968, 4.61673 )
+z_as_relative = false
+texture = ExtResource( 8 )
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 1087.69, 216.982 )
+position = Vector2( 1087.69, 269.491 )
+scale = Vector2( 1, 1.57075 )
 z_index = 1
 texture = ExtResource( 2 )
 
@@ -63,22 +55,16 @@ position = Vector2( 3.9, 4.237 )
 z_as_relative = false
 texture = ExtResource( 2 )
 
-[node name="BubbleTailSprite" type="Sprite" parent="ThoughtBubbleSprite"]
-position = Vector2( -243.786, 26.8106 )
+[node name="Katty2Sprite" type="Sprite" parent="."]
+position = Vector2( 472.505, 470.576 )
 z_index = 1
-texture = ExtResource( 8 )
+texture = ExtResource( 3 )
 
-[node name="TailShadowSprite" type="Sprite" parent="ThoughtBubbleSprite/BubbleTailSprite"]
-modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
-position = Vector2( 3.35968, 4.61673 )
-z_as_relative = false
-texture = ExtResource( 8 )
-
-[node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -190.9
-margin_top = -76.7546
-margin_right = 39.1001
-margin_bottom = -28.7546
+[node name="ResultLabel" type="Label" parent="Katty2Sprite"]
+margin_left = 424.285
+margin_top = -330.349
+margin_right = 654.285
+margin_bottom = -282.349
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "¡Resultado!"
@@ -86,11 +72,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -192.0
-margin_top = -30.0
-margin_right = 154.0
-margin_bottom = 63.0
+[node name="SummaryLabel" type="Label" parent="Katty2Sprite"]
+margin_left = 423.0
+margin_top = -284.0
+margin_right = 805.0
+margin_bottom = -93.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "Resumen de tu resultado"
@@ -106,6 +92,22 @@ margin_right = 1394.0
 margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "FINALIZAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "¡En Parejas!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plantilla_ejercicio.png-410dff0ae121c5eccde4edbbb479725a.stex"
+path="res://.import/ejercicio_48.png-b89318d8375bcb3d98958191fd981b30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/plantilla_ejercicio.png"
-dest_files=[ "res://.import/plantilla_ejercicio.png-410dff0ae121c5eccde4edbbb479725a.stex" ]
+source_file="res://export/ejercicio_48.png"
+dest_files=[ "res://.import/ejercicio_48.png-b89318d8375bcb3d98958191fd981b30.stex" ]
 
 [params]
 

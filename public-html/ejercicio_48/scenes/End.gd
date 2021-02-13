@@ -7,14 +7,14 @@ var result_summary;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	result_title = $ThoughtBubbleSprite/ResultLabel
-	result_summary = $ThoughtBubbleSprite/SummaryLabel
+	result_title = $Katty2Sprite/ResultLabel
+	result_summary = $Katty2Sprite/SummaryLabel
 	if global.answered_correctly:
 		result_title.text = "Felicitaciones"
-		result_summary.text = "Respondiste estas cosas bien"
+		result_summary.text = "Identificaste correctamente los tipos de datos"
 	else:
 		result_title.text = "Mala suerte"
-		result_summary.text = "Respondiste estas cosas mal"
+		result_summary.text = "No identificaste a tiempo los tipos de datos"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
