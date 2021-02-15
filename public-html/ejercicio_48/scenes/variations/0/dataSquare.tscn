@@ -4,15 +4,15 @@
 [ext_resource path="res://scenes/variations/0/dataSquare.gd" type="Script" id=2]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=3]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.705882, 0.8, 1, 1 )
 corner_radius_top_left = 47
 corner_radius_top_right = 47
 corner_radius_bottom_right = 47
 corner_radius_bottom_left = 47
 
-[sub_resource type="DynamicFont" id=6]
-size = 40
+[sub_resource type="DynamicFont" id=2]
+size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -38,20 +38,21 @@ margin_left = 2.0
 margin_top = 2.0
 margin_right = 177.0
 margin_bottom = 177.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Data"]
-margin_right = 180.0
-margin_bottom = 180.0
-custom_fonts/font = SubResource( 6 )
+margin_right = 175.0
+margin_bottom = 175.0
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "data"
+text = "datadatadatadata"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

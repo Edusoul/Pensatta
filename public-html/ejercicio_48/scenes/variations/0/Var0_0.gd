@@ -13,8 +13,8 @@ func _ready():
 	$NextButton.hide()
 	
 	randomize()
-	var dataTypeList = ["A","B","C","D"] #Data Types
-	var dataList = ["a","b","c","d"] #Data
+	var dataTypeList = ["Entero","Caracter","Booleano","Cadena de Caracteres"] #Data Types
+	var dataList = ["42"," 'k' ","True"," 'hola' "] #Data
 	var idList = range(len(dataList)) #IDs
 	var locList = _locList() # Locations
 	
