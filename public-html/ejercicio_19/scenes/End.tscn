@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/End.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/ThoughtBubble2.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/Katty2.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 41
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Katty2Sprite" type="Sprite" parent="."]
+position = Vector2( 472.505, 470.576 )
+texture = ExtResource( 3 )
+
+[node name="ThoughtBubbleSprite" type="Sprite" parent="."]
+position = Vector2( 1087.69, 216.982 )
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="ShadowSprite" type="Sprite" parent="ThoughtBubbleSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 3.9, 4.237 )
+z_as_relative = false
+texture = ExtResource( 2 )
+
+[node name="BubbleTailSprite" type="Sprite" parent="ThoughtBubbleSprite"]
+position = Vector2( -243.786, 26.8106 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="TailShadowSprite" type="Sprite" parent="ThoughtBubbleSprite/BubbleTailSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 3.35968, 4.61673 )
+z_as_relative = false
+texture = ExtResource( 8 )
+
+[node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
+margin_left = -190.9
+margin_top = -76.7546
+margin_right = 39.1001
+margin_bottom = -28.7546
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+text = "¡Resultado!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
+margin_left = -192.0
+margin_top = -30.0
+margin_right = 154.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+text = "Resumen de tu resultado"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishButton" type="Button" parent="."]
+margin_left = 1020.0
+margin_top = 794.0
+margin_right = 1394.0
+margin_bottom = 841.0
+theme = ExtResource( 5 )
+text = "FINALIZAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( -16.8179, 40 )
+scale = Vector2( 1.25913, 1 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 88.2626
+margin_top = 47.9341
+margin_right = 784.263
+margin_bottom = 98.9341
+custom_fonts/font = SubResource( 3 )
+text = "Aplicación o Sistema Operativo?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="FinishButton" to="." method="_on_FinishButton_pressed"]

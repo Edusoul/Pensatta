@@ -1,0 +1,380 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/variations/0/IconoTienda.gd" type="Script" id=3]
+[ext_resource path="res://scenes/variations/0/FirstPlace.gd" type="Script" id=4]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 150, 75 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.701961, 0.701961, 0.701961, 0.333333 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.701961, 0.701961, 0.701961, 0.784314 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 5 )
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0.00645161, 1 )
+colors = PoolColorArray( 0.933333, 0.486275, 0.372549, 1, 0.933594, 0.813005, 0.707489, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+width = 150
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 126, 54 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 41
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_right = 1441.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="InstructionLabel" type="Label" parent="."]
+margin_left = 756.0
+margin_top = 54.0
+margin_right = 1334.0
+margin_bottom = 139.0
+theme = ExtResource( 6 )
+text = "(Arrastre las acciones a su lugar respectivo)"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishedButton" type="Button" parent="."]
+margin_left = 522.0
+margin_top = 774.0
+margin_right = 922.0
+margin_bottom = 846.0
+theme = ExtResource( 6 )
+custom_fonts/font = SubResource( 1 )
+text = "Realizado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1stPlace" type="Area2D" parent="." groups=[
+"Lugares",
+]]
+position = Vector2( 324, 594 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1stPlace"]
+shape = SubResource( 2 )
+
+[node name="Panel" type="Panel" parent="1stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="1stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="1stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "Primera Acción"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2stPlace" type="Area2D" parent="." groups=[
+"Lugares",
+]]
+position = Vector2( 720, 594 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2stPlace"]
+shape = SubResource( 2 )
+
+[node name="Panel" type="Panel" parent="2stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="2stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="2stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "Segunda Acción"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3stPlace" type="Area2D" parent="." groups=[
+"Lugares",
+]]
+position = Vector2( 1109.47, 594 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3stPlace"]
+shape = SubResource( 2 )
+
+[node name="Panel" type="Panel" parent="3stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="3stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="3stPlace"]
+margin_left = -144.0
+margin_top = -72.0
+margin_right = 156.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "Tercera Acción"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Action1" type="TextureRect" parent="." groups=[
+"Shops",
+]]
+margin_left = 882.0
+margin_top = 265.0
+margin_right = 1132.0
+margin_bottom = 365.0
+texture = SubResource( 7 )
+expand = true
+flip_h = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Action1"]
+margin_right = 250.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Quitarse la pijama"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaT1" type="Area2D" parent="Action1"]
+position = Vector2( 88, 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action1/AreaT1"]
+position = Vector2( 38, 24 )
+shape = SubResource( 9 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Action1"]
+position = Vector2( 126, 48 )
+scale = Vector2( 5.2, 0.8 )
+
+[node name="Action2" type="TextureRect" parent="." groups=[
+"Shops",
+]]
+margin_left = 306.0
+margin_top = 265.0
+margin_right = 556.0
+margin_bottom = 365.0
+texture = SubResource( 7 )
+expand = true
+flip_h = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Action2"]
+margin_right = 250.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ducharse"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaT1" type="Area2D" parent="Action2"]
+position = Vector2( 88, 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action2/AreaT1"]
+position = Vector2( 38, 24 )
+shape = SubResource( 9 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Action2"]
+position = Vector2( 126, 48 )
+scale = Vector2( 5.2, 0.8 )
+
+[node name="Action3" type="TextureRect" parent="." groups=[
+"Shops",
+]]
+margin_left = 594.0
+margin_top = 265.0
+margin_right = 844.0
+margin_bottom = 365.0
+texture = SubResource( 7 )
+expand = true
+flip_h = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Action3"]
+margin_right = 250.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ponerse la ropa"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaT1" type="Area2D" parent="Action3"]
+position = Vector2( 88, 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Action3/AreaT1"]
+position = Vector2( 38, 24 )
+shape = SubResource( 9 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Action3"]
+position = Vector2( 126, 48 )
+scale = Vector2( 5.2, 0.8 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 10 )
+text = "Pensando en algoritmos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]
+[connection signal="area_shape_entered" from="1stPlace" to="1stPlace" method="_on_FirstPlace_area_shape_entered"]
+[connection signal="area_shape_exited" from="1stPlace" to="1stPlace" method="_on_FirstPlace_area_shape_exited"]
+[connection signal="area_shape_entered" from="2stPlace" to="2stPlace" method="_on_FirstPlace_area_shape_entered"]
+[connection signal="area_shape_exited" from="2stPlace" to="2stPlace" method="_on_FirstPlace_area_shape_exited"]
+[connection signal="area_shape_entered" from="3stPlace" to="3stPlace" method="_on_FirstPlace_area_shape_entered"]
+[connection signal="area_shape_exited" from="3stPlace" to="3stPlace" method="_on_FirstPlace_area_shape_exited"]
+[connection signal="gui_input" from="Action1" to="Action1" method="_on_Tienda_gui_input"]
+[connection signal="mouse_entered" from="Action1" to="Action1" method="_on_Tienda_mouse_entered"]
+[connection signal="mouse_exited" from="Action1" to="Action1" method="_on_Tienda_mouse_exited"]
+[connection signal="screen_exited" from="Action1/VisibilityNotifier2D" to="Action1" method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="gui_input" from="Action2" to="Action2" method="_on_Tienda_gui_input"]
+[connection signal="mouse_entered" from="Action2" to="Action2" method="_on_Tienda_mouse_entered"]
+[connection signal="mouse_exited" from="Action2" to="Action2" method="_on_Tienda_mouse_exited"]
+[connection signal="screen_exited" from="Action2/VisibilityNotifier2D" to="Action2" method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="gui_input" from="Action3" to="Action3" method="_on_Tienda_gui_input"]
+[connection signal="mouse_entered" from="Action3" to="Action3" method="_on_Tienda_mouse_entered"]
+[connection signal="mouse_exited" from="Action3" to="Action3" method="_on_Tienda_mouse_exited"]
+[connection signal="screen_exited" from="Action3/VisibilityNotifier2D" to="Action3" method="_on_VisibilityNotifier2D_screen_exited"]

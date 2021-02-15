@@ -1,18 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/variations/0/Bloque.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 41
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 41
+font_data = ExtResource( 6 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -29,11 +35,11 @@ __meta__ = {
 
 [node name="Aciertos" type="Label" parent="."]
 margin_left = 296.0
-margin_top = 816.0
+margin_top = 840.0
 margin_right = 517.0
-margin_bottom = 866.0
+margin_bottom = 890.0
 theme = ExtResource( 5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Aciertos: 0"
 __meta__ = {
@@ -41,10 +47,10 @@ __meta__ = {
 }
 
 [node name="FinishedButton" type="Button" parent="."]
-margin_left = 856.0
-margin_top = 816.0
-margin_right = 1244.0
-margin_bottom = 863.0
+margin_left = 848.0
+margin_top = 840.0
+margin_right = 1236.0
+margin_bottom = 887.0
 theme = ExtResource( 5 )
 text = "REALIZADO"
 __meta__ = {
@@ -54,66 +60,66 @@ __meta__ = {
 [node name="SavedNode" type="Node" parent="."]
 
 [node name="Saved1" type="Label" parent="SavedNode"]
-margin_left = 832.0
-margin_top = 648.0
-margin_right = 1264.0
-margin_bottom = 699.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 840.0
+margin_top = 696.0
+margin_right = 1272.0
+margin_bottom = 747.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Saved2" type="Label" parent="SavedNode"]
-margin_left = 832.0
-margin_top = 408.0
-margin_right = 1264.0
-margin_bottom = 459.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 840.0
+margin_top = 456.0
+margin_right = 1272.0
+margin_bottom = 507.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Saved3" type="Label" parent="SavedNode"]
-margin_left = 832.0
-margin_top = 160.0
-margin_right = 1264.0
-margin_bottom = 211.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 840.0
+margin_top = 208.0
+margin_right = 1272.0
+margin_bottom = 259.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Saved4" type="Label" parent="SavedNode"]
-margin_left = 192.0
-margin_top = 160.0
-margin_right = 624.0
-margin_bottom = 211.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 200.0
+margin_top = 208.0
+margin_right = 632.0
+margin_bottom = 259.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Saved5" type="Label" parent="SavedNode"]
-margin_left = 192.0
-margin_top = 408.0
-margin_right = 624.0
-margin_bottom = 459.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 200.0
+margin_top = 456.0
+margin_right = 632.0
+margin_bottom = 507.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Saved6" type="Label" parent="SavedNode"]
-margin_left = 192.0
-margin_top = 648.0
-margin_right = 624.0
-margin_bottom = 699.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 200.0
+margin_top = 696.0
+margin_right = 632.0
+margin_bottom = 747.0
+custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -122,49 +128,65 @@ __meta__ = {
 [node name="PanelNode" type="Node" parent="."]
 
 [node name="Panel" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 144.0
-margin_top = 72.0
-margin_right = 656.0
-margin_bottom = 296.0
+margin_left = 152.0
+margin_top = 120.0
+margin_right = 664.0
+margin_bottom = 344.0
 password = "p0k3r0812*"
 
 [node name="Panel2" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 144.0
-margin_top = 312.0
-margin_right = 656.0
-margin_bottom = 536.0
+margin_left = 152.0
+margin_top = 360.0
+margin_right = 664.0
+margin_bottom = 584.0
 secure = false
 password = "contraseña"
 
 [node name="Panel3" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 144.0
-margin_top = 552.0
-margin_right = 656.0
-margin_bottom = 776.0
+margin_left = 152.0
+margin_top = 600.0
+margin_right = 664.0
+margin_bottom = 824.0
 secure = false
 password = "futbol"
 
 [node name="Panel4" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 784.0
-margin_top = 72.0
-margin_right = 1296.0
-margin_bottom = 296.0
+margin_left = 792.0
+margin_top = 120.0
+margin_right = 1304.0
+margin_bottom = 344.0
 secure = false
 password = "12345"
 
 [node name="Panel5" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 784.0
-margin_top = 312.0
-margin_right = 1296.0
-margin_bottom = 536.0
+margin_left = 792.0
+margin_top = 360.0
+margin_right = 1304.0
+margin_bottom = 584.0
 password = "2021f4m1L14!"
 
 [node name="Panel6" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 784.0
-margin_top = 552.0
-margin_right = 1296.0
-margin_bottom = 776.0
+margin_left = 792.0
+margin_top = 600.0
+margin_right = 1304.0
+margin_bottom = 824.0
 password = "159xYzC4Rl0s*/"
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 3 )
+text = "Lluvia Contraseñas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]
 [connection signal="toggled" from="PanelNode/Panel" to="." method="_countCorrectAnswers"]
 [connection signal="toggled" from="PanelNode/Panel2" to="." method="_countCorrectAnswers"]

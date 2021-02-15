@@ -31,7 +31,7 @@ margin_top = 794.0
 margin_right = 1391.0
 margin_bottom = 841.0
 theme = ExtResource( 4 )
-text = "FINALIZAR"
+text = "COMPROBAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -100,4 +100,169 @@ __meta__ = {
 [node name="CheckboxRect" type="Sprite" parent="."]
 position = Vector2( 976.219, 533.609 )
 texture = ExtResource( 9 )
+
+[node name="CheckBox1" type="CheckBox" parent="CheckboxRect"]
+margin_left = -435.578
+margin_top = -130.765
+margin_right = -233.578
+margin_bottom = -99.7645
+theme = ExtResource( 4 )
+text = "Tarjeta madre"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox2" type="CheckBox" parent="CheckboxRect"]
+margin_left = -435.578
+margin_top = -74.2196
+margin_right = -203.578
+margin_bottom = -43.2196
+theme = ExtResource( 4 )
+text = "Fuente de poder"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox3" type="CheckBox" parent="CheckboxRect"]
+margin_left = -435.578
+margin_top = -16.2196
+margin_right = -203.578
+margin_bottom = 14.7804
+theme = ExtResource( 4 )
+text = "Puertos USB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox4" type="CheckBox" parent="CheckboxRect"]
+margin_left = -435.578
+margin_top = 39.7804
+margin_right = -203.578
+margin_bottom = 70.7804
+theme = ExtResource( 4 )
+text = "Disco sólido"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox5" type="CheckBox" parent="CheckboxRect"]
+margin_left = -435.578
+margin_top = 98.7804
+margin_right = -203.578
+margin_bottom = 129.78
+theme = ExtResource( 4 )
+text = "CPU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox6" type="CheckBox" parent="CheckboxRect"]
+margin_left = -163.578
+margin_top = -130.765
+margin_right = 40.4221
+margin_bottom = -99.7645
+theme = ExtResource( 4 )
+text = "Memoria RAM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox7" type="CheckBox" parent="CheckboxRect"]
+margin_left = -163.578
+margin_top = -74.7645
+margin_right = 40.4221
+margin_bottom = -43.7645
+theme = ExtResource( 4 )
+text = "DVD-ROM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox8" type="CheckBox" parent="CheckboxRect"]
+margin_left = -163.578
+margin_top = -17.7645
+margin_right = 112.422
+margin_bottom = 13.2355
+theme = ExtResource( 4 )
+text = "Elementos de salida"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox9" type="CheckBox" parent="CheckboxRect"]
+margin_left = -163.578
+margin_top = 39.2355
+margin_right = 44.4221
+margin_bottom = 70.2355
+theme = ExtResource( 4 )
+text = "Tarjeta gráfica"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox10" type="CheckBox" parent="CheckboxRect"]
+margin_left = -163.578
+margin_top = 97.2355
+margin_right = 44.4221
+margin_bottom = 128.235
+theme = ExtResource( 4 )
+text = "Ranura PCI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox11" type="CheckBox" parent="CheckboxRect"]
+margin_left = 141.422
+margin_top = -130.765
+margin_right = 345.422
+margin_bottom = -99.7645
+theme = ExtResource( 4 )
+text = "Lector de CD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox12" type="CheckBox" parent="CheckboxRect"]
+margin_left = 141.422
+margin_top = -74.7645
+margin_right = 345.422
+margin_bottom = -43.7645
+theme = ExtResource( 4 )
+text = "Disco duro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox13" type="CheckBox" parent="CheckboxRect"]
+margin_left = 141.422
+margin_top = -17.7645
+margin_right = 345.422
+margin_bottom = 13.2355
+theme = ExtResource( 4 )
+text = "Ventilador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox14" type="CheckBox" parent="CheckboxRect"]
+margin_left = 141.422
+margin_top = 39.2355
+margin_right = 349.422
+margin_bottom = 70.2355
+theme = ExtResource( 4 )
+text = "Puerto HDMI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox15" type="CheckBox" parent="CheckboxRect"]
+margin_left = 141.422
+margin_top = 97.2355
+margin_right = 442.422
+margin_bottom = 128.235
+theme = ExtResource( 4 )
+text = "Elementos de entrada"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="AnswerButton" to="." method="_on_AnswerButton_pressed"]

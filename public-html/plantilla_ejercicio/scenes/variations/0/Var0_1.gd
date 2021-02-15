@@ -16,5 +16,6 @@ func _ready():
 #	pass
 
 func _on_AnswerButton_pressed():
-	global.answered_correctly = false
+	global.correct_answers_no = 10
+	global.incorrect_answers_no = 10
 	get_tree().change_scene("res://scenes/End.tscn")

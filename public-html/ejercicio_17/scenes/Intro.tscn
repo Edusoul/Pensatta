@@ -38,7 +38,7 @@ margin_top = 7.93414
 margin_right = 507.263
 margin_bottom = 58.9341
 custom_fonts/font = SubResource( 1 )
-text = "Título del problema"
+text = "Compra en Línea"
 __meta__ = {
 "_edit_use_anchors_": false
 }

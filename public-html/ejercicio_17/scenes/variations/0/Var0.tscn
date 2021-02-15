@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/variations/0/FirstPlace.gd" type="Script" id=4]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -76,6 +77,10 @@ colors = PoolColorArray( 1, 0.679688, 0, 1, 0.933594, 0.813005, 0.707489, 1 )
 gradient = SubResource( 14 )
 width = 150
 
+[sub_resource type="DynamicFont" id=16]
+size = 41
+font_data = ExtResource( 5 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -91,11 +96,12 @@ __meta__ = {
 }
 
 [node name="InstructionLabel" type="Label" parent="."]
-margin_top = 54.0
+margin_left = 720.0
+margin_top = 36.0
 margin_right = 1440.0
-margin_bottom = 139.0
+margin_bottom = 121.0
 theme = ExtResource( 6 )
-text = "(Pase el mouse por encima para ver descripción y arrástrelas para moverlas)"
+text = "(Pase el mouse por encima para ver descripción y arastre los íconos para moverlos)"
 align = 1
 autowrap = true
 __meta__ = {
@@ -198,8 +204,7 @@ margin_top = -72.0
 margin_right = 156.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 5 )
-text = "Primer Lugar
-(Más confiable)"
+text = "Segundo Lugar"
 align = 1
 valign = 1
 __meta__ = {
@@ -244,8 +249,8 @@ margin_top = -72.0
 margin_right = 156.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 5 )
-text = "Primer Lugar
-(Más confiable)"
+text = "Tercer Lugar
+(Menos confiable)"
 align = 1
 valign = 1
 __meta__ = {
@@ -440,6 +445,22 @@ shape = SubResource( 9 )
 [node name="VisibilityNotifier2D3" type="VisibilityNotifier2D" parent="Shop3"]
 position = Vector2( 126, 50 )
 scale = Vector2( 5.2, 0.8 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 16 )
+text = "Compra en Línea"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="FinishedButton" to="." method="_on_FinishedButton_pressed"]
 [connection signal="area_shape_entered" from="1stPlace" to="1stPlace" method="_on_FirstPlace_area_shape_entered"]
 [connection signal="area_shape_exited" from="1stPlace" to="1stPlace" method="_on_FirstPlace_area_shape_exited"]

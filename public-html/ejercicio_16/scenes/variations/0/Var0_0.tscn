@@ -1,16 +1,26 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+func _ready():
+	pass # Replace with function body.
+
+func _on_NextButton_pressed():
+	get_tree().change_scene(\"res://scenes/variations/0/Var0_1.tscn\")
+"
+
+[sub_resource type="DynamicFont" id=2]
 size = 41
 font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 1 )
+script = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1440.0
@@ -30,7 +40,7 @@ margin_left = 88.2626
 margin_top = 7.93414
 margin_right = 507.263
 margin_bottom = 58.9341
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Título del problema"
 __meta__ = {
 "_edit_use_anchors_": false
