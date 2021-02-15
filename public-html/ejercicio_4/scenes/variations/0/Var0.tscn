@@ -1,33 +1,23 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
-[ext_resource path="res://assets/memoriaRAM.png" type="Texture" id=2]
-[ext_resource path="res://assets/fuente de poder.png" type="Texture" id=3]
-[ext_resource path="res://assets/mother board.png" type="Texture" id=4]
-[ext_resource path="res://assets/disco duro.png" type="Texture" id=5]
-[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/GPU.png" type="Texture" id=2]
+[ext_resource path="res://assets/Board.png" type="Texture" id=3]
+[ext_resource path="res://assets/CPU (1).png" type="Texture" id=4]
+[ext_resource path="res://assets/DiscoDuro.png" type="Texture" id=5]
+[ext_resource path="res://assets/Rectangle 1.png" type="Texture" id=6]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=7]
+[ext_resource path="res://assets/RAM.png" type="Texture" id=8]
+[ext_resource path="res://assets/UnidadLectora.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=10]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 461.909, 309.401 )
+extents = Vector2( 722, 459.189 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=5]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 30
-font_data = ExtResource( 6 )
+size = 41
+font_data = ExtResource( 11 )
 
 [node name="Node2d" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,107 +25,237 @@ script = ExtResource( 1 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 450, 300 )
+position = Vector2( 725.127, 442.378 )
 z_as_relative = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
-position = Vector2( 90.0071, 74.3736 )
-scale = Vector2( 1.26228, 1.49025 )
+[node name="Button" type="Button" parent="Area2D"]
+margin_left = 1035.0
+margin_top = 794.0
+margin_right = 1419.0
+margin_bottom = 841.0
+theme = ExtResource( 7 )
+text = "REGISTRAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rectangle_descriptions" type="Sprite" parent="Area2D"]
+position = Vector2( 1142.12, 466 )
+scale = Vector2( 1.18665, 1 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Hard_disk" type="Label" parent="Area2D/Rectangle_descriptions"]
+anchor_left = -1.808
+anchor_top = -0.286
+anchor_right = -1.808
+anchor_bottom = -0.286
+margin_left = 712.504
+margin_top = -58.686
+margin_right = 1114.51
+margin_bottom = 31.314
+theme = ExtResource( 7 )
+text = "Díspositivo de almacenamiento de datos"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPU" type="Label" parent="Area2D/Rectangle_descriptions"]
+anchor_left = -1.378
+anchor_top = -0.282
+anchor_right = -1.378
+anchor_bottom = -0.282
+margin_left = 491.914
+margin_top = 38.918
+margin_right = 775.914
+margin_bottom = 120.918
+theme = ExtResource( 7 )
+text = "Procesa los datos del computador"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RAM" type="Label" parent="Area2D/Rectangle_descriptions"]
+margin_left = -215.0
+margin_top = -40.0
+margin_right = 123.0
+margin_bottom = 52.0
+theme = ExtResource( 7 )
+text = "Memoria de corto plazo del computador"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GPU" type="Label" parent="Area2D/Rectangle_descriptions"]
+margin_left = -215.0
+margin_top = 160.0
+margin_right = 190.0
+margin_bottom = 198.0
+theme = ExtResource( 7 )
+text = "Procesamiento de gráficos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reading_unit" type="Label" parent="Area2D/Rectangle_descriptions"]
+margin_left = -215.0
+margin_top = 210.0
+margin_right = 153.0
+margin_bottom = 248.0
+theme = ExtResource( 7 )
+text = "permite la lectura de CD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Board" type="Label" parent="Area2D/Rectangle_descriptions"]
+margin_left = -215.0
+margin_top = 65.0
+margin_right = 173.0
+margin_bottom = 144.0
+theme = ExtResource( 7 )
+text = "Permite la integración de todos los componentes"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteTitle" type="Sprite" parent="Area2D"]
+position = Vector2( 330.6, 75 )
+texture = ExtResource( 10 )
+
+[node name="Title" type="Label" parent="Area2D/SpriteTitle"]
+margin_left = -283.031
+margin_top = -28.541
+margin_right = 317.969
+margin_bottom = 22.459
+custom_fonts/font = SubResource( 2 )
+text = "¿Qué hace este dispositivo?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rectagle_Images" type="Sprite" parent="Area2D"]
+position = Vector2( 130, 466 )
+texture = ExtResource( 6 )
+
+[node name="Board" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( -67.0725, -250.852 )
+scale = Vector2( 0.56501, 0.795035 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Sprite2" type="Sprite" parent="Area2D"]
-position = Vector2( 80.5228, 198.838 )
-scale = Vector2( 1.37489, 1.43262 )
-texture = ExtResource( 5 )
-centered = false
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/Board"]
+margin_left = 26.13
+margin_top = 140.0
+margin_right = 118.13
+margin_bottom = 178.0
+theme = ExtResource( 7 )
+text = "Board"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite3" type="Sprite" parent="Area2D"]
-position = Vector2( 91.2583, 355.11 )
-scale = Vector2( 1.06421, 1.08441 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="Sprite4" type="Sprite" parent="Area2D"]
-position = Vector2( 86.0428, 486.583 )
-scale = Vector2( 1.14983, 1.41813 )
+[node name="CPU" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( 60.4171, 97.9304 )
+scale = Vector2( 0.91759, 1.08816 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="Label" type="Label" parent="Area2D"]
-margin_left = 316.674
-margin_top = 78.8388
-margin_right = 724.674
-margin_bottom = 195.839
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Tarjeta de circuito impreso que permite la integración de todos los componentes de una computadora. Para esto, cuenta con un software básico conocido como BIOS, que le permite cumplir con sus funciones."
-autowrap = true
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/CPU"]
+margin_left = 49.573
+margin_top = 126.67
+margin_right = 117.573
+margin_bottom = 164.67
+theme = ExtResource( 7 )
+text = "CPU"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Area2D"]
-margin_left = 317.375
-margin_top = 224.028
-margin_right = 676.375
-margin_bottom = 296.028
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Hace referencia al sistema que otorga la electricidad imprescindible para alimentar a equipos"
-autowrap = true
+[node name="Hard_disk" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( 95.5003, -283.971 )
+scale = Vector2( 0.742794, 0.983097 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/Hard_disk"]
+margin_left = -4.027
+margin_top = 140.0
+margin_right = 158.973
+margin_bottom = 178.0
+theme = ExtResource( 7 )
+text = "Disco duro"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="Area2D"]
-margin_left = 320.0
-margin_top = 322.406
-margin_right = 726.0
-margin_bottom = 439.406
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Es conocida como memoria volátil lo cual quiere decir que los datos no se guardan de manera permanente, es por ello, que cuando deja de existir una fuente de energía en el dispositivo la información se pierde"
-autowrap = true
+[node name="GPU" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( 91.6672, -105.408 )
+scale = Vector2( 0.637757, 1.03314 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/GPU"]
+anchor_left = 0.481
+anchor_top = 1.112
+anchor_right = 0.481
+anchor_bottom = 1.112
+margin_left = -42.5868
+margin_top = -33.83
+margin_right = 37.4132
+margin_bottom = 4.16998
+theme = ExtResource( 7 )
+text = "GPU"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label4" type="Label" parent="Area2D"]
-margin_left = 323.0
-margin_top = 467.0
-margin_right = 719.0
-margin_bottom = 584.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Dispositivo de almacenamiento de datos no volátil (porque los contenidos almacenados no se pierden aunque no se encuentre energizado) y que emplea un sistema de grabación magnético para guardar los datos digitales."
-autowrap = true
+[node name="RAM" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( -35.7602, 185.434 )
+scale = Vector2( 0.726578, 0.967658 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/RAM"]
+margin_left = -48.1523
+margin_top = 55.963
+margin_right = 24.8477
+margin_bottom = 93.963
+theme = ExtResource( 7 )
+text = "RAM"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Area2D"]
-margin_left = 802.413
-margin_top = 531.215
-margin_right = 882.413
-margin_bottom = 568.215
-custom_fonts/font = SubResource( 6 )
-text = "Registrar"
+[node name="Reading_unit" type="Sprite" parent="Area2D/Rectagle_Images"]
+position = Vector2( -32.9347, -6.72731 )
+scale = Vector2( 0.652089, 0.837899 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Area2D/Rectagle_Images/Reading_unit"]
+margin_left = -124.15
+margin_top = 70.0
+margin_right = 97.85
+margin_bottom = 108.0
+theme = ExtResource( 7 )
+text = "Unidad lectora"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="Area2D"]
-margin_left = 90.3798
-margin_top = 7.13527
-margin_right = 806.38
-margin_bottom = 45.1353
-custom_fonts/font = SubResource( 7 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Relaciona las dos columnas mediante una linea"
+[node name="Button" type="Button" parent="."]
+margin_left = 1031.74
+margin_top = 25.4559
+margin_right = 1202.74
+margin_bottom = 130.456
+text = "repetir"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="pressed" from="Area2D/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_r"]

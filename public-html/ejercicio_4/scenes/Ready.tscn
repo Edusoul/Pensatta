@@ -1,21 +1,51 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/variations/0/Label2.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Ready.gd" type="Script" id=2]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+func _ready():
+	pass # Replace with function body.
+
+
+
+"
+
+[sub_resource type="DynamicFont" id=2]
 size = 65
 outline_color = Color( 0.396078, 0.839216, 0.807843, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 70
 outline_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 font_data = ExtResource( 3 )
 
+[sub_resource type="GDScript" id=4]
+script/source = "extends Label
+
+var timer
+
+func _ready():
+	timer = get_child(0)
+	pass # Replace with function body.
+	
+func _process(delta):
+	set_text(str(int(timer.get_time_left())))	
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene(\"res://scenes/variations/\" + \\
+		str(global.variation_number) + \"/Var\" + str(global.variation_number) + \\
+		\".tscn\")
+#	get_tree().change_scene(\"res://scenes/variations/0/Var0.tscn\")
+	pass # Replace with function body.
+"
+
 [node name="Ready" type="Node"]
-script = ExtResource( 2 )
+script = SubResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 900.0
@@ -30,7 +60,7 @@ margin_left = 255.0
 margin_top = 174.0
 margin_right = 640.0
 margin_bottom = 259.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.396078, 0.839216, 0.807843, 1 )
 text = "¿Preparado?"
 __meta__ = {
@@ -42,10 +72,10 @@ margin_left = 428.0
 margin_top = 309.0
 margin_right = 468.0
 margin_bottom = 395.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
 text = "5"
-script = ExtResource( 1 )
+script = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

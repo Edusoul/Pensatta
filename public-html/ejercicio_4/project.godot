@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ejercicio_4"
-run/main_scene="res://scenes/Ready.tscn"
+run/main_scene="res://scenes/Setup.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -25,10 +25,15 @@ global="*res://global.gd"
 
 [display]
 
-window/size/width=900
+window/size/width=1440
+window/size/height=900
+window/size/test_width=960
+window/size/test_height=600
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
-environment/default_clear_color=Color( 1, 0.913725, 0.839216, 1 )
+environment/default_clear_color=Color( 1, 1, 1, 1 )
 environment/default_environment="res://default_env.tres"
