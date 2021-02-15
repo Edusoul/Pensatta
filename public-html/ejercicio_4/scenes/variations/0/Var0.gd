@@ -17,14 +17,14 @@ var answers = []
 
 func _ready():
 	var area_children = get_child(0).get_children()
-	
+
 	for child in area_children:
 		if child is Sprite:
 			components.append(child)
 		elif child is Label:
 			descriptions.append(child)	
-			
-	
+	pass
+
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
@@ -33,7 +33,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			line.default_color = Color("#00FFFF")
 			line.width=8.0
 			add_child(line)
-			line_start = (get_viewport().get_mouse_position())#aqui me muestra la posicion del mouse
+			line_start = (get_viewport().get_mouse_position())
+			print(event.position)
 		else:
 			pressed = false
 			var end = (get_viewport().get_mouse_position())
@@ -46,8 +47,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			elif start_match == 2 and end_match == 2:
 				answers.push_back(3)
 			elif start_match == 1 and end_match == 3:
-				answers.push_back(4)	
-			
+				answers.push_back(4)
+
 			if (start_match == 0 or start_match) and \
 			   (end_match == 0 or end_match):
 				lines.append({ "node": line.duplicate(), "start": start_match, \
@@ -55,12 +56,12 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 			else:
 				line.queue_free()
 			line = null
-			
+
 	if event is InputEventMouse:
 		if pressed:
 			line.add_point(event.position)
-			
-			
+
+
 func _on_Button_pressed():
 	global.answered_correctly = answers
 	get_tree().change_scene("res://scenes/End.tscn")
@@ -76,7 +77,7 @@ func start_component_match(start):
 		   start.y < component_pos.y + component_height:
 			return i
 	return null
-	
+
 func end_component_match(end):
 	for i in range(descriptions.size()):
 		var description_pos = descriptions[i].get_position()
@@ -88,5 +89,9 @@ func end_component_match(end):
 		   end.y < description_pos.y + description_height:
 			return i
 	return null
-	
-	
+
+func _on_Button_r():
+	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
+	pass # Replace with function body.
+
+
