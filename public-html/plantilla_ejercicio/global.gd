@@ -1,5 +1,11 @@
 extends Node
 
+var title = "Título"
+var timer = 181 #s
+var timeout = false
+var scene = 0
+var last_scene = 1 
+
 var possible_variations = 1
 var variation_number
 var correct_answers_no = 0
