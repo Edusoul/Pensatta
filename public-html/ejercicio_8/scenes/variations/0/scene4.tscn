@@ -63,7 +63,7 @@ margin_top = -26.6968
 margin_right = 213.398
 margin_bottom = 11.3032
 theme = ExtResource( 6 )
-text = "¿Cual es el candado correcto?"
+text = "¿Cuál es el candado correcto?"
 __meta__ = {
 "_edit_use_anchors_": false
 }

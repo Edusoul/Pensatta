@@ -142,7 +142,7 @@ margin_top = 776.0
 margin_right = 1203.0
 margin_bottom = 829.0
 theme = ExtResource( 7 )
-text = "Siguiente"
+text = "FINALIZAR"
 
 [node name="RectTitleSprite" type="Sprite" parent="."]
 position = Vector2( 0, 40 )

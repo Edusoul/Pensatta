@@ -1,5 +1,6 @@
 extends Node
 
+var answers_correct = []
 var answered_correctly = false
 var possible_variations = 1
 var variation_number

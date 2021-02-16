@@ -1,23 +1,26 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-var congratulations;
-var bad_luck;
+var result_title;
+var result_summary;
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	congratulations = get_node("Congratulations")
-	bad_luck = get_node("BadLuck")
-	if global.answered_correctly:
-		bad_luck.visible = false;
+	result_title = $ThoughtBubbleSprite/ResultLabel
+	result_summary = $ThoughtBubbleSprite/SummaryLabel
+	if global.answers_correct.size() == 3:
+		result_title.text = "¡Felicitaciones!"
+		result_summary.text = "Respondiste todo bien."
+	elif global.answers_correct.size() == 2:
+		result_title.text = "¡Muy bien!"
+		result_summary.text = "Respondiste acertadamente 2 de 3"
+	elif global.answers_correct.size() == 1:
+		result_title.text = "¡Debes mejorar!"
+		result_summary.text = "Solo acertaste en una respuesta"
 	else:
-		congratulations.visible = false;
+		result_title.text = "¡Continúa intentando!"
+		result_summary.text = "No acertaste en ninguna"
+#		result_summary.text = "Respondiste " + str(global.answers_correct) \
+#			+ " opciones bien y " + str(global.answers_correct) + " mal."
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Timer_timeout():
+func _on_FinishButton_pressed():
 	JavaScript.eval("window.top.postMessage('finished_problem', '*')")
