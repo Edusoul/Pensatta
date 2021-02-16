@@ -1,162 +1,753 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://scenes/Label.gd" type="Script" id=3]
-[ext_resource path="res://assets/img/sgt2.png" type="Texture" id=4]
-[ext_resource path="res://assets/img/TABLA.png" type="Texture" id=5]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=3]
+[ext_resource path="res://assets/img/colors/Color.png" type="Texture" id=4]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/img/characters/simbolo (7).png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Cuadro1.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Cuadro2.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Rectangle 1 (3).png" type="Texture" id=9]
+[ext_resource path="res://assets/img/colors/Color (2).png" type="Texture" id=10]
+[ext_resource path="res://assets/img/colors/Color (5).png" type="Texture" id=11]
+[ext_resource path="res://assets/img/colors/Color (4).png" type="Texture" id=12]
+[ext_resource path="res://assets/img/colors/Color (3).png" type="Texture" id=13]
+[ext_resource path="res://assets/img/colors/Color (6).png" type="Texture" id=14]
+[ext_resource path="res://assets/img/colors/Color (8).png" type="Texture" id=15]
+[ext_resource path="res://assets/img/colors/Color (1).png" type="Texture" id=16]
+[ext_resource path="res://assets/img/colors/Color (9).png" type="Texture" id=17]
+[ext_resource path="res://assets/img/colors/Color (7).png" type="Texture" id=18]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://assets/img/numbers/Número.png" type="Texture" id=20]
+[ext_resource path="res://assets/img/numbers/Número (1).png" type="Texture" id=21]
+[ext_resource path="res://assets/img/numbers/Número (8).png" type="Texture" id=22]
+[ext_resource path="res://assets/img/numbers/Número (6).png" type="Texture" id=23]
+[ext_resource path="res://assets/img/numbers/Número (4).png" type="Texture" id=24]
+[ext_resource path="res://assets/img/numbers/Número (9).png" type="Texture" id=25]
+[ext_resource path="res://assets/img/numbers/Número (7).png" type="Texture" id=26]
+[ext_resource path="res://assets/img/numbers/Número (3).png" type="Texture" id=27]
+[ext_resource path="res://assets/img/numbers/Número (2).png" type="Texture" id=28]
+[ext_resource path="res://assets/img/numbers/Número (5).png" type="Texture" id=29]
+[ext_resource path="res://assets/img/characters/simbolo (1).png" type="Texture" id=30]
+[ext_resource path="res://assets/img/alphabet/Letra (1).png" type="Texture" id=31]
+[ext_resource path="res://assets/img/characters/simbolo (10).png" type="Texture" id=32]
+[ext_resource path="res://assets/img/characters/simbolo (29).png" type="Texture" id=33]
+[ext_resource path="res://assets/img/characters/simbolo (12).png" type="Texture" id=34]
+[ext_resource path="res://assets/img/characters/simbolo (28).png" type="Texture" id=35]
+[ext_resource path="res://assets/img/characters/simbolo (9).png" type="Texture" id=36]
+[ext_resource path="res://assets/img/characters/simbolo (8).png" type="Texture" id=37]
+[ext_resource path="res://assets/img/characters/simbolo (13).png" type="Texture" id=38]
+[ext_resource path="res://assets/img/characters/simbolo (6).png" type="Texture" id=39]
+[ext_resource path="res://assets/img/characters/simbolo (2).png" type="Texture" id=40]
+[ext_resource path="res://assets/img/characters/simbolo (30).png" type="Texture" id=41]
+[ext_resource path="res://assets/img/characters/simbolo (3).png" type="Texture" id=42]
+[ext_resource path="res://assets/img/characters/simbolo (5).png" type="Texture" id=43]
+[ext_resource path="res://assets/img/characters/simbolo (26).png" type="Texture" id=44]
+[ext_resource path="res://assets/img/characters/simbolo (27).png" type="Texture" id=45]
+[ext_resource path="res://assets/img/characters/simbolo (16).png" type="Texture" id=46]
+[ext_resource path="res://assets/img/characters/simbolo (32).png" type="Texture" id=47]
+[ext_resource path="res://assets/img/characters/simbolo (33).png" type="Texture" id=48]
+[ext_resource path="res://assets/img/characters/simbolo (15).png" type="Texture" id=49]
+[ext_resource path="res://assets/img/characters/simbolo (19).png" type="Texture" id=50]
+[ext_resource path="res://assets/img/characters/simbolo (23).png" type="Texture" id=51]
+[ext_resource path="res://assets/img/characters/simbolo (24).png" type="Texture" id=52]
+[ext_resource path="res://assets/img/characters/simbolo (21).png" type="Texture" id=53]
+[ext_resource path="res://assets/img/characters/simbolo (22).png" type="Texture" id=54]
+[ext_resource path="res://assets/img/characters/simbolo (31).png" type="Texture" id=55]
+[ext_resource path="res://assets/img/characters/simbolo (20).png" type="Texture" id=56]
+[ext_resource path="res://assets/img/alphabet/Letra (7).png" type="Texture" id=57]
+[ext_resource path="res://assets/img/alphabet/Letra (9).png" type="Texture" id=58]
+[ext_resource path="res://assets/img/alphabet/Letra (6).png" type="Texture" id=59]
+[ext_resource path="res://assets/img/alphabet/Letra (8).png" type="Texture" id=60]
+[ext_resource path="res://assets/img/alphabet/Letra (10).png" type="Texture" id=61]
+[ext_resource path="res://assets/img/alphabet/Letra (11).png" type="Texture" id=62]
+[ext_resource path="res://assets/img/alphabet/Letra (3).png" type="Texture" id=63]
+[ext_resource path="res://assets/img/alphabet/Letra (4).png" type="Texture" id=64]
+[ext_resource path="res://assets/img/alphabet/Letra (5).png" type="Texture" id=65]
+[ext_resource path="res://assets/img/alphabet/Letra (2).png" type="Texture" id=66]
+[ext_resource path="res://assets/img/alphabet/Letra (12).png" type="Texture" id=67]
+[ext_resource path="res://assets/img/alphabet/Letra (13).png" type="Texture" id=68]
+[ext_resource path="res://assets/img/alphabet/Letra (14).png" type="Texture" id=69]
+[ext_resource path="res://assets/img/alphabet/Letra (25).png" type="Texture" id=70]
+[ext_resource path="res://assets/img/alphabet/Letra (27).png" type="Texture" id=71]
+[ext_resource path="res://assets/img/alphabet/Letra (26).png" type="Texture" id=72]
+[ext_resource path="res://assets/img/alphabet/Letra (24).png" type="Texture" id=73]
+[ext_resource path="res://assets/img/alphabet/Letra (19).png" type="Texture" id=74]
+[ext_resource path="res://assets/img/alphabet/Letra (20).png" type="Texture" id=75]
+[ext_resource path="res://assets/img/alphabet/Letra (21).png" type="Texture" id=76]
+[ext_resource path="res://assets/img/alphabet/Letra (18).png" type="Texture" id=77]
+[ext_resource path="res://assets/img/alphabet/Letra (23).png" type="Texture" id=78]
+[ext_resource path="res://assets/img/alphabet/Letra (22).png" type="Texture" id=79]
+[ext_resource path="res://assets/img/alphabet/Letra (17).png" type="Texture" id=80]
+[ext_resource path="res://assets/img/alphabet/Letra (15).png" type="Texture" id=81]
+[ext_resource path="res://assets/img/alphabet/Letra (16).png" type="Texture" id=82]
+[ext_resource path="res://assets/img/Globo-877x125.png" type="Texture" id=83]
+
+[sub_resource type="StyleBoxTexture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 83 )
+region_rect = Rect2( 0, 0, 745, 51 )
 
 [sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
+size = 20
+font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
+size = 60
+font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 2 )
+size = 41
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=5]
-font_data = ExtResource( 2 )
+size = 24
+font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 2 )
+size = 24
+font_data = ExtResource( 19 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 900.0
-margin_bottom = 600.0
-color = Color( 1, 0.913725, 0.839216, 1 )
+margin_top = -1.49829
+margin_right = 1440.0
+margin_bottom = 898.502
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 80.0
-margin_top = 400.865
-margin_right = 512.0
-margin_bottom = 452.865
-placeholder_text = "Escribe el mensaje que vamos a codificar aqui"
+margin_left = 695.0
+margin_top = 571.0
+margin_right = 1341.0
+margin_bottom = 623.0
+custom_icons/clear = ExtResource( 83 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+placeholder_text = "                                Ingresa el mensaje"
+placeholder_alpha = 1.0
+caret_blink = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 82.0
-margin_top = 334.0
-margin_right = 501.0
-margin_bottom = 368.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 82.0
-margin_top = 464.0
-margin_right = 366.0
-margin_bottom = 500.0
+visible = false
+margin_left = 852.261
+margin_top = 724.176
+margin_right = 1271.26
+margin_bottom = 758.176
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Este es tu mensaje codificado:"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="."]
-margin_left = 80.3235
-margin_top = 294.184
-margin_right = 430.324
-margin_bottom = 344.184
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Este es tu mensaje sin codificar:"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label5" type="Label" parent="."]
-margin_left = 82.0
-margin_top = 25.0
-margin_right = 841.0
-margin_bottom = 142.0
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "En las tablas que vas a encontrar en la parte inferior se mustra el sistema de codificacion que usaremos en este ejercicio.
-Puedes escribir cuantos mensajes quieras y seran codificados.
-Repite la operacion cuantas veces lo necesites hasta comprender como funciona la codificacion. "
-autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 82.0
-margin_top = 514.0
-margin_right = 512.0
-margin_bottom = 572.0
-custom_fonts/normal_font = SubResource( 4 )
+margin_left = 699.0
+margin_top = 251.0
+margin_right = 1345.0
+margin_bottom = 505.0
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label4" type="Label" parent="."]
-margin_left = 598.516
-margin_top = 155.662
-margin_right = 808.516
-margin_bottom = 287.662
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "0 = Rojo          1 = Amarillo
-2 = Azul           3 = Verde
-4 = Morado    5 = Naranja
-6 = Blanco      7 = Negro
-8 = Cafe           9 = Gris"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Button" type="Button" parent="."]
 visible = false
-margin_left = 569.061
-margin_top = 401.235
-margin_right = 641.061
-margin_bottom = 449.235
-custom_fonts/font = SubResource( 6 )
-text = "Repetir"
+margin_left = 600.0
+margin_top = 797.0
+margin_right = 974.0
+margin_bottom = 845.0
+theme = ExtResource( 3 )
+text = "REPETIR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="."]
 visible = false
-margin_left = 758.0
-margin_top = 483.0
-margin_right = 846.0
-margin_bottom = 592.0
-custom_fonts/font = SubResource( 6 )
+margin_left = 1000.0
+margin_top = 797.0
+margin_right = 1374.0
+margin_bottom = 845.0
+theme = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 1, 0.501961, 0, 1 )
-icon = ExtResource( 4 )
-flat = true
-expand_icon = true
+text = "FINALIZAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 287.764, 220.446 )
-texture = ExtResource( 5 )
+position = Vector2( 460, 76.999 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -330.0
+margin_top = -25.0
+margin_right = -3.00003
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "Mensaje oculto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Letters" type="Label" parent="."]
+margin_left = 63.0
+margin_top = 155.0
+margin_right = 156.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.556863, 0.921569, 0.901961, 1 )
+text = "Letras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numbers" type="Label" parent="."]
+margin_left = 444.0
+margin_top = 155.0
+margin_right = 584.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.556863, 0.921569, 0.901961, 1 )
+text = "Numeros"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteCharacter" type="Sprite" parent="."]
+position = Vector2( 92.104, 225 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter"]
+texture = ExtResource( 30 )
+
+[node name="SpriteCharacter3" type="Sprite" parent="."]
+position = Vector2( 92, 270 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter3"]
+texture = ExtResource( 40 )
+
+[node name="SpriteCharacter4" type="Sprite" parent="."]
+position = Vector2( 92, 315 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter4"]
+texture = ExtResource( 42 )
+
+[node name="SpriteCharacter5" type="Sprite" parent="."]
+position = Vector2( 92, 360 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter5"]
+texture = ExtResource( 33 )
+
+[node name="SpriteCharacter6" type="Sprite" parent="."]
+position = Vector2( 92, 405 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter6"]
+texture = ExtResource( 43 )
+
+[node name="SpriteCharacter7" type="Sprite" parent="."]
+position = Vector2( 92, 450 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter7"]
+texture = ExtResource( 39 )
+
+[node name="SpriteCharacter8" type="Sprite" parent="."]
+position = Vector2( 92, 495 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter8"]
+texture = ExtResource( 6 )
+
+[node name="SpriteCharacter9" type="Sprite" parent="."]
+position = Vector2( 92, 540 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter9"]
+texture = ExtResource( 37 )
+
+[node name="SpriteCharacter10" type="Sprite" parent="."]
+position = Vector2( 92, 585 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter10"]
+texture = ExtResource( 36 )
+
+[node name="SpriteCharacter11" type="Sprite" parent="."]
+position = Vector2( 92, 630 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter11"]
+texture = ExtResource( 32 )
+flip_h = true
+
+[node name="SpriteCharacter12" type="Sprite" parent="."]
+position = Vector2( 92, 675 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter12"]
+texture = ExtResource( 41 )
+
+[node name="SpriteCharacter13" type="Sprite" parent="."]
+position = Vector2( 92, 720 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter13"]
+texture = ExtResource( 34 )
+
+[node name="SpriteCharacter14" type="Sprite" parent="."]
+position = Vector2( 92, 765 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter14"]
+texture = ExtResource( 38 )
+
+[node name="SpriteCharacter15" type="Sprite" parent="."]
+position = Vector2( 92, 810 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter15"]
+texture = ExtResource( 35 )
+
+[node name="SpriteCharacter2" type="Sprite" parent="."]
+position = Vector2( 286, 225 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter2"]
+texture = ExtResource( 49 )
+
+[node name="SpriteCharacter16" type="Sprite" parent="."]
+position = Vector2( 286, 270 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter16"]
+texture = ExtResource( 46 )
+
+[node name="SpriteCharacter17" type="Sprite" parent="."]
+position = Vector2( 286, 315 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter17"]
+texture = ExtResource( 55 )
+
+[node name="SpriteCharacter18" type="Sprite" parent="."]
+position = Vector2( 286, 360 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter18"]
+texture = ExtResource( 47 )
+
+[node name="SpriteCharacter19" type="Sprite" parent="."]
+position = Vector2( 286, 405 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter19"]
+texture = ExtResource( 50 )
+
+[node name="SpriteCharacter20" type="Sprite" parent="."]
+position = Vector2( 286, 450 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter20"]
+texture = ExtResource( 56 )
+
+[node name="SpriteCharacter21" type="Sprite" parent="."]
+position = Vector2( 286, 495 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter21"]
+texture = ExtResource( 53 )
+
+[node name="SpriteCharacter22" type="Sprite" parent="."]
+position = Vector2( 286, 540 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter22"]
+texture = ExtResource( 54 )
+
+[node name="SpriteCharacter23" type="Sprite" parent="."]
+position = Vector2( 286, 585 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter23"]
+texture = ExtResource( 51 )
+
+[node name="SpriteCharacter24" type="Sprite" parent="."]
+position = Vector2( 286, 630 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter24"]
+texture = ExtResource( 52 )
+
+[node name="SpriteCharacter25" type="Sprite" parent="."]
+position = Vector2( 286, 675 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter25"]
+texture = ExtResource( 48 )
+
+[node name="SpriteCharacter26" type="Sprite" parent="."]
+position = Vector2( 286, 720 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter26"]
+texture = ExtResource( 44 )
+
+[node name="SpriteCharacter27" type="Sprite" parent="."]
+position = Vector2( 286, 765 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCharacter27"]
+texture = ExtResource( 45 )
+
+[node name="SpriteLetter" type="Sprite" parent="."]
+position = Vector2( 152, 225 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter"]
+texture = ExtResource( 31 )
+
+[node name="SpriteLetter2" type="Sprite" parent="."]
+position = Vector2( 152, 270 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter2"]
+texture = ExtResource( 66 )
+
+[node name="SpriteLetter3" type="Sprite" parent="."]
+position = Vector2( 152, 315 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter3"]
+texture = ExtResource( 63 )
+
+[node name="SpriteLetter4" type="Sprite" parent="."]
+position = Vector2( 152, 360 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter4"]
+texture = ExtResource( 64 )
+
+[node name="SpriteLetter5" type="Sprite" parent="."]
+position = Vector2( 152, 405 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter5"]
+texture = ExtResource( 65 )
+
+[node name="SpriteLetter6" type="Sprite" parent="."]
+position = Vector2( 152, 450 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter6"]
+texture = ExtResource( 59 )
+
+[node name="SpriteLetter7" type="Sprite" parent="."]
+position = Vector2( 152, 495 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter7"]
+texture = ExtResource( 57 )
+
+[node name="SpriteLetter8" type="Sprite" parent="."]
+position = Vector2( 152, 540 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter8"]
+texture = ExtResource( 60 )
+
+[node name="SpriteLetter9" type="Sprite" parent="."]
+position = Vector2( 152, 585 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter9"]
+texture = ExtResource( 58 )
+
+[node name="SpriteLetter10" type="Sprite" parent="."]
+position = Vector2( 152, 630 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter10"]
+texture = ExtResource( 61 )
+
+[node name="SpriteLetter11" type="Sprite" parent="."]
+position = Vector2( 152, 675 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter11"]
+texture = ExtResource( 62 )
+
+[node name="SpriteLetter12" type="Sprite" parent="."]
+position = Vector2( 152, 720 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter12"]
+texture = ExtResource( 67 )
+
+[node name="SpriteLetter13" type="Sprite" parent="."]
+position = Vector2( 152, 765 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter13"]
+texture = ExtResource( 68 )
+
+[node name="SpriteLetter14" type="Sprite" parent="."]
+position = Vector2( 152, 810 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter14"]
+texture = ExtResource( 69 )
+
+[node name="SpriteLetter15" type="Sprite" parent="."]
+position = Vector2( 346, 225 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter15"]
+texture = ExtResource( 81 )
+
+[node name="SpriteLetter16" type="Sprite" parent="."]
+position = Vector2( 346, 270 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter16"]
+texture = ExtResource( 82 )
+
+[node name="SpriteLetter17" type="Sprite" parent="."]
+position = Vector2( 346, 315 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter17"]
+texture = ExtResource( 80 )
+
+[node name="SpriteLetter18" type="Sprite" parent="."]
+position = Vector2( 346, 360 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter18"]
+texture = ExtResource( 77 )
+
+[node name="SpriteLetter19" type="Sprite" parent="."]
+position = Vector2( 346, 405 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter19"]
+texture = ExtResource( 74 )
+
+[node name="SpriteLetter20" type="Sprite" parent="."]
+position = Vector2( 346, 450 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter20"]
+texture = ExtResource( 75 )
+
+[node name="SpriteLetter21" type="Sprite" parent="."]
+position = Vector2( 346, 495 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter21"]
+texture = ExtResource( 76 )
+
+[node name="SpriteLetter22" type="Sprite" parent="."]
+position = Vector2( 346, 540 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter22"]
+texture = ExtResource( 79 )
+
+[node name="SpriteLetter23" type="Sprite" parent="."]
+position = Vector2( 346, 585 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter23"]
+texture = ExtResource( 78 )
+
+[node name="SpriteLetter24" type="Sprite" parent="."]
+position = Vector2( 346, 630 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter24"]
+texture = ExtResource( 73 )
+
+[node name="SpriteLetter25" type="Sprite" parent="."]
+position = Vector2( 346, 675 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter25"]
+texture = ExtResource( 70 )
+
+[node name="SpriteLetter26" type="Sprite" parent="."]
+position = Vector2( 346, 720 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter26"]
+texture = ExtResource( 72 )
+
+[node name="SpriteLetter27" type="Sprite" parent="."]
+position = Vector2( 346, 765 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="SpriteLetter27"]
+texture = ExtResource( 71 )
+
+[node name="SpriteColor" type="Sprite" parent="."]
+position = Vector2( 475, 225 )
+texture = ExtResource( 7 )
+
+[node name="SpriteRed" type="Sprite" parent="SpriteColor"]
+texture = ExtResource( 4 )
+
+[node name="SpriteColor2" type="Sprite" parent="."]
+position = Vector2( 475, 270 )
+texture = ExtResource( 7 )
+
+[node name="SpriteYellow" type="Sprite" parent="SpriteColor2"]
+texture = ExtResource( 16 )
+
+[node name="SpriteColor3" type="Sprite" parent="."]
+position = Vector2( 475, 315 )
+texture = ExtResource( 7 )
+
+[node name="SpriteBlue" type="Sprite" parent="SpriteColor3"]
+texture = ExtResource( 10 )
+
+[node name="SpriteColor4" type="Sprite" parent="."]
+position = Vector2( 475, 360 )
+texture = ExtResource( 7 )
+
+[node name="SpriteGreen" type="Sprite" parent="SpriteColor4"]
+texture = ExtResource( 13 )
+
+[node name="SpriteColor5" type="Sprite" parent="."]
+position = Vector2( 475, 405 )
+texture = ExtResource( 7 )
+
+[node name="SpritePurple" type="Sprite" parent="SpriteColor5"]
+texture = ExtResource( 12 )
+
+[node name="SpriteColor6" type="Sprite" parent="."]
+position = Vector2( 475, 450 )
+texture = ExtResource( 7 )
+
+[node name="SpritePink" type="Sprite" parent="SpriteColor6"]
+texture = ExtResource( 11 )
+
+[node name="SpriteColor7" type="Sprite" parent="."]
+position = Vector2( 475, 495 )
+texture = ExtResource( 7 )
+
+[node name="SpriteBrown" type="Sprite" parent="SpriteColor7"]
+texture = ExtResource( 14 )
+
+[node name="SpriteColor8" type="Sprite" parent="."]
+position = Vector2( 475, 540 )
+texture = ExtResource( 7 )
+
+[node name="SpriteWhite" type="Sprite" parent="SpriteColor8"]
+texture = ExtResource( 18 )
+
+[node name="SpriteColor9" type="Sprite" parent="."]
+position = Vector2( 475, 585 )
+texture = ExtResource( 7 )
+
+[node name="SpriteBlack" type="Sprite" parent="SpriteColor9"]
+texture = ExtResource( 15 )
+
+[node name="SpriteColor10" type="Sprite" parent="."]
+position = Vector2( 475, 630 )
+texture = ExtResource( 7 )
+
+[node name="SpriteGrey" type="Sprite" parent="SpriteColor10"]
+texture = ExtResource( 17 )
+
+[node name="SpritenNumber" type="Sprite" parent="."]
+position = Vector2( 535, 225 )
+texture = ExtResource( 8 )
+
+[node name="SpriteZero" type="Sprite" parent="SpritenNumber"]
+texture = ExtResource( 20 )
+
+[node name="SpritenNumber2" type="Sprite" parent="."]
+position = Vector2( 535, 270 )
+texture = ExtResource( 8 )
+
+[node name="SpriteOne" type="Sprite" parent="SpritenNumber2"]
+texture = ExtResource( 21 )
+
+[node name="SpritenNumber3" type="Sprite" parent="."]
+position = Vector2( 535, 315 )
+texture = ExtResource( 8 )
+
+[node name="SpriteTwo" type="Sprite" parent="SpritenNumber3"]
+texture = ExtResource( 28 )
+
+[node name="SpritenNumber4" type="Sprite" parent="."]
+position = Vector2( 535, 360 )
+texture = ExtResource( 8 )
+
+[node name="SpriteThree" type="Sprite" parent="SpritenNumber4"]
+texture = ExtResource( 27 )
+
+[node name="SpritenNumber5" type="Sprite" parent="."]
+position = Vector2( 535, 405 )
+texture = ExtResource( 8 )
+
+[node name="SpriteFour" type="Sprite" parent="SpritenNumber5"]
+texture = ExtResource( 24 )
+
+[node name="SpritenNumber6" type="Sprite" parent="."]
+position = Vector2( 535, 450 )
+texture = ExtResource( 8 )
+
+[node name="SpriteFive" type="Sprite" parent="SpritenNumber6"]
+texture = ExtResource( 29 )
+
+[node name="SpritenNumber7" type="Sprite" parent="."]
+position = Vector2( 535, 495 )
+texture = ExtResource( 8 )
+
+[node name="SpriteSix" type="Sprite" parent="SpritenNumber7"]
+texture = ExtResource( 23 )
+
+[node name="SpritenNumber8" type="Sprite" parent="."]
+position = Vector2( 535, 540 )
+texture = ExtResource( 8 )
+
+[node name="SpriteSeven" type="Sprite" parent="SpritenNumber8"]
+texture = ExtResource( 26 )
+
+[node name="SpritenNumber9" type="Sprite" parent="."]
+position = Vector2( 535, 585 )
+texture = ExtResource( 8 )
+
+[node name="SpriteEight" type="Sprite" parent="SpritenNumber9"]
+texture = ExtResource( 22 )
+
+[node name="SpritenNumber10" type="Sprite" parent="."]
+position = Vector2( 535, 630 )
+texture = ExtResource( 8 )
+
+[node name="SpriteNine" type="Sprite" parent="SpritenNumber10"]
+texture = ExtResource( 25 )
 [connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_next"]
