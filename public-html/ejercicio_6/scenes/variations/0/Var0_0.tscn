@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/img/Vector 1.png" type="Texture" id=1]
+[ext_resource path="res://scenes/contador.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/variations/0/tera.gd" type="Script" id=3]
+[ext_resource path="res://assets/Vector (2).png" type="Texture" id=4]
+[ext_resource path="res://assets/img/Rectangle 1 (5).png" type="Texture" id=5]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Vector (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/Vector.png" type="Texture" id=8]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+size = 41
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 9 )
+
+[node name="tera" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 1292.0
+margin_top = 401.0
+margin_right = 1349.0
+margin_bottom = 501.0
+icon = ExtResource( 1 )
+flat = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 2 )
+text = "Bit a byte"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteCube" type="Sprite" parent="."]
+position = Vector2( 720, 450 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCube"]
+position = Vector2( -100, 56 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="SpriteCube"]
+position = Vector2( 108, 54.642 )
+texture = ExtResource( 7 )
+
+[node name="Sprite3" type="Sprite" parent="SpriteCube"]
+position = Vector2( 3.5, -124.018 )
+texture = ExtResource( 4 )
+
+[node name="Terabyte" type="Label" parent="."]
+margin_left = 600.0
+margin_top = 700.0
+margin_right = 855.0
+margin_bottom = 745.0
+custom_fonts/font = SubResource( 3 )
+text = "Terabyte (TB)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Terabyte"]
+margin_left = 50.0001
+margin_top = 50.0
+margin_right = 197.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 4 )
+text = "1024 GB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_Button_pressed"]
