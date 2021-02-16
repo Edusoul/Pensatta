@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="plantilla_ejercicio"
+config/name="ejercicio_21"
 run/main_scene="res://scenes/Setup.tscn"
 config/icon="res://icon.png"
 

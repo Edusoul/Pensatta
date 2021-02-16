@@ -38,13 +38,38 @@ margin_top = 7.93414
 margin_right = 507.263
 margin_bottom = 58.9341
 custom_fonts/font = SubResource( 1 )
-text = "Título del problema"
+text = "Teléfono y Apps"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BubbleTailSprite" type="Sprite" parent="."]
+position = Vector2( 502.713, 244.137 )
+z_index = 2
+texture = SubResource( 2 )
+
+[node name="TailShadowSprite" type="Sprite" parent="BubbleTailSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 2, 4.12 )
+z_as_relative = false
+texture = SubResource( 2 )
+
+[node name="IntroLabel" type="Label" parent="BubbleTailSprite"]
+margin_left = 79.387
+margin_top = -65.4305
+margin_right = 807.387
+margin_bottom = 54.5695
+theme = ExtResource( 5 )
+text = "Selecciona el software ofimático que mejor se ajusta a la necesidad.
+ Tienes 3 minutos luego de presionar el botón de inicio  ¡Mucha suerte!"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 937.1, 219.667 )
+position = Vector2( 937.1, 257.044 )
+scale = Vector2( 1, 1.59804 )
 z_index = 1
 texture = ExtResource( 4 )
 
@@ -53,29 +78,6 @@ modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
 position = Vector2( 3.34705, 4.10217 )
 z_as_relative = false
 texture = ExtResource( 4 )
-
-[node name="IntroLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -355.0
-margin_top = -40.9603
-margin_right = 373.0
-margin_bottom = 38.0397
-theme = ExtResource( 5 )
-text = "Aquí va la descripción del problema. Haz algo para avanzar a la siguiente pantalla."
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BubbleTailSprite" type="Sprite" parent="ThoughtBubbleSprite"]
-position = Vector2( -434.387, 24.4702 )
-z_index = 1
-texture = SubResource( 2 )
-
-[node name="TailShadowSprite" type="Sprite" parent="ThoughtBubbleSprite/BubbleTailSprite"]
-modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
-position = Vector2( 2, 4.12 )
-z_as_relative = false
-texture = SubResource( 2 )
 
 [node name="KattySprite" type="Sprite" parent="."]
 position = Vector2( 331.374, 502.222 )

@@ -1,12 +1,11 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
 var result_title;
 var result_summary;
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	find_node("TitleLabel").text = global.title
 	result_title = $ThoughtBubbleSprite/ResultLabel
 	result_summary = $ThoughtBubbleSprite/SummaryLabel
 #	if global.correct_answers_no == (número de respuestas correctas):
