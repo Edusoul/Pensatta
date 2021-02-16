@@ -1,6 +1,6 @@
 extends Control
 
-export var title = "Title"
+export(String, MULTILINE) var title = "Title"
 export(String, MULTILINE) var question = "question"
 export var options = []
 export var correctIndex = []

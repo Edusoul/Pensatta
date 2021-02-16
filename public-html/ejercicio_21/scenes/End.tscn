@@ -9,15 +9,15 @@
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=7]
 [ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 36
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 36
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 41
 font_data = ExtResource( 4 )
 
@@ -47,7 +47,7 @@ margin_left = -199.9
 margin_top = -69.7546
 margin_right = 30.1001
 margin_bottom = -21.7546
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "¡Resultado!"
 __meta__ = {
@@ -59,7 +59,7 @@ margin_left = -202.0
 margin_top = -23.0
 margin_right = 224.0
 margin_bottom = 70.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "Resumen de tus respuestas."
 autowrap = true
@@ -104,7 +104,7 @@ margin_left = 88.2626
 margin_top = 7.93414
 margin_right = 507.263
 margin_bottom = 58.9341
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Teléfono y Apps"
 __meta__ = {
 "_edit_use_anchors_": false

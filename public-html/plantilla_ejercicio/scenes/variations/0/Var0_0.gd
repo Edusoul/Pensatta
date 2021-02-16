@@ -15,8 +15,8 @@ func _on_NextButton_pressed():
 		get_tree().change_scene("res://scenes/End.tscn")
 
 
-#DESCOMENTAR CON CTRL+K SI SE REQUIERE UN TIMER GLOBAL
-#LA ESCENA TIENE QUE TENER UN NODO $Time
+#UNCOMMENT WITH CTRL+K IF THE SCENE REQUIRES A GLOBAL TIMER
+#THE SCENE WILL REQUIRE A $Time LABEL NODE
 #func _process(delta):
 #	global.timer -= delta
 #	$Time.text = "Tiempo Restante: {t}s".format({"t":int(global.timer)})

@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://QuestionNode.gd" type="Script" id=2]
+[ext_resource path="res://scenes/QuestionNode.gd" type="Script" id=2]
 [ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=3]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.423529, 0.556863, 1 )
@@ -28,7 +29,6 @@ __meta__ = {
 title = "Título"
 question = "Pregunta"
 options = [ "a", "b", "c" ]
-correctIndex = [ 0 ]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_right = 486.0

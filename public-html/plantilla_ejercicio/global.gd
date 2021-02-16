@@ -1,7 +1,7 @@
 extends Node
 
 var title = "Título"
-var timer = 181
+var timer = 181 #s
 var timeout = false
 var scene = 0
 var last_scene = 1 
