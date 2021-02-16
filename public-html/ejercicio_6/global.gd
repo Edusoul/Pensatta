@@ -1,23 +1,20 @@
 extends Node
 
-
 var counter = 0
 var timer_on = true
-var show_count
+var Show_count
 
-var answered_correctly
-var possible_variations = 3
+var title = "Bit a byte"
+var timer = 181 #s
+var timeout = false
+var scene = 0
+var last_scene = 1 
+
+var possible_variations = 1
 var variation_number
+var correct_answers_no = 0
+var incorrect_answers_no = 0
 
 func pick_random_variation_number():
 	randomize()
-#	return 2
 	return randi() % possible_variations
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

@@ -1,58 +1,137 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/cuboMega.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/Vector 2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/variations/0/mega.gd" type="Script" id=2]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/contador.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/img/Vector 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Rectangle 1 (5).png" type="Texture" id=6]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/Vector (2).png" type="Texture" id=8]
+[ext_resource path="res://assets/Vector (1).png" type="Texture" id=9]
+[ext_resource path="res://assets/Vector.png" type="Texture" id=10]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/Vector (4).png" type="Texture" id=12]
+[ext_resource path="res://assets/Vector (3).png" type="Texture" id=13]
+[ext_resource path="res://assets/Vector (5).png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 18
-font_data = ExtResource( 3 )
+size = 41
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 11 )
 
 [node name="mega" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 900.0
-margin_bottom = 600.0
-color = Color( 1, 0.913725, 0.839216, 1 )
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 309.119
-margin_top = 164.357
-margin_right = 521.119
-margin_bottom = 370.357
-icon = ExtResource( 1 )
+margin_left = 1292.0
+margin_top = 401.0
+margin_right = 1349.0
+margin_bottom = 501.0
+icon = ExtResource( 5 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="ColorRect"]
-margin_left = 136.0
-margin_top = 460.0
-margin_right = 217.0
-margin_bottom = 499.0
+margin_left = 90.0
+margin_top = 401.0
+margin_right = 147.0
+margin_bottom = 501.0
 custom_fonts/font = SubResource( 1 )
-text = "Anterior"
-
-[node name="Node2D" parent="." instance=ExtResource( 4 )]
-
-[node name="Label" type="Label" parent="."]
-margin_left = 97.0
-margin_top = 57.0
-margin_right = 372.0
-margin_bottom = 80.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Tiempo que llevas estudiando:"
+icon = ExtResource( 1 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 2 )
+text = "Bit a byte"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteCubeMega" type="Sprite" parent="."]
+position = Vector2( 720, 450 )
+
+[node name="Sprite" type="Sprite" parent="SpriteCubeMega"]
+position = Vector2( -100, 56 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="SpriteCubeMega"]
+position = Vector2( 108, 54.642 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="SpriteCubeMega"]
+position = Vector2( 3.5, -124.018 )
+texture = ExtResource( 8 )
+
+[node name="Megabyte" type="Label" parent="."]
+margin_left = 600.0
+margin_top = 700.0
+margin_right = 855.0
+margin_bottom = 745.0
+custom_fonts/font = SubResource( 3 )
+text = "Megabyte (Mb)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Megabyte"]
+margin_left = 50.0001
+margin_top = 50.0
+margin_right = 197.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 4 )
+text = "1024 KB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteMiniCube" type="Sprite" parent="."]
+position = Vector2( 930, 650 )
+
+[node name="Sprite" type="Sprite" parent="SpriteMiniCube"]
+position = Vector2( 4.23785, 14.8325 )
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="SpriteMiniCube"]
+position = Vector2( 32.3137, 13.7731 )
+texture = ExtResource( 12 )
+
+[node name="Sprite3" type="Sprite" parent="SpriteMiniCube"]
+position = Vector2( 18.5406, -9.00543 )
+texture = ExtResource( 14 )
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button2_anterior"]
