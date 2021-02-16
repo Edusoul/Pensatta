@@ -4,14 +4,14 @@
 [ext_resource path="res://scenes/QuestionNode.gd" type="Script" id=2]
 [ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=3]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.423529, 0.556863, 1 )
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 20
 font_data = ExtResource( 1 )
 
@@ -22,15 +22,18 @@ size_flags_horizontal = 2
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
-question = "Question"
+title = "Título"
+question = "Pregunta"
 options = [ "a", "b", "c" ]
+correctIndex = [ 0 ]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_right = 486.0
 margin_bottom = 180.0
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 margin_right = 486.0
@@ -58,7 +61,7 @@ margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "QuestionTitlee"
+text = "QuestionTitle"
 align = 1
 autowrap = true
 __meta__ = {
@@ -71,7 +74,7 @@ margin_right = 446.0
 margin_bottom = 84.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.74902, 0.74902, 0.74902, 1 )
 text = "Question"
 align = 1

@@ -3,7 +3,7 @@ extends Control
 export var title = "Title"
 export var question = "question"
 export var options = []
-export var correctIndex = 0
+export var correctIndex = []
 
 func _ready():
 	find_node("Title").text = title
@@ -21,8 +21,8 @@ func _ready():
 		button.connect("pressed", self, "_pressed",[answer])
 		get_node("PanelContainer/MarginContainer/GridContainer").add_child(button)
 
-func _pressed(answer):
-	if answer:
+func _pressed(rightAnswer):
+	if rightAnswer:
 		pass #Qué se hace si la respuesta es correcta
 	else:
 		pass #Qué hacer si la respuesta fue incorrecta
