@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/Rectangle 1 (5).png" type="Texture" id=1]
-[ext_resource path="res://scenes/variations/0/scene3.gd" type="Script" id=2]
-[ext_resource path="res://assets/Rectangle 3 (1).png" type="Texture" id=3]
-[ext_resource path="res://assets/Rectangle 3.png" type="Texture" id=4]
-[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Rectangle 1 (5).png" type="Texture" id=3]
+[ext_resource path="res://assets/Rectangle 3 (1).png" type="Texture" id=4]
+[ext_resource path="res://assets/Rectangle 3.png" type="Texture" id=5]
 [ext_resource path="res://assets/Rectangle 4 (1).png" type="Texture" id=6]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=7]
 
@@ -12,10 +12,10 @@
 size = 41
 font_data = ExtResource( 7 )
 
-[node name="scene3" type="Control"]
-margin_right = 1441.0
-margin_bottom = 897.0
-script = ExtResource( 2 )
+[node name="Var0" type="Control"]
+margin_right = 1440.0
+margin_bottom = 900.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -28,9 +28,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="image" type="Sprite" parent="."]
+position = Vector2( 580, 470 )
+scale = Vector2( 1.05019, 1.04969 )
+texture = ExtResource( 6 )
+
 [node name="RectTitleSprite" type="Sprite" parent="."]
 position = Vector2( 0, 40 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="TitleLabel" type="Label" parent="RectTitleSprite"]
@@ -38,7 +43,7 @@ margin_left = -36.1882
 margin_top = 4.36655
 margin_right = 382.812
 margin_bottom = 56.3665
-theme = ExtResource( 5 )
+theme = ExtResource( 2 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "¡Asegúrate!"
@@ -48,34 +53,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="image" type="Sprite" parent="."]
-position = Vector2( 580, 470 )
-scale = Vector2( 1.05019, 1.04969 )
-texture = ExtResource( 6 )
-
 [node name="SpriteOpen" type="Sprite" parent="."]
 position = Vector2( 1250, 350 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Button2" type="Button" parent="SpriteOpen"]
-margin_left = -29.3185
-margin_top = -28.4432
-margin_right = 29.6815
-margin_bottom = 22.5568
+margin_left = -39.2806
+margin_top = -31.0
+margin_right = 38.7194
+margin_bottom = 21.0
 text = "Abierto"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SpriteClose" type="Sprite" parent="."]
-position = Vector2( 1255.34, 552.896 )
-texture = ExtResource( 3 )
+position = Vector2( 1250, 560 )
+texture = ExtResource( 4 )
 
 [node name="Button" type="Button" parent="SpriteClose"]
-margin_left = -33.8014
-margin_top = -29.5518
-margin_right = 27.1986
-margin_bottom = 21.4482
+anchor_right = 0.281
+anchor_bottom = 0.265
+margin_left = -30.5715
+margin_top = -37.347
+margin_right = 2.95646
+margin_bottom = -4.88199
 text = "Cerrado"
 __meta__ = {
 "_edit_use_anchors_": false
