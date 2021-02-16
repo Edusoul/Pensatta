@@ -23,19 +23,8 @@ var code ={
 	"Y": "§", "Z": "↕", "Ñ": ":"
 }
 
-<<<<<<< HEAD
-func _ready():
-#	var style = StyleBoxFlat.new()
-#	var color = Color(0.9, 0.5, 0.2)
-#	style.set_bg_color(color)
-#	$Button.set("custom_styles/normal", style)
-=======
+
 func _ready(): 
-	var style = StyleBoxFlat.new()
-	var color = Color(0.9, 0.5, 0.2)
-	style.set_bg_color(color)
-	$Button.set("custom_styles/normal", style)
->>>>>>> develop
 	pass
 
 func _on_LineEdit_text_changed(new_text):
