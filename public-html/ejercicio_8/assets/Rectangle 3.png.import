@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/f1.png-cd8a460038afc0038ea35fa237e11fcf.stex"
+path="res://.import/Rectangle 3.png-9da88e464f46f69fe58a16a5d8db9d2a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/f1.png"
-dest_files=[ "res://.import/f1.png-cd8a460038afc0038ea35fa237e11fcf.stex" ]
+source_file="res://assets/Rectangle 3.png"
+dest_files=[ "res://.import/Rectangle 3.png-9da88e464f46f69fe58a16a5d8db9d2a.stex" ]
 
 [params]
 
