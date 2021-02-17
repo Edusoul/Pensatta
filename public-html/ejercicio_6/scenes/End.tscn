@@ -15,10 +15,12 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 36
+use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 36
+use_filter = true
 font_data = ExtResource( 6 )
 
 [node name="Node2D" type="Node2D"]
