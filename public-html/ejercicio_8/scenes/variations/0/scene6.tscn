@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/img/f6.png" type="Texture" id=1]
+[ext_resource path="res://assets/Rectangle 1 (5).png" type="Texture" id=1]
 [ext_resource path="res://scenes/variations/0/scene6.gd" type="Script" id=2]
-[ext_resource path="res://assets/img/Katty1.png" type="Texture" id=4]
-[ext_resource path="res://assets/img/ThoughtBubble.png" type="Texture" id=5]
+[ext_resource path="res://assets/Rectangle 3 (1).png" type="Texture" id=3]
+[ext_resource path="res://assets/Rectangle 3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Rectangle 4 (1).png" type="Texture" id=5]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=6]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 7 )
 
 [node name="scene6" type="Control"]
-margin_right = 1023.0
-margin_bottom = 597.0
+margin_right = 1440.0
+margin_bottom = 900.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -23,51 +29,57 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 691.262, 493.889 )
-scale = Vector2( 1.21046, 2.06096 )
-texture = ExtResource( 1 )
+[node name="SpriteClose" type="Sprite" parent="."]
+position = Vector2( 1255.34, 552.896 )
+texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 116.456
-margin_top = 534.727
-margin_right = 454.456
-margin_bottom = 588.727
-theme = ExtResource( 6 )
+[node name="Button" type="Button" parent="SpriteClose"]
+margin_left = -27.3671
+margin_top = -30.8685
+margin_right = 33.6329
+margin_bottom = 23.1315
 text = "Cerrado"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 116.456
-margin_top = 379.727
-margin_right = 447.456
-margin_bottom = 433.727
-theme = ExtResource( 6 )
+[node name="SpriteOpen" type="Sprite" parent="."]
+position = Vector2( 1250, 350 )
+texture = ExtResource( 4 )
+
+[node name="Button2" type="Button" parent="SpriteOpen"]
+margin_left = -32.9675
+margin_top = -28.3276
+margin_right = 26.0325
+margin_bottom = 21.6724
 text = "Abierto"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Katty1" type="Sprite" parent="."]
-position = Vector2( 1090.63, 490.714 )
-texture = ExtResource( 4 )
-flip_h = true
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 506.03, 156.798 )
+[node name="image" type="Sprite" parent="."]
+position = Vector2( 580, 470 )
+scale = Vector2( 1.05019, 1.04969 )
 texture = ExtResource( 5 )
 
-[node name="Label" type="Label" parent="Sprite2"]
-margin_left = -228.07
-margin_top = -21.3816
-margin_right = 222.93
-margin_bottom = 16.6184
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = -36.1882
+margin_top = 4.36655
+margin_right = 382.812
+margin_bottom = 56.3665
 theme = ExtResource( 6 )
-text = "¿Cuál es el candado correcto?"
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "¡Asegúrate!"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_cerrado"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_abierto"]
+[connection signal="pressed" from="SpriteClose/Button" to="." method="_on_Button_cerrado"]
+[connection signal="pressed" from="SpriteOpen/Button2" to="." method="_on_Button2_abierto"]

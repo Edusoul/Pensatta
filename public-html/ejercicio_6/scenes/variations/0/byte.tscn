@@ -1,64 +1,60 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://assets/cuboByte.png" type="Texture" id=1]
+[ext_resource path="res://assets/Vector (2).png" type="Texture" id=1]
 [ext_resource path="res://scenes/variations/0/byte.gd" type="Script" id=2]
 [ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/contador.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Vector (1).png" type="Texture" id=5]
+[ext_resource path="res://assets/Vector.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Vector 2.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Rectangle 1 (5).png" type="Texture" id=8]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=10]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
 
-[sub_resource type="GDScript" id=2]
-script/source = "extends Label
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 3 )
+[sub_resource type="DynamicFont" id=2]
+size = 41
+font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 18
-font_data = ExtResource( 3 )
+size = 36
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 36
+font_data = ExtResource( 11 )
 
 [node name="byte" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 900.0
-margin_bottom = 600.0
-color = Color( 1, 0.913725, 0.839216, 1 )
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 338.784
-margin_top = 223.687
-margin_right = 450.784
-margin_bottom = 329.687
-icon = ExtResource( 1 )
+margin_left = 90.0
+margin_top = 401.0
+margin_right = 147.0
+margin_bottom = 501.0
+icon = ExtResource( 7 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="ColorRect"]
-margin_left = 686.921
-margin_top = 438.811
-margin_right = 767.921
-margin_bottom = 477.811
+visible = false
+margin_left = 1194.07
+margin_top = 670.61
+margin_right = 1275.07
+margin_bottom = 709.61
 custom_fonts/font = SubResource( 1 )
 text = "Si"
 __meta__ = {
@@ -66,51 +62,70 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="ColorRect"]
-margin_left = 686.921
-margin_top = 510.854
-margin_right = 767.921
-margin_bottom = 549.854
-custom_fonts/font = SubResource( 1 )
-text = "No"
+margin_left = 1000.0
+margin_top = 807.432
+margin_right = 1326.0
+margin_bottom = 846.432
+theme = ExtResource( 10 )
+text = "FINALIZAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Node2D" parent="." instance=ExtResource( 4 )]
 
-[node name="Label" type="Label" parent="."]
-margin_left = 375.05
-margin_top = 63.5678
-margin_right = 476.05
-margin_bottom = 113.568
-script = SubResource( 2 )
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 2 )
+text = "Bit a byte"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 650.511
-margin_top = 156.801
-margin_right = 825.511
-margin_bottom = 238.801
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "¿Quieres repasar de nuevo las unidades de medida de la informacion?"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 720, 450 )
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 97.0
-margin_top = 57.0
-margin_right = 372.0
-margin_bottom = 80.0
+[node name="Sprite" type="Sprite" parent="Sprite"]
+position = Vector2( -100, 56 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( 108, 54.642 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="Sprite"]
+position = Vector2( 3.5, -124.018 )
+texture = ExtResource( 1 )
+
+[node name="Kilobyte" type="Label" parent="."]
+margin_left = 675.0
+margin_top = 700.0
+margin_right = 769.0
+margin_bottom = 745.0
 custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.396078, 0.25098, 0.384314, 1 )
-text = "Tiempo que llevas estudiando:"
+text = "Byte"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="Kilobyte"]
+margin_left = -10.0
+margin_top = 50.0
+margin_right = 137.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 5 )
+text = "8 bits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button2_anterior"]
 [connection signal="pressed" from="ColorRect/Button3" to="." method="_on_Button3_pressed"]

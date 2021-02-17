@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/img/Katty1.png" type="Texture" id=1]
-[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=2]
+[ext_resource path="res://assets/Rectangle 1 (5).png" type="Texture" id=2]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/img/ThoughtBubble.png" type="Texture" id=4]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
@@ -17,8 +17,10 @@ font_data = ExtResource( 3 )
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1440.0
-margin_bottom = 900.0
+margin_left = 1.41418
+margin_top = 4.0
+margin_right = 1441.41
+margin_bottom = 904.0
 color = Color( 0.254902, 0.560784, 0.529412, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -30,14 +32,14 @@ texture = ExtResource( 2 )
 centered = false
 
 [node name="TitleLabel" type="Label" parent="RectTitleSprite"]
-margin_left = 88.2626
-margin_top = 4.36653
-margin_right = 507.263
+margin_left = -36.1882
+margin_top = 4.36655
+margin_right = 382.812
 margin_bottom = 56.3665
 theme = ExtResource( 5 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Asegurate"
+text = "¡Asegúrate!"
 align = 1
 valign = 1
 __meta__ = {
@@ -45,7 +47,8 @@ __meta__ = {
 }
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 937.1, 219.667 )
+position = Vector2( 937.1, 259.667 )
+scale = Vector2( 1, 1.64 )
 z_index = 1
 texture = ExtResource( 4 )
 
@@ -55,28 +58,30 @@ position = Vector2( 3.34705, 1.27375 )
 z_as_relative = false
 texture = ExtResource( 4 )
 
-[node name="IntroLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -357.828
-margin_top = -63.5877
-margin_right = 370.172
-margin_bottom = 56.4123
-theme = ExtResource( 5 )
-text = "Presiona el candado correspondiente según la información que determines que contiene cada imagen."
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="BubbleTail2" type="Sprite" parent="ThoughtBubbleSprite"]
-position = Vector2( -434.586, 24.5092 )
+position = Vector2( -433.172, 1.10476 )
 z_index = 1
 texture = ExtResource( 8 )
 
 [node name="BubbleTail3" type="Sprite" parent="ThoughtBubbleSprite/BubbleTail2"]
 modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
-position = Vector2( 1.35516, 1.25204 )
+position = Vector2( 1.35516, 11.0081 )
 z_as_relative = false
 texture = ExtResource( 8 )
+
+[node name="IntroLabel" type="Label" parent="ThoughtBubbleSprite"]
+anchor_left = -0.0021549
+anchor_right = -0.0021549
+margin_left = -381.112
+margin_top = -63.0
+margin_right = 412.888
+margin_bottom = 57.0
+theme = ExtResource( 5 )
+text = "Verás una serie de publicaciones. Con base en su contenido, determina si estas son o no seguras y si deben llevar un aviso de contenido sensible."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="KattySprite" type="Sprite" parent="."]
 position = Vector2( 331.374, 502.222 )

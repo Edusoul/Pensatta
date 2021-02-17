@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Rectangle 1 (5).png" type="Texture" id=3]
+[ext_resource path="res://assets/Rectangle 3 (1).png" type="Texture" id=4]
+[ext_resource path="res://assets/Rectangle 3.png" type="Texture" id=5]
+[ext_resource path="res://assets/Rectangle 4 (1).png" type="Texture" id=6]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 7 )
+
+[node name="Var0" type="Control"]
+margin_right = 1440.0
+margin_bottom = 900.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image" type="Sprite" parent="."]
+position = Vector2( 580, 470 )
+scale = Vector2( 1.05019, 1.04969 )
+texture = ExtResource( 6 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = -36.1882
+margin_top = 4.36655
+margin_right = 382.812
+margin_bottom = 56.3665
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "¡Asegúrate!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteOpen" type="Sprite" parent="."]
+position = Vector2( 1250, 350 )
+texture = ExtResource( 5 )
+
+[node name="Button2" type="Button" parent="SpriteOpen"]
+margin_left = -39.2806
+margin_top = -31.0
+margin_right = 38.7194
+margin_bottom = 21.0
+text = "Abierto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteClose" type="Sprite" parent="."]
+position = Vector2( 1250, 560 )
+texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="SpriteClose"]
+anchor_right = 0.281
+anchor_bottom = 0.265
+margin_left = -30.5715
+margin_top = -37.347
+margin_right = 2.95646
+margin_bottom = -4.88199
+text = "Cerrado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="SpriteOpen/Button2" to="." method="_on_Button2_abierto"]
+[connection signal="pressed" from="SpriteClose/Button" to="." method="_on_Button_cerrado"]

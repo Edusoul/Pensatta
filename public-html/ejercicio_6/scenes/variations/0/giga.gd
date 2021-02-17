@@ -22,5 +22,5 @@ func _on_Button_pressed():
 
 
 func _on_Button2_anterior():
-	get_tree().change_scene("res://scenes/variations/0/Var0.tscn")
+	get_tree().change_scene("res://scenes/variations/0/Var0_0.tscn")
 	pass # Replace with function body.
