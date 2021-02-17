@@ -1,0 +1,331 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://scenes/variations/0/Timer_body.gd" type="Script" id=2]
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Rectangle 1 (6).png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Rectangle 3 (2).png" type="Texture" id=7]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/img/Ellipse 6.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/Ellipse 2.png" type="Texture" id=10]
+[ext_resource path="res://assets/font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/img/Rectangle 1 (7).png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=19]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=20]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="DynamicFont" id=21]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="DynamicFont" id=18]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 24
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="DynamicFont" id=16]
+size = 24
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 40
+font_data = ExtResource( 11 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Algoritmos y computadoras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteAnswers" type="Sprite" parent="."]
+position = Vector2( 549.241, 520.667 )
+scale = Vector2( 1.12308, 1.2811 )
+texture = ExtResource( 6 )
+
+[node name="SpriteLine_4" type="Sprite" parent="SpriteAnswers"]
+visible = false
+position = Vector2( 330, -73 )
+texture = ExtResource( 9 )
+
+[node name="LineEdit4" type="LineEdit" parent="SpriteAnswers/SpriteLine_4"]
+margin_left = -34.0
+margin_top = -15.0
+margin_right = 38.0
+margin_bottom = 16.0
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+max_length = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteLine_2" type="Sprite" parent="SpriteAnswers"]
+visible = false
+position = Vector2( 330, -13 )
+texture = ExtResource( 9 )
+
+[node name="LineEdit2" type="LineEdit" parent="SpriteAnswers/SpriteLine_2"]
+anchor_left = 2.0
+anchor_right = 2.0
+margin_left = -138.0
+margin_top = -15.0
+margin_right = -66.0
+margin_bottom = 16.0
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+max_length = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteLine" type="Sprite" parent="SpriteAnswers"]
+visible = false
+position = Vector2( 330, 50 )
+texture = ExtResource( 9 )
+
+[node name="LineEdit" type="LineEdit" parent="SpriteAnswers/SpriteLine"]
+margin_left = -34.0
+margin_top = -15.0
+margin_right = 38.0
+margin_bottom = 16.0
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+max_length = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteLine_3" type="Sprite" parent="SpriteAnswers"]
+visible = false
+position = Vector2( 330, 110 )
+texture = ExtResource( 9 )
+
+[node name="LineEdit3" type="LineEdit" parent="SpriteAnswers/SpriteLine_3"]
+margin_left = -34.0
+margin_top = -15.0
+margin_right = 38.0
+margin_bottom = 16.0
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+max_length = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="SpriteAnswers"]
+position = Vector2( -64.3236, -70.773 )
+scale = Vector2( 0.890407, 0.780578 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="SpriteAnswers/Sprite2"]
+margin_left = -255.0
+margin_top = -22.0
+margin_right = 218.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Dispositivos de adquisición de entrada"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="SpriteAnswers"]
+position = Vector2( -64.3236, -8.32678 )
+scale = Vector2( 0.890407, 0.780578 )
+texture = ExtResource( 7 )
+
+[node name="Label2" type="Label" parent="SpriteAnswers/Sprite3"]
+margin_left = -255.0
+margin_top = -16.0
+margin_right = 122.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Memoria de datos y programas"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="SpriteAnswers"]
+position = Vector2( -64.3236, 54.1194 )
+scale = Vector2( 0.890407, 0.780578 )
+texture = ExtResource( 7 )
+
+[node name="Label3" type="Label" parent="SpriteAnswers/Sprite4"]
+margin_left = -255.0
+margin_top = -13.0
+margin_right = -215.0
+margin_bottom = 10.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "CPU"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="SpriteAnswers"]
+position = Vector2( -64.3236, 116.566 )
+scale = Vector2( 0.890407, 0.780578 )
+texture = ExtResource( 7 )
+
+[node name="Label4" type="Label" parent="SpriteAnswers/Sprite5"]
+margin_left = -255.0
+margin_top = -13.0
+margin_right = -59.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Dispositivos de Salida"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 281.761
+margin_top = 323.862
+margin_right = 856.761
+margin_bottom = 354.862
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0.556863, 0.52549, 1 )
+text = "Componentes de la arquitectura Von Neumann"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonIniciar" type="Button" parent="."]
+margin_left = 1181.03
+margin_top = 428.598
+margin_right = 1324.03
+margin_bottom = 565.598
+custom_styles/focus = SubResource( 15 )
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ButtonIniciar"]
+margin_left = 26.5369
+margin_top = 50.7986
+margin_right = 122.537
+margin_bottom = 81.7986
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color = Color( 0, 0.290196, 0.27451, 1 )
+text = "INICIAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteCountDown" type="Sprite" parent="."]
+position = Vector2( 1325, 80 )
+texture = ExtResource( 12 )
+
+[node name="LabelCountdown" type="Label" parent="SpriteCountDown"]
+margin_left = -47.7175
+margin_top = -49.5742
+margin_right = -3.71753
+margin_bottom = 53.4258
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0.290196, 0.27451, 1 )
+text = "
+"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="SpriteCountDown/LabelCountdown"]
+process_mode = 0
+wait_time = 10.9
+[connection signal="text_changed" from="SpriteAnswers/SpriteLine_4/LineEdit4" to="." method="_on_LineEdit4_text_changed"]
+[connection signal="text_changed" from="SpriteAnswers/SpriteLine_2/LineEdit2" to="." method="_on_LineEdit2_text_changed"]
+[connection signal="text_changed" from="SpriteAnswers/SpriteLine/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_changed" from="SpriteAnswers/SpriteLine_3/LineEdit3" to="." method="_on_LineEdit3_text_changed"]
+[connection signal="pressed" from="ButtonIniciar" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="SpriteCountDown/LabelCountdown/Timer" to="." method="_on_Timer_timeout"]

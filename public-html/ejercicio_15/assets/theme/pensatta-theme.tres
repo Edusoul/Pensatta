@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://assets/font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=2]
@@ -49,9 +49,19 @@ shadow_color = Color( 0, 0, 0, 0.25098 )
 shadow_size = 4
 shadow_offset = Vector2( 0, 2 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/checkbox-filled.png-26e0c08325c78b17dacf814bcdeaae27.stex"
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/checkbox.png-de288cf4d397d9c3760c39f752b264b0.stex"
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 30
-use_filter = true
 font_data = ExtResource( 2 )
 
 [resource]
@@ -66,6 +76,24 @@ Button/styles/focus = null
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
+CheckBox/colors/font_color = Color( 0.254902, 0.560784, 0.529412, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.254902, 0.560784, 0.529412, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 0.254902, 0.560784, 0.529412, 1 )
+CheckBox/colors/font_color_pressed = Color( 0.254902, 0.560784, 0.529412, 1 )
+CheckBox/constants/check_vadjust = 2
+CheckBox/constants/hseparation = 8
+CheckBox/fonts/font = null
+CheckBox/icons/checked = SubResource( 5 )
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = SubResource( 6 )
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = SubResource( 7 )
+CheckBox/styles/hover_pressed = SubResource( 7 )
+CheckBox/styles/normal = SubResource( 7 )
+CheckBox/styles/pressed = SubResource( 7 )
 Label/colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
@@ -73,5 +101,5 @@ Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
-Label/fonts/font = SubResource( 5 )
+Label/fonts/font = SubResource( 8 )
 Label/styles/normal = null
