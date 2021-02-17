@@ -1,6 +1,7 @@
 extends Node
 
-var answered_correctly
+var answered_correctly = 0
+var answered = 0
 var possible_variations = 1
 var variation_number
 

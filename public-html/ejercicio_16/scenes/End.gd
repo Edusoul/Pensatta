@@ -9,7 +9,7 @@ var result_summary;
 func _ready():
 	result_title = $Node2D/ResultLabel
 	result_summary = $Node2D/SummaryLabel
-	if global.answered_correctly:
+	if global.answered_correctly == 6:
 		result_title.text = "Felicitaciones"
 		result_summary.text = "Identificaste correctamente las contraseñas"
 	else:

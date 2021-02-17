@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/img/Shadow.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Intro.gd" type="Script" id=7]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 41
 font_data = ExtResource( 3 )
 
@@ -38,7 +38,7 @@ margin_left = 88.2626
 margin_top = 47.9341
 margin_right = 784.263
 margin_bottom = 98.9341
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "Aplicación o Sistema Operativo?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,7 +61,7 @@ margin_top = -40.9603
 margin_right = 373.0
 margin_bottom = 38.0397
 theme = ExtResource( 5 )
-text = "Identifica todos los sistemas operativos en la siguiente sopa de palabras"
+text = "Escoge solo los globos que correspondan a sistemas operativos."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
