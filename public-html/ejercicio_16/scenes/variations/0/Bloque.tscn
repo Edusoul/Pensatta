@@ -1,102 +1,25 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/variations/0/Bloque.gd" type="Script" id=1]
-[ext_resource path="res://assets/font/Montserrat-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/ContornoV.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/Rectangle 3.png" type="Texture" id=3]
+[ext_resource path="res://assets/theme/BloqueVerde.tres" type="Theme" id=4]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/theme/BloqueRojo.tres" type="Theme" id=7]
+[ext_resource path="res://assets/img/ContornoR.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.384314, 0.768627, 0.729412, 1 )
-corner_detail = 1
+bg_color = Color( 0, 0.556863, 0.52549, 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 24
-font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
-bg_color = Color( 0.87451, 0.458824, 0.352941, 1 )
-corner_radius_top_left = 47
-corner_radius_top_right = 47
-corner_radius_bottom_right = 47
-corner_radius_bottom_left = 47
-shadow_color = Color( 0, 0, 0, 0.25098 )
-shadow_size = 4
-shadow_offset = Vector2( 0, 2 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
-bg_color = Color( 0.933333, 0.486275, 0.372549, 1 )
-corner_radius_top_left = 47
-corner_radius_top_right = 47
-corner_radius_bottom_right = 47
-corner_radius_bottom_left = 47
-shadow_color = Color( 0, 0, 0, 0.25098 )
-shadow_size = 4
-shadow_offset = Vector2( 0, 2 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
-bg_color = Color( 0.733333, 0.380392, 0.294118, 1 )
-corner_radius_top_left = 47
-corner_radius_top_right = 47
-corner_radius_bottom_right = 47
-corner_radius_bottom_left = 47
-shadow_color = Color( 0, 0, 0, 0.25098 )
-shadow_size = 4
-shadow_offset = Vector2( 0, 2 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 30
-font_data = ExtResource( 4 )
-
-[sub_resource type="Theme" id=7]
-Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
-Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
-Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
-Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-Button/constants/hseparation = 2
-Button/fonts/font = SubResource( 2 )
-Button/icons/Correct = null
-Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = SubResource( 3 )
-Button/styles/normal = SubResource( 4 )
-Button/styles/pressed = SubResource( 5 )
-Label/colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
-Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
-Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
-Label/constants/line_spacing = 3
-Label/constants/shadow_as_outline = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/fonts/font = SubResource( 6 )
-Label/styles/normal = null
-
-[sub_resource type="DynamicFont" id=8]
 size = 35
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 26
 extra_spacing_char = 5
 font_data = ExtResource( 6 )
 
 [node name="Panel" type="Panel"]
-margin_right = 512.0
-margin_bottom = 224.0
+margin_right = 448.0
+margin_bottom = 168.0
 theme = ExtResource( 5 )
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 1 )
@@ -104,52 +27,82 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="botonSecure" type="Button" parent="."]
-margin_left = 128.0
-margin_top = 96.0
-margin_right = 384.0
-margin_bottom = 143.0
-theme = SubResource( 7 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "SEGURA"
+[node name="Control" type="Control" parent="."]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 416.0
+margin_bottom = 85.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="botonInsecure" type="Button" parent="."]
-margin_left = 128.0
-margin_top = 160.0
-margin_right = 384.0
-margin_bottom = 207.0
-theme = SubResource( 7 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "INSEGURA"
+[node name="Rectangle 3" type="Sprite" parent="Control"]
+position = Vector2( 192, 26.511 )
+scale = Vector2( 0.929782, 0.947753 )
+texture = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="."]
-margin_right = 512.0
-margin_bottom = 43.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Contraseña:"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label2" type="Label" parent="."]
-margin_top = 48.0
-margin_right = 512.0
-margin_bottom = 81.0
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+[node name="Label2" type="Label" parent="Control/Rectangle 3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -206.5
+margin_top = -28.5
+margin_right = -206.5
+margin_bottom = -33.5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.576471, 0.576471, 0.576471, 1 )
 text = "password"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Insecure" type="Sprite" parent="Control"]
+position = Vector2( 192, 24 )
+scale = Vector2( 0.929782, 1.02927 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Secure" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 192, 24 )
+scale = Vector2( 0.929782, 1.02927 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="botonSecure" type="Button" parent="."]
+margin_left = 32.0
+margin_top = 104.0
+margin_right = 216.0
+margin_bottom = 151.0
+theme = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0745098, 0.352941, 0.329412, 1 )
+custom_colors/font_color_hover = Color( 0.0745098, 0.352941, 0.329412, 1 )
+custom_colors/font_color_pressed = Color( 0.0745098, 0.352941, 0.329412, 1 )
+text = "SEGURA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botonInsecure" type="Button" parent="."]
+margin_left = 232.0
+margin_top = 104.0
+margin_right = 416.0
+margin_bottom = 151.0
+theme = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "INSEGURA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="Control" to="." method="_mouse_entered"]
 [connection signal="pressed" from="botonSecure" to="." method="_checkSecurity" binds= [ true ]]
 [connection signal="pressed" from="botonInsecure" to="." method="_checkSecurity" binds= [ false ]]

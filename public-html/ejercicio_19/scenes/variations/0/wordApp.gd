@@ -7,10 +7,12 @@ var is_system = true
 var speed = 100
 var mousein = true
 var rotate_back = false
+var color = Color(1,1,1,1)
 
 
 func _ready():
-	$Panel/Label.text = text
+	find_node("Label").text = text
+	$Ball.self_modulate = color
 	
 	#Generates a random starting position and direction
 	randomize()
@@ -34,6 +36,12 @@ func _stop():
 	rotate_back = true
 	
 func _process(delta):
-	self.angular_velocity = lerp(self.angular_velocity,0,0.1*delta)	
+	self.angular_velocity = lerp(self.angular_velocity,0,delta)	
 	if rotate_back:
 		self.rotation = lerp(self.rotation,0,delta)
+
+func _mouse_entered():
+	$Ball.self_modulate = color.darkened(0.2)
+	
+func _mouse_exited():
+	$Ball.self_modulate = color

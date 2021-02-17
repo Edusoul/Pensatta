@@ -27,7 +27,7 @@ script = ExtResource( 1 )
 margin_left = 1.88782
 margin_right = 1441.89
 margin_bottom = 900.0
-color = Color( 0.254902, 0.560784, 0.529412, 1 )
+color = Color( 0, 0.556863, 0.52549, 1 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -35,9 +35,9 @@ __meta__ = {
 
 [node name="Aciertos" type="Label" parent="."]
 margin_left = 296.0
-margin_top = 840.0
+margin_top = 792.0
 margin_right = 517.0
-margin_bottom = 890.0
+margin_bottom = 842.0
 theme = ExtResource( 5 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -47,10 +47,10 @@ __meta__ = {
 }
 
 [node name="FinishedButton" type="Button" parent="."]
-margin_left = 848.0
-margin_top = 840.0
-margin_right = 1236.0
-margin_bottom = 887.0
+margin_left = 982.0
+margin_top = 794.0
+margin_right = 1370.0
+margin_bottom = 841.0
 theme = ExtResource( 5 )
 text = "REALIZADO"
 __meta__ = {
@@ -60,10 +60,10 @@ __meta__ = {
 [node name="SavedNode" type="Node" parent="."]
 
 [node name="Saved1" type="Label" parent="SavedNode"]
-margin_left = 840.0
-margin_top = 696.0
-margin_right = 1272.0
-margin_bottom = 747.0
+margin_left = 968.0
+margin_top = 550.0
+margin_right = 1400.0
+margin_bottom = 601.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -71,10 +71,10 @@ __meta__ = {
 }
 
 [node name="Saved2" type="Label" parent="SavedNode"]
-margin_left = 840.0
-margin_top = 456.0
-margin_right = 1272.0
-margin_bottom = 507.0
+margin_left = 32.0
+margin_top = 550.0
+margin_right = 464.0
+margin_bottom = 601.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -82,10 +82,14 @@ __meta__ = {
 }
 
 [node name="Saved3" type="Label" parent="SavedNode"]
-margin_left = 840.0
-margin_top = 208.0
-margin_right = 1272.0
-margin_bottom = 259.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -228.737
+margin_top = -130.0
+margin_right = 203.263
+margin_bottom = -79.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -93,10 +97,10 @@ __meta__ = {
 }
 
 [node name="Saved4" type="Label" parent="SavedNode"]
-margin_left = 200.0
-margin_top = 208.0
-margin_right = 632.0
-margin_bottom = 259.0
+margin_left = 32.0
+margin_top = 320.0
+margin_right = 464.0
+margin_bottom = 371.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -104,10 +108,10 @@ __meta__ = {
 }
 
 [node name="Saved5" type="Label" parent="SavedNode"]
-margin_left = 200.0
-margin_top = 456.0
-margin_right = 632.0
-margin_bottom = 507.0
+margin_left = 968.0
+margin_top = 320.0
+margin_right = 1400.0
+margin_bottom = 371.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -115,10 +119,14 @@ __meta__ = {
 }
 
 [node name="Saved6" type="Label" parent="SavedNode"]
-margin_left = 200.0
-margin_top = 696.0
-margin_right = 632.0
-margin_bottom = 747.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -228.737
+margin_top = 100.0
+margin_right = 203.263
+margin_bottom = 151.0
 custom_fonts/font = SubResource( 2 )
 text = "Respuesta Guardada"
 __meta__ = {
@@ -128,48 +136,56 @@ __meta__ = {
 [node name="PanelNode" type="Node" parent="."]
 
 [node name="Panel" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 152.0
-margin_top = 120.0
-margin_right = 664.0
-margin_bottom = 344.0
+margin_left = 24.0
+margin_top = 250.0
+margin_right = 486.0
+margin_bottom = 474.0
 password = "p0k3r0812*"
 
 [node name="Panel2" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 152.0
-margin_top = 360.0
-margin_right = 664.0
-margin_bottom = 584.0
+margin_left = 952.0
+margin_top = 250.0
+margin_right = 1438.0
+margin_bottom = 474.0
 secure = false
 password = "contraseña"
 
 [node name="Panel3" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 152.0
-margin_top = 600.0
-margin_right = 664.0
-margin_bottom = 824.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.888
+margin_top = 50.0
+margin_right = 278.112
+margin_bottom = 274.0
 secure = false
 password = "futbol"
 
 [node name="Panel4" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 792.0
-margin_top = 120.0
-margin_right = 1304.0
-margin_bottom = 344.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -234.0
+margin_top = -200.0
+margin_right = 232.0
+margin_bottom = 24.0
 secure = false
 password = "12345"
 
 [node name="Panel5" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 792.0
-margin_top = 360.0
-margin_right = 1304.0
-margin_bottom = 584.0
+margin_left = 30.0
+margin_top = 500.0
+margin_right = 486.0
+margin_bottom = 724.0
 password = "2021f4m1L14!"
 
 [node name="Panel6" parent="PanelNode" instance=ExtResource( 3 )]
-margin_left = 792.0
-margin_top = 600.0
-margin_right = 1304.0
-margin_bottom = 824.0
+margin_left = 952.0
+margin_top = 500.0
+margin_right = 1438.0
+margin_bottom = 724.0
 password = "159xYzC4Rl0s*/"
 
 [node name="RectTitleSprite" type="Sprite" parent="."]
