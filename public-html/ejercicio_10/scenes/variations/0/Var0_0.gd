@@ -1,22 +1,27 @@
 extends Node2D
 const block = preload("res://scenes/Block.tscn")
 
+signal connection(c_id2,c_targetID2,truth)
 
 var path = [
-	["down" ,"right","down"],
-	["down" ,"up"	,"down"],
-	["right","up"	,"down"]]
+	["abajo"  ,"derecha","abajo"],
+	["abajo"  ,"arriba"	,"abajo"],
+	["derecha","arriba"	,"abajo"]] # Correct order according to grid
+	
+var path2 = ["abajo", "abajo", "derecha",
+			"arriba", "arriba", "derecha",
+			"abajo", "abajo", "abajo"] # Correct order in order
 	
 var blocks = ["arriba","abajo","derecha","izquierda"]
-var smols = [0,0,1,1]
-var id2 = 0
+var vectors = [[0,1],[0,-1],[1,0],[-1,0]]
+var id2 = 0 # Counter of all unique IDs
+var chain = [] # Chain of unique IDs
+var commandChain = [] # Chain of command IDs
 
 func _ready():
 	find_node("TitleLabel").text = global.title
 	get_node("NextButton").connect("pressed",self,"_on_NextButton_pressed")
-	var nodes = get_tree().get_nodes_in_group("staticButton")
-	for node in nodes:
-		node.connect("pressed",self,"_block_pressed")
+	connect("connection",get_node("MainBlock"),"connection")
 	
 	for i in range(4):
 		var bl = block.instance()
@@ -24,9 +29,21 @@ func _ready():
 		self.add_child(bl)
 		id2 += 1
 		
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_SPACE:
+			EXECUTE()
 		
-func _block_pressed():
-	print("ay")
+func EXECUTE():
+	print("_______")
+#	for k in range(len(commandChain)):
+#		var q = commandChain[k][1]
+#		if blocks[q] == path2[k]:
+#			var mov = Vector2(vectors[q][0],-vectors[q][1])
+#			find_node("Katty").global_position += mov*135
+#			print("Correcto!")
+#		else:
+#			_ready()
 
 
 func _on_NextButton_pressed():
@@ -42,22 +59,24 @@ func makeBlock(bl,i):
 	bl.id = i
 	bl.id2 = id2
 	bl.text = blocks[i]
-	bl.smol = smols[i]
 	bl.set_position(Vector2(1024,180+i*550/4))
-	bl.connect("linked",self,"redoBlock")
+	bl.connect("linked",self,"chainUp")
+	connect("connection",bl,"connection")
+
+func chainUp(c_id,c_id2,targetID,targetID2,truth):
+	if truth:
+		emit_signal("connection",c_id2,targetID2,true)
+		chain.append([targetID2,c_id2])
+		commandChain.append([targetID,c_id])
+		redoBlock(c_id)
+	else:
+		if c_id2 == chain[-1][-1]:	
+			emit_signal("connection",c_id2,chain[-1][0],false)
+			chain.pop_back()
+			commandChain.pop_back()
 	
 func redoBlock(id):
 	var bl = block.instance()
 	makeBlock(bl,id)
 	self.add_child(bl)
 	id2 += 1
-	
-
-#UNCOMMENT WITH CTRL+K IF THE SCENE REQUIRES A GLOBAL TIMER
-#THE SCENE WILL REQUIRE A $Time LABEL NODE
-#func _process(delta):
-#	global.timer -= delta
-#	$Time.text = "Tiempo Restante: {t}s".format({"t":int(global.timer)})
-#	if global.timer < 0:
-#		get_tree().change_scene("res://scenes/End.tscn")
-#		global.timeout = true

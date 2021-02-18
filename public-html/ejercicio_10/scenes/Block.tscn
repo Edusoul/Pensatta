@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/img/botones/bloque.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Block.gd" type="Script" id=3]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 28.3586
 height = 321.712
 
@@ -16,10 +16,10 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [sub_resource type="DynamicFont" id=3]
-size = 24
+size = 20
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=4]
 content_margin_left = 0.0
 content_margin_right = 0.0
 content_margin_top = 0.0
@@ -41,15 +41,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 text = "derecha"
-smol = true
 
 [node name="ConnectArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ConnectArea"]
+[node name="CollisionShadow" type="CollisionShape2D" parent="ConnectArea"]
 visible = false
 position = Vector2( 161.172, 83.8503 )
 rotation = 1.5708
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Shadow" type="Panel" parent="ConnectArea"]
 margin_left = -18.0
@@ -72,28 +71,28 @@ __meta__ = {
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="Area2D"]
-margin_left = -165.0
+margin_left = -152.0
 margin_top = -34.0
-margin_right = 163.0
+margin_right = 169.0
 margin_bottom = 21.0
 custom_fonts/font = SubResource( 3 )
-text = "Mover	               pasos arriba"
-align = 1
+text = "Mover	                pasos izquierda"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionBlock" type="CollisionPolygon2D" parent="Area2D"]
 visible = false
 polygon = PoolVector2Array( 165.5, -32.4, 165.5, 25, 160.3, 30, -86.7, 30, -89.7, 33, -138.1, 33, -140.5, 30, -165.5, 30, -165.5, -33, 164.6, -33 )
+disabled = true
 
 [node name="LineEdit" type="LineEdit" parent="Area2D"]
-margin_left = -70.0
+margin_left = -85.0
 margin_top = -20.41
-margin_right = 2.0
+margin_right = -13.0
 margin_bottom = 10.59
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/cursor_color = Color( 0.368627, 0.368627, 0.368627, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
