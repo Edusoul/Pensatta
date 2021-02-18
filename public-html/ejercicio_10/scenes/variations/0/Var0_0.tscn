@@ -18,11 +18,11 @@
 size = 41
 font_data = ExtResource( 4 )
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 28.3586
 height = 321.712
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 0.407843 )
 corner_radius_top_left = 30
 corner_radius_top_right = 30
@@ -187,7 +187,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="MainBlock" type="Control" parent="."]
 margin_left = 558.0
 margin_top = 222.0
 margin_right = 914.0
@@ -197,30 +197,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ConnectArea" type="Area2D" parent="Control"]
+[node name="ConnectArea" type="Area2D" parent="MainBlock"]
 position = Vector2( -558, -222 )
 z_as_relative = false
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ConnectArea"]
+[node name="CollisionShadow" type="CollisionShape2D" parent="MainBlock/ConnectArea"]
 position = Vector2( 737, 306 )
 rotation = 1.5708
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
-[node name="Shadow" type="Panel" parent="Control/ConnectArea"]
+[node name="Shadow" type="Panel" parent="MainBlock/ConnectArea"]
 margin_left = 552.0
 margin_top = 278.0
 margin_right = 925.0
 margin_bottom = 332.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="main_block" type="Sprite" parent="Control"]
+[node name="main_block" type="Sprite" parent="MainBlock"]
 position = Vector2( 180, 12 )
 z_index = 2
 texture = ExtResource( 9 )
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
