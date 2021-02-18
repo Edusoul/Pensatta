@@ -99,6 +99,9 @@ margin_right = -25.4102
 margin_bottom = 16.625
 theme = ExtResource( 2 )
 text = "Respuesta 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CheckBox3" type="CheckBox" parent="CheckRect"]
 margin_left = -201.41

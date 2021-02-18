@@ -49,13 +49,13 @@ shadow_color = Color( 0, 0, 0, 0.25098 )
 shadow_size = 4
 shadow_offset = Vector2( 0, 2 )
 
-[sub_resource type="StreamTexture" id=5]
+[sub_resource type="StreamTexture" id=9]
 flags = 4
-load_path = "res://.import/checkbox-filled.png-26e0c08325c78b17dacf814bcdeaae27.stex"
+load_path = "res://.import/checkbox-filled.png-4a7749326ddb02976b8700cfb80bdb90.stex"
 
-[sub_resource type="StreamTexture" id=6]
+[sub_resource type="StreamTexture" id=10]
 flags = 4
-load_path = "res://.import/checkbox.png-de288cf4d397d9c3760c39f752b264b0.stex"
+load_path = "res://.import/checkbox.png-60ae9ded5fe85cc29012ea64cb7b5a3e.stex"
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -84,10 +84,10 @@ CheckBox/colors/font_color_pressed = Color( 0.254902, 0.560784, 0.529412, 1 )
 CheckBox/constants/check_vadjust = 2
 CheckBox/constants/hseparation = 8
 CheckBox/fonts/font = null
-CheckBox/icons/checked = SubResource( 5 )
+CheckBox/icons/checked = SubResource( 9 )
 CheckBox/icons/radio_checked = null
 CheckBox/icons/radio_unchecked = null
-CheckBox/icons/unchecked = SubResource( 6 )
+CheckBox/icons/unchecked = SubResource( 10 )
 CheckBox/styles/disabled = null
 CheckBox/styles/focus = null
 CheckBox/styles/hover = SubResource( 7 )

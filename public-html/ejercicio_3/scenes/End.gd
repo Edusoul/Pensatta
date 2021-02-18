@@ -15,7 +15,7 @@ func _ready():
 		result_summary.text = "Respondiste todo bien."
 	else:
 		result_title.text = "¡Continúa intentando!"
-		result_summary.text = "Respondiste " + str(global.correct_answers_no) \
+		result_summary.text = "Marcaste " + str(global.correct_answers_no) \
 			+ " opciones bien y " + str(global.incorrect_answers_no) + " mal."
 
 func _on_FinishButton_pressed():

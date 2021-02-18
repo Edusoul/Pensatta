@@ -62,7 +62,7 @@ margin_top = -60.0
 margin_right = 342.0
 margin_bottom = 60.0
 theme = ExtResource( 5 )
-text = "Presiona el botón rojo para detener la ruleta. Selecciona la respuesta que consideres correcta para la pregunta de la ruleta."
+text = "Presiona el botón rojo para girar la ruleta. Selecciona la respuesta que consideres correcta para la pregunta de la ruleta."
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
