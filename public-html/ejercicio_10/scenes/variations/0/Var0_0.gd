@@ -36,14 +36,14 @@ func _unhandled_input(event):
 		
 func EXECUTE():
 	print("_______")
-	for k in range(len(commandChain)):
-		var q = commandChain[k][1]
-		if blocks[q] == path2[k]:
-			var mov = Vector2(vectors[q][0],-vectors[q][1])
-			find_node("Katty").global_position += mov*120
-			print("Correcto!")
-		else:
-			_ready()
+#	for k in range(len(commandChain)):
+#		var q = commandChain[k][1]
+#		if blocks[q] == path2[k]:
+#			var mov = Vector2(vectors[q][0],-vectors[q][1])
+#			find_node("Katty").global_position += mov*135
+#			print("Correcto!")
+#		else:
+#			_ready()
 
 
 func _on_NextButton_pressed():

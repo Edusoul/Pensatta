@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/img/2.png" type="Texture" id=5]
-[ext_resource path="res://scenes/variations/0/main_block.gd" type="Script" id=6]
+[ext_resource path="res://scenes/variations/0/MainBlock.gd" type="Script" id=6]
 [ext_resource path="res://assets/img/labyrinth/Rectangle 8.png" type="Texture" id=7]
 [ext_resource path="res://assets/img/botones/boton_iniciar.png" type="Texture" id=9]
 [ext_resource path="res://assets/img/Rectangle 1.png" type="Texture" id=10]
@@ -219,7 +219,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="main_block" type="Sprite" parent="MainBlock"]
+[node name="MainBlock" type="Sprite" parent="MainBlock"]
 position = Vector2( 180, 12 )
 z_index = 2
 texture = ExtResource( 9 )
