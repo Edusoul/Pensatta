@@ -84,32 +84,32 @@
 [ext_resource path="res://assets/img/alphabet/Letra (16).png" type="Texture" id=82]
 [ext_resource path="res://assets/img/Globo-877x125.png" type="Texture" id=83]
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=1]
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 83 )
 region_rect = Rect2( 0, 0, 745, 51 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 60
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 41
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 24
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 size = 24
 font_data = ExtResource( 19 )
 
@@ -131,11 +131,12 @@ margin_top = 571.0
 margin_right = 1341.0
 margin_bottom = 623.0
 custom_icons/clear = ExtResource( 83 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-placeholder_text = "                                Ingresa el mensaje"
+align = 1
+placeholder_text = "Ingresa el mensaje"
 placeholder_alpha = 1.0
 caret_blink = true
 __meta__ = {
@@ -148,7 +149,7 @@ margin_left = 852.261
 margin_top = 724.176
 margin_right = 1271.26
 margin_bottom = 758.176
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -159,7 +160,7 @@ margin_left = 699.0
 margin_top = 251.0
 margin_right = 1345.0
 margin_bottom = 505.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 __meta__ = {
@@ -200,7 +201,7 @@ margin_left = -330.0
 margin_top = -25.0
 margin_right = -3.00003
 margin_bottom = 26.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Mensaje oculto"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -211,7 +212,7 @@ margin_left = 63.0
 margin_top = 155.0
 margin_right = 156.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.556863, 0.921569, 0.901961, 1 )
 text = "Letras"
 __meta__ = {
@@ -223,7 +224,7 @@ margin_left = 444.0
 margin_top = 155.0
 margin_right = 584.0
 margin_bottom = 193.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.556863, 0.921569, 0.901961, 1 )
 text = "Numeros"
 __meta__ = {

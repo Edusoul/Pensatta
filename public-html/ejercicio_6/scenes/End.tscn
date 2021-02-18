@@ -62,9 +62,9 @@ z_index = 1
 texture = ExtResource( 2 )
 
 [node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -210.0
+margin_left = -190.0
 margin_top = -95.0
-margin_right = 20.0001
+margin_right = 40.0001
 margin_bottom = -47.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
@@ -74,9 +74,9 @@ __meta__ = {
 }
 
 [node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -210.0
+margin_left = -190.0
 margin_top = -53.0
-margin_right = 216.0
+margin_right = 236.0
 margin_bottom = 40.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
