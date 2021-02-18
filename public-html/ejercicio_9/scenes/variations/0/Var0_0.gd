@@ -23,3 +23,5 @@ func _on_NextButton_pressed():
 #	if global.timer < 0:
 #		get_tree().change_scene("res://scenes/End.tscn")
 #		global.timeout = true
+
+
