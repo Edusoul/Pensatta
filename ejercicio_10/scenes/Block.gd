@@ -1,26 +1,32 @@
 extends Control
 
-signal linked(id,id2,targetID,targetID2,truth)
+#Sends signal of self ids and target ids when connected or disconnected
+signal linked(id,id2,targetID,targetID2,truth,n)
 
-export var text = "arriba"
+export var text = "arriba" # Text to display
 
+#SELF INFO
 var id = 0 # Type of block from 0 to 3
 var id2 = 0 # Unique ID
-var dragPosition = null
-var linkedUp = false 
-var linkedDown = false 
-var inside = false
-var onOrigin = true
-var getBack = false
-var getToTarget = false
+var n = 1 # Number of repetitions
+var dragPosition = null # Is being dragged
+var linkedUp = false # Is linked upwards with the chain
+var linkedDown = false # Is linked downwards in the chain
+var inside = false # Is inside of a shadow
+
+#ANIMATION CONTROL
+var initialPos
+var onOrigin = true # Is resting on the origin
+var getBack = false # Is going back
+var getToTarget = false # Is getting to the target
 var timer = 60 # Timer to go back to origin
 var timer2 = 20 # Timer to link
 
+#TARGET INFO
 var target # Target Node
 var targetID
 var targetID2
 var targetPos
-var initialPos
 
 func _ready():
 	find_node("Shadow").hide()
@@ -29,6 +35,7 @@ func _ready():
 	find_node("CollisionBlock").disabled = true
 	find_node("CollisionShadow").disabled = true
 
+# MOVEMENT AND MOUSE INTERACTION
 func _on_Node2D_gui_input(event):
 	if event is InputEventMouseButton and !linkedDown:
 		if event.pressed:
@@ -41,17 +48,21 @@ func _on_Node2D_gui_input(event):
 				getBack = true # getBack and getToTarget get executed in _process
 			else: # Else, connect with said block
 				getToTarget = true
-				emit_signal("linked",id,id2,targetID,targetID2,true)
+				if !find_node("LineEdit").text:
+					find_node("LineEdit").text = str(1)
+				emit_signal("linked",id,id2,targetID,targetID2,true,n)
 	if event is InputEventMouseMotion and !linkedDown: #Dragging
 		if dragPosition:
 			rect_global_position = get_global_mouse_position() - dragPosition
 			find_node("CollisionBlock").disabled = false
 			find_node("CollisionShadow").disabled = true
 			if linkedUp:
-				emit_signal("linked",id,id2,targetID,targetID2,false)
+				emit_signal("linked",id,id2,targetID,targetID2,false,n)
 				linkedUp = false
 
+# MOSTLY ANIMATION STUFF TO GET BACK TO BASE OR CONNECT
 func _process(delta):
+	n = int(find_node("LineEdit").text)
 	if getBack: #Lerp back to origin
 		rect_global_position = lerp(rect_global_position,initialPos,5*delta)
 		timer -= 1
@@ -65,6 +76,7 @@ func _process(delta):
 		onOrigin = false
 		linkedUp = true
 		find_node("CollisionShadow").disabled = false
+
 		timer2 -= 1
 		if timer2 == 0:
 			getToTarget = false
@@ -73,13 +85,25 @@ func _process(delta):
 	if global.clear:
 		find_node("Shadow").hide() #Hide all shadows
 
-func connection(_id2,c_targetID2,truth):
+# WHEN MAIN SCRIPT REPORTS A CONNECTION, CHECK IF YOU'RE THE VICTIM
+func _connection(_id2,c_targetID2,truthValue):
 	if id2 == c_targetID2:
-		linkedDown = truth
-		find_node("CollisionShadow").disabled = truth	
+		linkedDown = truthValue
+		find_node("CollisionShadow").disabled = truthValue
+	find_node("LineEdit").hide()
+	find_node("LineEdit").show()
+
+func _active(active_id2,right):
+	if id2 == active_id2:
+		if right:	
+			pass # Yellow Shader
+		else:
+			pass # Red Shader
+	else:
+		pass
 		
 
-# SHADOW DYNAMICS
+# SHADOW AND LINKING DYNAMICS
 func _area_entered(area):
 	#If block touches a shadow, that shadow appears
 	target = area.get_parent()
