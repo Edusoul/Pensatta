@@ -1,25 +1,27 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/img/botones/bloque.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Block.gd" type="Script" id=3]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 28.3586
 height = 321.712
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 0.407843 )
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 content_margin_left = 0.0
 content_margin_right = 0.0
 content_margin_top = 0.0
@@ -31,6 +33,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [node name="Block" type="Control"]
+material = SubResource( 1 )
 margin_top = 15.59
 margin_right = 328.0
 margin_bottom = 72.59
@@ -48,14 +51,14 @@ text = "derecha"
 visible = false
 position = Vector2( 161.172, 83.8503 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Shadow" type="Panel" parent="ConnectArea"]
 margin_left = -18.0
 margin_top = 57.0
 margin_right = 342.0
 margin_bottom = 111.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,7 +70,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="bloque" type="Sprite" parent="Area2D"]
+[node name="Bloque" type="Sprite" parent="Area2D"]
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="Area2D"]
@@ -75,7 +78,7 @@ margin_left = -152.0
 margin_top = -34.0
 margin_right = 169.0
 margin_bottom = 21.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Mover	                pasos izquierda"
 valign = 1
 __meta__ = {
@@ -92,8 +95,8 @@ margin_left = -85.0
 margin_top = -20.41
 margin_right = -13.0
 margin_bottom = 10.59
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/cursor_color = Color( 0.368627, 0.368627, 0.368627, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1

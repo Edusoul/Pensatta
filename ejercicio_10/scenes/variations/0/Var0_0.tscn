@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/img/2.png" type="Texture" id=5]
 [ext_resource path="res://scenes/variations/0/MainBlock.gd" type="Script" id=6]
 [ext_resource path="res://assets/img/labyrinth/Rectangle 8.png" type="Texture" id=7]
+[ext_resource path="res://scenes/variations/0/Katty.gd" type="Script" id=8]
 [ext_resource path="res://assets/img/botones/boton_iniciar.png" type="Texture" id=9]
 [ext_resource path="res://assets/img/Rectangle 1.png" type="Texture" id=10]
 [ext_resource path="res://assets/img/Rectangle 2.png" type="Texture" id=11]
@@ -170,6 +171,7 @@ __meta__ = {
 [node name="Katty" type="Sprite" parent="Labyrinth"]
 position = Vector2( 72, 77.5 )
 texture = ExtResource( 15 )
+script = ExtResource( 8 )
 
 [node name="Rectangle 1" type="Sprite" parent="."]
 position = Vector2( 972, 432 )

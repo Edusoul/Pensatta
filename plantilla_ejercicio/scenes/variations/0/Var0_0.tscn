@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://scenes/QuestionNode.gd" type="Script" id=6]
 [ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=7]
 
@@ -13,15 +12,11 @@ size = 41
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0.423529, 0.556863, 1 )
+bg_color = Color( 0, 0.847059, 0.8, 1 )
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
-
-[sub_resource type="DynamicFont" id=3]
-size = 20
-font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -65,10 +60,10 @@ __meta__ = {
 [node name="Question" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 205.179
-margin_top = 188.361
-margin_right = 205.179
-margin_bottom = 188.361
+margin_left = 356.359
+margin_top = 222.725
+margin_right = 356.359
+margin_bottom = 222.725
 size_flags_horizontal = 2
 theme = ExtResource( 7 )
 script = ExtResource( 6 )
@@ -76,14 +71,16 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
-title = "Título"
-question = "Question"
+question = "Pregunta"
 options = [ "a", "b", "c" ]
 
 [node name="PanelContainer" type="PanelContainer" parent="Question"]
 margin_right = 486.0
 margin_bottom = 180.0
 custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MarginContainer" type="MarginContainer" parent="Question/PanelContainer"]
 margin_right = 486.0
@@ -95,9 +92,9 @@ custom_constants/margin_bottom = 30
 
 [node name="GridContainer" type="GridContainer" parent="Question/PanelContainer/MarginContainer"]
 margin_left = 20.0
-margin_top = 48.0
+margin_top = 71.0
 margin_right = 466.0
-margin_bottom = 132.0
+margin_bottom = 109.0
 size_flags_horizontal = 5
 size_flags_vertical = 4
 custom_constants/vseparation = 20
@@ -105,27 +102,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="Question/PanelContainer/MarginContainer/GridContainer"]
+[node name="Question" type="Label" parent="Question/PanelContainer/MarginContainer/GridContainer"]
 margin_right = 446.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "QuestionTitle"
-align = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Question" type="Label" parent="Question/PanelContainer/MarginContainer/GridContainer"]
-margin_top = 58.0
-margin_right = 446.0
-margin_bottom = 84.0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0.74902, 0.74902, 0.74902, 1 )
+custom_colors/font_color = Color( 0, 0.388235, 0.364706, 1 )
 text = "Question"
 align = 1
 autowrap = true

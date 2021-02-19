@@ -20,12 +20,14 @@ func _checkSecurity(guess):
 		find_node("Insecure").hide()
 		if previousAnswer: # If previous answer was right
 			global.answered_correctly -= 1 # Remove point
+		global.answered -= 1 # Remove point
 			
 	if guess == secure: # If guess was the same as security answer
 		global.answered_correctly += 1 # Award point
 		previousAnswer = true # Mark as answered correctly
 	elif guess != secure: # If guess was wrong
 		previousAnswer = false # Mark accordingly
+	global.answered += 1 # Remove point	
 	answeredBefore = true # Mark as answered before
 	emit_signal("toggled")
 	

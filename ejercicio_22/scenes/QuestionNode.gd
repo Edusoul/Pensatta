@@ -1,18 +1,13 @@
 extends Control
 
-signal next_scene
+signal next
 
-export var title = "Selecciona el Software Correcto"
-export var question = "question"
-export var options = ["Word","Excel","PowerPoint","OneNote"]
+export(String, MULTILINE) var question = "question"
+export var options = []
 export var correctIndex = []
 
 func _ready():
-	find_node("Title").text = title
-	find_node("Question").text = question
-	
-	
-	var content = question
+	find_node("Question").text = question	
 	for option in options:
 		var answer = false
 		var button = Button.new()
@@ -23,9 +18,9 @@ func _ready():
 		button.connect("pressed", self, "_pressed",[answer])
 		get_node("PanelContainer/MarginContainer/GridContainer").add_child(button)
 
-func _pressed(answer):
-	if answer:
+func _pressed(rightAnswer):
+	if rightAnswer:
 		global.correct_answers_no += 1
 	else:
 		global.incorrect_answers_no += 1
-	emit_signal("next_scene")
+	emit_signal("next")
