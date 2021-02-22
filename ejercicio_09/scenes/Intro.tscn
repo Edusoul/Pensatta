@@ -55,10 +55,10 @@ z_as_relative = false
 texture = ExtResource( 4 )
 
 [node name="IntroLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -355.0
-margin_top = -59.46
-margin_right = 373.0
-margin_bottom = 60.54
+margin_left = -376.0
+margin_top = -59.0
+margin_right = 403.0
+margin_bottom = 65.0
 theme = ExtResource( 5 )
 text = "¡Ayúdame a atravesar el laberinto sin perder mis datos! Guíame hasta la salida evitando a los enemigos que pueden robar mi información. "
 autowrap = true
