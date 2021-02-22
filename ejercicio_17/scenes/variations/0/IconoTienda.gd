@@ -6,10 +6,9 @@ var getBack
 var i
 
 func _ready():
-	i = 100
+	i = 50
 	getBack = false
 	dragPosition = null
-	$Node2D/Info.hide()
 
 func _on_Tienda_gui_input(event):
 	if !getBack:
@@ -21,14 +20,6 @@ func _on_Tienda_gui_input(event):
 		if event is InputEventMouseMotion:
 			if dragPosition:
 				rect_global_position = get_global_mouse_position() - dragPosition
-
-
-func _on_Tienda_mouse_entered():
-	$Node2D/Info.show()
-	
-
-func _on_Tienda_mouse_exited():
-	$Node2D/Info.hide()
 
 func _on_VisibilityNotifier2D_screen_exited():
 	getBack = true

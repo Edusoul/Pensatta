@@ -7,6 +7,7 @@ var result_summary;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	find_node("TitleLabel").text = global.title
 	result_title = $ThoughtBubbleSprite/ResultLabel
 	result_summary = $ThoughtBubbleSprite/SummaryLabel
 	if global.timeout == false:
