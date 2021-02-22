@@ -8,6 +8,7 @@ var incorrect_answers_no = 0
 var timer = 181
 var timeout = false
 var scene = 0
+var lastScene = 3
 
 func pick_random_variation_number():
 	randomize()

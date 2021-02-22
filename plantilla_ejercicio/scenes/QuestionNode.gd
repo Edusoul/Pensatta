@@ -1,12 +1,10 @@
 extends Control
 
-export(String, MULTILINE) var title = "Title"
 export(String, MULTILINE) var question = "question"
 export var options = []
 export var correctIndex = []
 
 func _ready():
-	find_node("Title").text = title
 	find_node("Question").text = question
 	
 	
