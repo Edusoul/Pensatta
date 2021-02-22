@@ -1,5 +1,8 @@
 extends Node
 
+var speed = 100
+
+
 var title = "¡Esa es mi información!"
 var timer = 181 #s
 var timeout = false
