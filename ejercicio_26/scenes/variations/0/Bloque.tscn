@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/variations/0/Bloque.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/Contorno.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/Contenido 1.png" type="Texture" id=3]
+[ext_resource path="res://assets/theme/BloqueVerde.tres" type="Theme" id=4]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/theme/BloqueRojo.tres" type="Theme" id=7]
+[ext_resource path="res://assets/img/Contorno (1).png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0.556863, 0.52549, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 6 )
+
+[node name="Panel" type="Panel"]
+margin_top = -2.0
+margin_right = 632.0
+margin_bottom = 196.0
+theme = ExtResource( 5 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 124.5
+margin_top = 37.6633
+margin_right = 508.5
+margin_bottom = 90.6633
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rectangle 3" type="Sprite" parent="Control"]
+position = Vector2( 192, 26.511 )
+scale = Vector2( 0.929782, 0.947753 )
+texture = ExtResource( 3 )
+
+[node name="Insecure" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 192, 24 )
+scale = Vector2( 0.929782, 1.02927 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Secure" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 192, 24 )
+scale = Vector2( 0.929782, 1.02927 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label2" type="Label" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -12.0
+margin_right = 92.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.576471, 0.576471, 0.576471, 1 )
+text = "password"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botonSecure" type="Button" parent="."]
+margin_left = 56.0
+margin_top = 106.0
+margin_right = 308.0
+margin_bottom = 153.0
+theme = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0745098, 0.352941, 0.329412, 1 )
+custom_colors/font_color_hover = Color( 0.0745098, 0.352941, 0.329412, 1 )
+custom_colors/font_color_pressed = Color( 0.0745098, 0.352941, 0.329412, 1 )
+text = "POSITIVO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="botonInsecure" type="Button" parent="."]
+margin_left = 320.0
+margin_top = 106.0
+margin_right = 572.0
+margin_bottom = 153.0
+theme = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "NEGATIVO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="Control" to="." method="_mouse_entered"]
+[connection signal="pressed" from="botonSecure" to="." method="_checkSecurity" binds= [ true ]]
+[connection signal="pressed" from="botonInsecure" to="." method="_checkSecurity" binds= [ false ]]

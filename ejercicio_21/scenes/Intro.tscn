@@ -67,8 +67,8 @@ __meta__ = {
 }
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 937.1, 238.167 )
-scale = Vector2( 1, 1.296 )
+position = Vector2( 937.1, 257.044 )
+scale = Vector2( 1, 1.59804 )
 z_index = 1
 texture = ExtResource( 4 )
 
