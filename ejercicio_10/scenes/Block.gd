@@ -34,12 +34,19 @@ func _ready():
 	initialPos = rect_global_position
 	find_node("CollisionBlock").disabled = true
 	find_node("CollisionShadow").disabled = true
+	find_node("ContourYellow").hide()
+	find_node("ContourRed").hide()
 
 # MOVEMENT AND MOUSE INTERACTION
 func _on_Node2D_gui_input(event):
 	if event is InputEventMouseButton and !linkedDown:
 		if event.pressed:
 			dragPosition = get_global_mouse_position() - rect_global_position
+			find_node("CollisionBlock").disabled = false
+			find_node("CollisionShadow").disabled = true
+			if linkedUp:
+				emit_signal("linked",id,id2,targetID,targetID2,false,n)
+				linkedUp = false
 		else:
 			dragPosition = null
 			find_node("CollisionBlock").disabled = true			
@@ -96,11 +103,12 @@ func _connection(_id2,c_targetID2,truthValue):
 func _active(active_id2,right):
 	if id2 == active_id2:
 		if right:	
-			pass # Yellow Shader
+			find_node("ContourYellow").show()
 		else:
-			pass # Red Shader
-	else:
-		pass
+			find_node("ContourRed").show()
+	yield(get_tree().create_timer(1.0), "timeout")
+	find_node("ContourYellow").hide()
+	find_node("ContourRed").hide()
 		
 
 # SHADOW AND LINKING DYNAMICS
@@ -115,7 +123,7 @@ func _area_entered(area):
 	if (targetID2 != id2) and isShadow and dragPosition and !otherOnOrigin and !isLinkedDown:
 		inside = true
 		area.find_node("Shadow").show()
-		targetPos = target.get_global_position() + Vector2(0,55)
+		targetPos = target.get_global_position() + Vector2(0,50)
 		global.clear = false
 
 func _area_exited(area):

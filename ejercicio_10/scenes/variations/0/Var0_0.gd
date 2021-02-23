@@ -6,6 +6,9 @@ signal active(active_id,right) # Alert blocks in chain which is being executed
 	
 var path = ["abajo", "abajo", "derecha","arriba", "arriba", "derecha",
 			"abajo", "abajo", "abajo"] # Correct order
+var kk = 0 # Path counter
+var done = false
+			
 
 # TYPES OF BLOCK AND THEIR VECTORIAL REPRESENTATION
 var blocks = ["arriba","abajo","derecha","izquierda"]
@@ -45,7 +48,6 @@ func EXECUTE():
 	
 	print(commandChain)
 	
-	var kk = 0 # Path counter
 	for k in range(len(chain)):
 		var r = 1 # Repetition counter
 		while r <= commandChain[k][2]:
@@ -63,7 +65,7 @@ func EXECUTE():
 			kk += 1
 			if kk == len(path):
 				get_node("NextButton").show()
-				break
+				done = true
 
 # ADD INFO TO CHAIN
 func chainUp(c_id,c_id2,targetID,targetID2,truth,n):
@@ -99,7 +101,8 @@ func redoBlock(id):
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_SPACE:
-			EXECUTE()
+			if !done:
+				EXECUTE()
 	
 # NEXT BUTTON SHENANIGANS
 func _on_NextButton_pressed():

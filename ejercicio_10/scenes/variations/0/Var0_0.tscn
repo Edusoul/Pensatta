@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/img/Rectangle 1.png" type="Texture" id=10]
 [ext_resource path="res://assets/img/Rectangle 2.png" type="Texture" id=11]
 [ext_resource path="res://assets/img/labyrinth/Vector 1.png" type="Texture" id=12]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://assets/img/labyrinth/Katty 1.png" type="Texture" id=15]
 [ext_resource path="res://assets/img/labyrinth/Vector 2.png" type="Texture" id=16]
 
@@ -29,6 +30,10 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = ExtResource( 13 )
 
 [node name="Scene" type="Node2D"]
 script = ExtResource( 1 )
@@ -174,7 +179,7 @@ texture = ExtResource( 15 )
 script = ExtResource( 8 )
 
 [node name="Rectangle 1" type="Sprite" parent="."]
-position = Vector2( 972, 432 )
+position = Vector2( 972.561, 432 )
 texture = ExtResource( 10 )
 
 [node name="Rectangle 2" type="Sprite" parent="Rectangle 1"]
@@ -200,7 +205,7 @@ __meta__ = {
 }
 
 [node name="ConnectArea" type="Area2D" parent="MainBlock"]
-position = Vector2( -558, -222 )
+position = Vector2( -558, -232 )
 z_as_relative = false
 __meta__ = {
 "_edit_group_": true
@@ -222,6 +227,17 @@ __meta__ = {
 }
 
 [node name="MainBlock" type="Sprite" parent="MainBlock"]
-position = Vector2( 180, 12 )
+position = Vector2( 165, 22 )
 z_index = 2
 texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="MainBlock/MainBlock"]
+margin_left = -175.663
+margin_top = -2.35692
+margin_right = 175.337
+margin_bottom = 20.6431
+custom_fonts/font = SubResource( 4 )
+text = "Presiona barra espaciadora para correr"
+__meta__ = {
+"_edit_use_anchors_": false
+}

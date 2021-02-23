@@ -29,4 +29,3 @@ func _physics_process(delta):
 		rect_global_position = rect_global_position.linear_interpolate(pos,10*delta)
 		i += -1
 		if i==0: _ready()
-		
