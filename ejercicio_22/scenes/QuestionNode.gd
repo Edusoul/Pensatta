@@ -12,6 +12,7 @@ func _ready():
 		var answer = false
 		var button = Button.new()
 		button.text = option
+		button.toggle_mode = true
 		for i in correctIndex:
 			if option in options[i]:
 				answer = true		
@@ -23,4 +24,5 @@ func _pressed(rightAnswer):
 		global.correct_answers_no += 1
 	else:
 		global.incorrect_answers_no += 1
+	yield(get_tree().create_timer(1.0), "timeout")
 	emit_signal("next")

@@ -44,8 +44,12 @@ func _on_NextButton_pressed():
 		get_tree().change_scene("res://scenes/variations/0/Var0_0.tscn")
 	
 func _process(delta):
+	find_node("TimeSprite").show()	
 	global.timer -= delta
-	$Time.text = "Tiempo Restante: {t}s".format({"t":int(global.timer)})
+	find_node("Time").text = "{mm}:{ss}".format({
+		"ss":"%02.0f" % int(fmod(global.timer,60)),
+		"mm":int(global.timer/60)
+		})
 	if global.timer < 0:
 		get_tree().change_scene("res://scenes/End.tscn")
 		global.timeout = true

@@ -13,6 +13,7 @@ func _ready():
 		var answer = false
 		var button = Button.new()
 		button.text = option
+		button.toggle_mode = true
 		for i in correctIndex:
 			if option in options[i]:
 				answer = true		
@@ -20,6 +21,7 @@ func _ready():
 		get_node("PanelContainer/MarginContainer/GridContainer").add_child(button)
 
 func _pressed(rightAnswer):
+	yield(get_tree().create_timer(1.0), "timeout")
 	if rightAnswer:
 		pass #Qué se hace si la respuesta es correcta
 	else:

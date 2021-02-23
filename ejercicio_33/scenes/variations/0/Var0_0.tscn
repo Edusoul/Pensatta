@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/2.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,6 +25,9 @@ __meta__ = {
 [node name="2" type="Sprite" parent="."]
 position = Vector2( 720, 448 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextButton" type="Button" parent="2"]
 margin_left = 294.0
@@ -41,6 +49,19 @@ mouse_filter = 2
 custom_constants/vseparation = 58
 custom_constants/hseparation = 58
 columns = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 324.0
+margin_top = 126.0
+margin_right = 1116.0
+margin_bottom = 198.0
+custom_fonts/font = SubResource( 1 )
+text = "¡Puedes pintar cuadros con el botón izquierdo del mouse, y borrarlos con el derecho!"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
