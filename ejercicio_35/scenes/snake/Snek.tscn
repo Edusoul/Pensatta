@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/snake/Snek.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/Snake 1.png" type="Texture" id=2]
+
+[node name="Snek" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Head" type="Area2D" parent="."]
+
+[node name="Snake 1" type="Sprite" parent="Head"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Head"]
+visible = false
+polygon = PoolVector2Array( 22, -21.4, 22, 21.2, 21.4, 22, -21.2, 22, -22, 21.4, -22, -21.4, -21.1, -22, 21.1, -22 )
+[connection signal="area_entered" from="Head" to="." method="_area_entered"]

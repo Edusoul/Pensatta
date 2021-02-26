@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/img/GameBackground.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Info.png" type="Texture" id=7]
+[ext_resource path="res://scenes/snake/Snek.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 415.863, 234.17 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSprite" parent="." instance=ExtResource( 5 )]
+
+[node name="Info" type="Sprite" parent="."]
+position = Vector2( 252, 450 )
+texture = ExtResource( 7 )
+
+[node name="Board" type="Area2D" parent="."]
+
+[node name="GameBackground" type="Sprite" parent="Board"]
+position = Vector2( 990, 450 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Board"]
+position = Vector2( 990, 454.353 )
+scale = Vector2( 0.952237, 0.940995 )
+shape = SubResource( 2 )
+
+[node name="Snek" parent="." instance=ExtResource( 8 )]
+position = Vector2( 828, 450 )
+
+[node name="Tail" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+[connection signal="area_exited" from="Board" to="." method="_area_exited"]
