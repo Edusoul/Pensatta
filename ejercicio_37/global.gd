@@ -1,6 +1,6 @@
 extends Node
 
-var title = "Fotoestudio"
+var title = "¡Luz Verde!"
 var timer = 181 #s
 var timeout = false
 var scene = 0

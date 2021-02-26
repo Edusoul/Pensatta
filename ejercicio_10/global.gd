@@ -1,6 +1,6 @@
 extends Node
 
-var title = "¡Pongámonos en marcha"
+var title = "¡Pongámonos en marcha!"
 var timer = 181 #s
 var timeout = false
 var scene = 0

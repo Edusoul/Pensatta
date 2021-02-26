@@ -1,0 +1,181 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/semaforo/Rectangle 17.png" type="Texture" id=5]
+[ext_resource path="res://scenes/variations/0/MainBlock.gd" type="Script" id=6]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/img/botones/boton_iniciar.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/Rectangle 1.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/Rectangle 2.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 28.3586
+height = 321.712
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.407843 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=7]
+size = 21
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.380392, 0.980392, 0.662745, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.980392, 0.454902, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.980392, 0.380392, 0.380392, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IDE Rectangle" type="Sprite" parent="."]
+position = Vector2( 972, 432 )
+texture = ExtResource( 10 )
+
+[node name="Rectangle 2" type="Sprite" parent="IDE Rectangle"]
+position = Vector2( 241.127, 0 )
+texture = ExtResource( 11 )
+
+[node name="MainBlock" type="Control" parent="."]
+margin_left = 558.0
+margin_top = 222.0
+margin_right = 914.0
+margin_bottom = 288.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConnectArea" type="Area2D" parent="MainBlock"]
+position = Vector2( -558, -222 )
+z_as_relative = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShadow" type="CollisionShape2D" parent="MainBlock/ConnectArea"]
+position = Vector2( 737, 306 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Shadow" type="Panel" parent="MainBlock/ConnectArea"]
+margin_left = 552.0
+margin_top = 278.0
+margin_right = 925.0
+margin_bottom = 332.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainBlock" type="Sprite" parent="MainBlock"]
+position = Vector2( 163, 23 )
+z_index = 2
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="MainBlock/MainBlock"]
+margin_left = -163.0
+margin_top = -7.0
+margin_right = 153.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 7 )
+text = "Iniciar con Barra Espaciadora"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stoplight" type="Sprite" parent="."]
+position = Vector2( 273.875, 468 )
+texture = ExtResource( 5 )
+
+[node name="Luz0" type="Panel" parent="Stoplight"]
+margin_left = -62.875
+margin_top = -234.0
+margin_right = 63.125
+margin_bottom = -108.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Luz1" type="Panel" parent="Stoplight"]
+margin_left = -62.875
+margin_top = -72.0
+margin_right = 63.125
+margin_bottom = 54.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Luz2" type="Panel" parent="Stoplight"]
+margin_left = -62.875
+margin_top = 108.0
+margin_right = 63.125
+margin_bottom = 234.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
