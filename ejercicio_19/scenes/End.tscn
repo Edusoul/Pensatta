@@ -37,7 +37,8 @@ position = Vector2( 472.505, 470.576 )
 texture = ExtResource( 3 )
 
 [node name="ThoughtBubbleSprite" type="Sprite" parent="."]
-position = Vector2( 1087.69, 216.982 )
+position = Vector2( 1087.69, 257.436 )
+scale = Vector2( 1, 1.43972 )
 z_index = 1
 texture = ExtResource( 2 )
 
@@ -47,22 +48,22 @@ position = Vector2( 3.9, 4.237 )
 z_as_relative = false
 texture = ExtResource( 2 )
 
-[node name="BubbleTailSprite" type="Sprite" parent="ThoughtBubbleSprite"]
-position = Vector2( -243.786, 26.8106 )
+[node name="BubbleTailSprite" type="Sprite" parent="."]
+position = Vector2( 843.904, 243.793 )
 z_index = 1
 texture = ExtResource( 8 )
 
-[node name="TailShadowSprite" type="Sprite" parent="ThoughtBubbleSprite/BubbleTailSprite"]
+[node name="TailShadowSprite" type="Sprite" parent="BubbleTailSprite"]
 modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
 position = Vector2( 3.35968, 4.61673 )
 z_as_relative = false
 texture = ExtResource( 8 )
 
-[node name="ResultLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -190.9
-margin_top = -76.7546
-margin_right = 39.1001
-margin_bottom = -28.7546
+[node name="ResultLabel" type="Label" parent="BubbleTailSprite"]
+margin_left = 52.886
+margin_top = -103.565
+margin_right = 282.886
+margin_bottom = -55.5652
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "¡Resultado!"
@@ -70,11 +71,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SummaryLabel" type="Label" parent="ThoughtBubbleSprite"]
-margin_left = -192.0
-margin_top = -30.0
-margin_right = 154.0
-margin_bottom = 63.0
+[node name="SummaryLabel" type="Label" parent="BubbleTailSprite"]
+margin_left = 51.786
+margin_top = -56.8106
+margin_right = 397.786
+margin_bottom = 36.1894
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "Resumen de tu resultado"

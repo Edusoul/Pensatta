@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/QuestionNode.gd" type="Script" id=6]
 [ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=7]
 
@@ -56,6 +57,8 @@ text = "SIGUIENTE"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TimeSprite" parent="." instance=ExtResource( 5 )]
 
 [node name="Question" type="Control" parent="."]
 anchor_right = 1.0
