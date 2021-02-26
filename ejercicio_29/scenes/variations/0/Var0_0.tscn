@@ -1,0 +1,188 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 3.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 2.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 6.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 4.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/Puzzle/Engranaje 5.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/Puzzle/Vector 3.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/Puzzle/Rectangle 1 (8).png" type="Texture" id=12]
+[ext_resource path="res://assets/img/Puzzle/Vector 2 (1).png" type="Texture" id=13]
+[ext_resource path="res://scenes/DropZone.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Draggable.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Counter.tscn" type="PackedScene" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 349.721, 299.271 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 213.433, 247.266 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 406.59, 458.555 )
+texture = ExtResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 318.739, 526.398 )
+texture = ExtResource( 9 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 236.137, 586.449 )
+texture = ExtResource( 10 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 321.976, 691.256 )
+texture = ExtResource( 8 )
+
+[node name="puzzleBackground" type="Sprite" parent="."]
+position = Vector2( 1017, 458 )
+texture = ExtResource( 12 )
+
+[node name="Draggable" parent="." instance=ExtResource( 15 )]
+position = Vector2( 990, 663 )
+
+[node name="Draggable2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 770, 663 )
+
+[node name="Draggable3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1210, 663 )
+
+[node name="DropZone" parent="." instance=ExtResource( 14 )]
+position = Vector2( 690, 300 )
+
+[node name="DropZone2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 690, 410 )
+
+[node name="DropZone3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 690, 520 )
+
+[node name="DropZone4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 890, 300 )
+
+[node name="DropZone5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1090, 300 )
+
+[node name="DropZone6" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1290, 300 )
+
+[node name="DropZone7" parent="." instance=ExtResource( 14 )]
+position = Vector2( 890, 410 )
+
+[node name="DropZone8" parent="." instance=ExtResource( 14 )]
+position = Vector2( 890, 520 )
+
+[node name="DropZone9" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1090, 410 )
+
+[node name="DropZone10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1090, 520 )
+
+[node name="DropZone11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1290, 410 )
+
+[node name="DropZone12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1290, 520 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1340.0
+margin_top = 615.0
+margin_right = 1397.0
+margin_bottom = 715.0
+icon = ExtResource( 11 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 590.0
+margin_top = 615.0
+margin_right = 647.0
+margin_bottom = 715.0
+icon = ExtResource( 13 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable4" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 770, 663 )
+
+[node name="Draggable5" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 990, 663 )
+
+[node name="Draggable6" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 1210, 663 )
+
+[node name="Draggable7" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 770, 663 )
+
+[node name="Draggable8" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 990, 663 )
+
+[node name="Draggable9" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 1210, 663 )
+
+[node name="Draggable10" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 770, 663 )
+
+[node name="Draggable11" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 990, 663 )
+
+[node name="Draggable12" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 1210, 663 )
+
+[node name="counter" parent="." instance=ExtResource( 16 )]
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
