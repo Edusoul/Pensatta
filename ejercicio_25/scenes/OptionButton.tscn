@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/OptionButton.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 640.976, 24 )
+
+[node name="OptionButton" type="Control"]
+margin_right = 1280.0
+margin_bottom = 48.0
+mouse_filter = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonArea" type="Area2D" parent="."]
+z_index = 1
+z_as_relative = false
+
+[node name="Button" type="Button" parent="ButtonArea"]
+margin_right = 12.0
+margin_bottom = 20.0
+mouse_filter = 1
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "G. Asegurar constantemente su información y realizar un control adecuado del contenido publicado."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionBlock" type="CollisionShape2D" parent="ButtonArea"]
+position = Vector2( 640, 24 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="ButtonArea" to="." method="_area_entered"]
+[connection signal="area_exited" from="ButtonArea" to="." method="_area_exited"]
