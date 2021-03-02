@@ -10,7 +10,7 @@ func _ready():
 	result_summary = find_node("SummaryLabel")
 
 	result_title.text = "¡Felicitaciones!"
-	result_summary.text = "Lo resolviste en :   " + global.time_total + " minutos"
+	result_summary.text = "Lo resolviste en " + str(global.time_total) + " segundos"
 	
 #
 #		elif global.correct_answers_no == 1:
