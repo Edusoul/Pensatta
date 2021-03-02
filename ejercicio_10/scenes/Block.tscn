@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/img/botones/bloque.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Block.gd" type="Script" id=3]
 [ext_resource path="res://assets/img/botones/Contorno rojo.png" type="Texture" id=4]
 [ext_resource path="res://assets/img/botones/Contorno amarillo.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/botones/Vector-1.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/botones/Vector.png" type="Texture" id=7]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -74,12 +76,21 @@ __meta__ = {
 [node name="Bloque" type="Sprite" parent="Area2D"]
 texture = ExtResource( 2 )
 
+[node name="Vector-1" type="Sprite" parent="Area2D"]
+position = Vector2( -0.034256, 13.3697 )
+texture = ExtResource( 6 )
+
+[node name="Vector" type="Sprite" parent="Area2D"]
+position = Vector2( -0.034256, -16.8439 )
+texture = ExtResource( 7 )
+
 [node name="Label" type="Label" parent="Area2D"]
 margin_left = -152.0
 margin_top = -34.0
 margin_right = 169.0
 margin_bottom = 21.0
 custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
 text = "Mover	                pasos izquierda"
 valign = 1
 __meta__ = {
@@ -93,9 +104,9 @@ disabled = true
 
 [node name="LineEdit" type="LineEdit" parent="Area2D"]
 margin_left = -85.0
-margin_top = -20.41
+margin_top = -18.41
 margin_right = -13.0
-margin_bottom = 10.59
+margin_bottom = 12.59
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/cursor_color = Color( 0.368627, 0.368627, 0.368627, 1 )
@@ -111,11 +122,13 @@ __meta__ = {
 }
 
 [node name="ContourYellow" type="Sprite" parent="."]
+visible = false
 position = Vector2( 164.217, 35.885 )
 z_index = 1
 texture = ExtResource( 5 )
 
 [node name="ContourRed" type="Sprite" parent="."]
+visible = false
 position = Vector2( 164.217, 35.885 )
 z_index = 1
 texture = ExtResource( 4 )
