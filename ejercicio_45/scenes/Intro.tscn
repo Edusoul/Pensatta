@@ -14,7 +14,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
-load_path = "res://.import/ThoughtBubble4.png-bea6dca155375456552cf71eb663bddf.stex"
+load_path = "res://.import/BubbleTail2.png-258baa981ae9ba5eb4c1c1e5cc5ed888.stex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )

@@ -1,6 +1,6 @@
 extends Node
 
-var title = "Título"
+var title = "Mantén vivo al pez"
 var timer = 60 #s
 var timeout = false
 var scene = 0
