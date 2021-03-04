@@ -1,6 +1,6 @@
 extends Node
 
-var title = "Título"
+var title = "Simulación del sistema inmunológico"
 var timer = 181 #s
 var timeout = false
 var scene = 0

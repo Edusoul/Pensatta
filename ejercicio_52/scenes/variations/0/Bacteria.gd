@@ -43,7 +43,7 @@ func create_blood_cells():
 	randomize()
 	var pos_y = randf() * 120 + 20
 	sprite.position = Vector2(pos_x, pos_y)
-	sprite.scale = Vector2(0.2, 0.2)
+	sprite.scale = Vector2(0.35, 0.35)
 	add_child(sprite)
 	var cell_timer = Timer.new()
 	cell_timer.wait_time = 4.0
