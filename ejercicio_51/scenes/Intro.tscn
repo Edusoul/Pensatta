@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/img/Katty1.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=2]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/img/ThoughtBubble.png" type="Texture" id=4]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/img/Shadow.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Intro.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 3 )
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/ThoughtBubble.png-17e0a2c645860238b14b1a6bf6b8bdfb.stex"
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/ThoughtBubble4.png-bea6dca155375456552cf71eb663bddf.stex"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 483.0
+margin_top = 585.0
+margin_right = 1377.0
+margin_bottom = 770.0
+texture = SubResource( 2 )
+patch_margin_left = 34
+patch_margin_top = 33
+patch_margin_right = 34
+patch_margin_bottom = 33
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ThoughtBubbleSprite" type="Sprite" parent="."]
+position = Vector2( 937.1, 219.667 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="ShadowSprite" type="Sprite" parent="ThoughtBubbleSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 3.34705, 4.10217 )
+z_as_relative = false
+texture = ExtResource( 4 )
+
+[node name="BubbleTailSprite" type="Sprite" parent="."]
+position = Vector2( 502.713, 244.137 )
+z_index = 1
+texture = SubResource( 3 )
+
+[node name="TailShadowSprite" type="Sprite" parent="BubbleTailSprite"]
+modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
+position = Vector2( 2, 4.12 )
+z_as_relative = false
+texture = SubResource( 3 )
+
+[node name="IntroLabel" type="Label" parent="BubbleTailSprite"]
+margin_left = 30.615
+margin_top = 262.519
+margin_right = 758.615
+margin_bottom = 341.519
+theme = ExtResource( 5 )
+text = "Aquí va la descripción del problema. Haz algo para avanzar a la siguiente pantalla."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KattySprite" type="Sprite" parent="."]
+position = Vector2( 331.374, 502.222 )
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="KattySprite"]
+modulate = Color( 0.188235, 0.431373, 0.403922, 0.537255 )
+position = Vector2( -16.284, 329.819 )
+z_as_relative = false
+texture = ExtResource( 6 )
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 1054.0
+margin_top = 794.0
+margin_right = 1390.0
+margin_bottom = 841.0
+theme = ExtResource( 5 )
+text = "INICIAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="StartButton" to="." method="_on_Button_pressed"]
