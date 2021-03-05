@@ -227,7 +227,7 @@ __meta__ = {
 }
 
 [node name="MainBlock" type="Sprite" parent="MainBlock"]
-position = Vector2( 165, 22 )
+position = Vector2( 145, 22 )
 z_index = 2
 texture = ExtResource( 9 )
 

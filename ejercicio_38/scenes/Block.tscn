@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/img/botones/bloque.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Block.gd" type="Script" id=3]
+[ext_resource path="res://assets/img/botones/Contorno rojo.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/botones/Contorno amarillo.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/botones/Contorno verde.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/botones/Vector-1.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/botones/Vector-2.png" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 28.3586
+height = 321.712
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.407843 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="Block" type="Control"]
+material = SubResource( 1 )
+margin_top = 15.59
+margin_right = 328.0
+margin_bottom = 72.59
+mouse_default_cursor_shape = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+text = "derecha"
+
+[node name="ConnectArea" type="Area2D" parent="."]
+
+[node name="CollisionShadow" type="CollisionShape2D" parent="ConnectArea"]
+visible = false
+position = Vector2( 161.172, 83.8503 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Shadow" type="Panel" parent="ConnectArea"]
+margin_left = -18.0
+margin_top = 57.0
+margin_right = 342.0
+margin_bottom = 111.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 164, 36 )
+z_index = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bloque" type="Sprite" parent="Area2D"]
+texture = ExtResource( 2 )
+
+[node name="Vector-1" type="Sprite" parent="Area2D/Bloque"]
+position = Vector2( 0.806122, 11.5227 )
+texture = ExtResource( 7 )
+
+[node name="Vector-2" type="Sprite" parent="Area2D/Bloque"]
+position = Vector2( 1.09903, -16.7616 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = -152.0
+margin_top = -29.0
+margin_right = 169.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 4 )
+text = "Mover	                pasos izquierda"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionBlock" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PoolVector2Array( 165.5, -32.4, 165.5, 25, 160.3, 30, -86.7, 30, -89.7, 33, -138.1, 33, -140.5, 30, -165.5, 30, -165.5, -33, 164.6, -33 )
+disabled = true
+
+[node name="ContourYellow" type="Sprite" parent="."]
+visible = false
+position = Vector2( 164.217, 35.885 )
+z_index = 1
+texture = ExtResource( 5 )
+
+[node name="ContourRed" type="Sprite" parent="."]
+visible = false
+position = Vector2( 164.217, 35.885 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="ContourGreen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 164.099, 36.209 )
+z_index = 1
+texture = ExtResource( 6 )
+[connection signal="gui_input" from="." to="." method="_on_Node2D_gui_input"]
+[connection signal="area_entered" from="Area2D" to="." method="_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_area_exited"]
