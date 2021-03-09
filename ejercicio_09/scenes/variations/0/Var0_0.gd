@@ -35,6 +35,7 @@ func question():
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Katty":
 		question().visible = true
+		print(question())
 		global.speed = 0
 
 func _on_Button_pressed():
