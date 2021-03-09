@@ -4,17 +4,18 @@ var speed = 80
 var path = []
 
 func _input(event):
-	
-	if Input.is_action_pressed("ui_right"):
-		_new_position($KinematicBody2D.position, $"/root/Katty".position)
-	if Input.is_action_pressed("ui_left"):
-		_new_position($KinematicBody2D.position, $"/root/Katty".position)
-	if Input.is_action_pressed("ui_down"):
-		_new_position($KinematicBody2D.position, $"/root/Katty".position)
-	if Input.is_action_pressed("ui_up"):
-		_new_position($KinematicBody2D.position, $"/root/Katty".position)
+	if Input.is_action_pressed("click"):
+		_new_position($KinematicBody2D.position, get_global_mouse_position())
+#	if Input.is_action_pressed("ui_right"):
+#		_new_position($KinematicBody2D.position, $"/root/Katty".position)
+#	if Input.is_action_pressed("ui_left"):
+#		_new_position($KinematicBody2D.position, $"/root/Katty".position)
+#	if Input.is_action_pressed("ui_down"):
+#		_new_position($KinematicBody2D.position, $"/root/Katty".position)
+#	if Input.is_action_pressed("ui_up"):
+#		_new_position($KinematicBody2D.position, $"/root/Katty".position)
 func _new_position(pos_init, pos_end):
-	path = get_simple_path(pos_init, pos_end, true)
+	path = self.get_simple_path(pos_init, pos_end, true)
 	path.remove(0)
 	
 func _physics_process(delta):

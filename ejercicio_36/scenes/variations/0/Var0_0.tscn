@@ -650,6 +650,90 @@ texture = ExtResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points66"]
 shape = SubResource( 13 )
 
+[node name="Points125" type="Area2D" parent="."]
+position = Vector2( 1001.09, 342.738 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points125"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points125"]
+shape = SubResource( 13 )
+
+[node name="Points128" type="Area2D" parent="."]
+position = Vector2( 1001.09, 389.932 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points128"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points128"]
+shape = SubResource( 13 )
+
+[node name="Points130" type="Area2D" parent="."]
+position = Vector2( 1000.5, 439.879 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points130"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points130"]
+shape = SubResource( 13 )
+
+[node name="Points131" type="Area2D" parent="."]
+position = Vector2( 1001, 494.562 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points131"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points131"]
+shape = SubResource( 13 )
+
+[node name="Points132" type="Area2D" parent="."]
+position = Vector2( 1057.43, 494.562 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points132"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points132"]
+shape = SubResource( 13 )
+
+[node name="Points133" type="Area2D" parent="."]
+position = Vector2( 1105.89, 498.562 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points133"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points133"]
+shape = SubResource( 13 )
+
+[node name="Points129" type="Area2D" parent="."]
+position = Vector2( 1059.14, 390.404 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points129"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points129"]
+shape = SubResource( 13 )
+
 [node name="Points67" type="Area2D" parent="."]
 position = Vector2( 1057.27, 281.974 )
 __meta__ = {
@@ -672,6 +756,30 @@ __meta__ = {
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points68"]
+shape = SubResource( 13 )
+
+[node name="Points126" type="Area2D" parent="."]
+position = Vector2( 1105.06, 343.845 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points126"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points126"]
+shape = SubResource( 13 )
+
+[node name="Points127" type="Area2D" parent="."]
+position = Vector2( 1104.11, 392.031 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points127"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points127"]
 shape = SubResource( 13 )
 
 [node name="Points69" type="Area2D" parent="."]
@@ -975,7 +1083,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points115" type="Area2D" parent="."]
-position = Vector2( 821.568, 386.027 )
+position = Vector2( 820.233, 384.692 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -984,6 +1092,90 @@ __meta__ = {
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points115"]
+shape = SubResource( 13 )
+
+[node name="Points116" type="Area2D" parent="."]
+position = Vector2( 820.901, 437.418 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points116"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points116"]
+shape = SubResource( 13 )
+
+[node name="Points117" type="Area2D" parent="."]
+position = Vector2( 820.901, 491.479 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points117"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points117"]
+shape = SubResource( 13 )
+
+[node name="Points118" type="Area2D" parent="."]
+position = Vector2( 868.287, 494.149 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points118"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points118"]
+shape = SubResource( 13 )
+
+[node name="Points119" type="Area2D" parent="."]
+position = Vector2( 912.333, 495.151 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points119"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points119"]
+shape = SubResource( 13 )
+
+[node name="Points122" type="Area2D" parent="."]
+position = Vector2( 909.987, 440.021 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points122"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points122"]
+shape = SubResource( 13 )
+
+[node name="Points123" type="Area2D" parent="."]
+position = Vector2( 909.392, 391.264 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points123"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points123"]
+shape = SubResource( 13 )
+
+[node name="Points124" type="Area2D" parent="."]
+position = Vector2( 908.333, 341.47 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points124"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points124"]
 shape = SubResource( 13 )
 
 [node name="Points104" type="Area2D" parent="."]
@@ -1094,8 +1286,20 @@ texture = ExtResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points112"]
 shape = SubResource( 13 )
 
+[node name="Points120" type="Area2D" parent="."]
+position = Vector2( 911.939, 543.918 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points120"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points120"]
+shape = SubResource( 13 )
+
 [node name="Points113" type="Area2D" parent="."]
-position = Vector2( 871.378, 592.811 )
+position = Vector2( 871.063, 600.37 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1104,6 +1308,198 @@ __meta__ = {
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points113"]
+shape = SubResource( 13 )
+
+[node name="Points121" type="Area2D" parent="."]
+position = Vector2( 911.234, 600.803 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points121"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points121"]
+shape = SubResource( 13 )
+
+[node name="Points134" type="Area2D" parent="."]
+position = Vector2( 967.152, 601.624 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points134"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points134"]
+shape = SubResource( 13 )
+
+[node name="Points143" type="Area2D" parent="."]
+position = Vector2( 967.646, 656.277 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points143"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points143"]
+shape = SubResource( 13 )
+
+[node name="Points144" type="Area2D" parent="."]
+position = Vector2( 967.646, 712.849 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points144"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points144"]
+shape = SubResource( 13 )
+
+[node name="Points145" type="Area2D" parent="."]
+position = Vector2( 912.41, 714.185 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points145"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points145"]
+shape = SubResource( 13 )
+
+[node name="Points146" type="Area2D" parent="."]
+position = Vector2( 869.201, 715.076 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points146"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points146"]
+shape = SubResource( 13 )
+
+[node name="Points147" type="Area2D" parent="."]
+position = Vector2( 826.438, 715.076 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points147"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points147"]
+shape = SubResource( 13 )
+
+[node name="Points148" type="Area2D" parent="."]
+position = Vector2( 785.457, 716.858 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points148"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points148"]
+shape = SubResource( 13 )
+
+[node name="Points135" type="Area2D" parent="."]
+position = Vector2( 1015.96, 600.967 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points135"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points135"]
+shape = SubResource( 13 )
+
+[node name="Points136" type="Area2D" parent="."]
+position = Vector2( 1056.4, 600.707 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points136"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points136"]
+shape = SubResource( 13 )
+
+[node name="Points137" type="Area2D" parent="."]
+position = Vector2( 1103.51, 601.913 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points137"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points137"]
+shape = SubResource( 13 )
+
+[node name="Points139" type="Area2D" parent="."]
+position = Vector2( 1103.51, 655.386 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points139"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points139"]
+shape = SubResource( 13 )
+
+[node name="Points140" type="Area2D" parent="."]
+position = Vector2( 1055.84, 712.849 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points140"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points140"]
+shape = SubResource( 13 )
+
+[node name="Points141" type="Area2D" parent="."]
+position = Vector2( 1015.31, 714.185 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points141"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points141"]
+shape = SubResource( 13 )
+
+[node name="Points142" type="Area2D" parent="."]
+position = Vector2( 1017.54, 656.277 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points142"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points142"]
+shape = SubResource( 13 )
+
+[node name="Points138" type="Area2D" parent="."]
+position = Vector2( 1101.94, 545.105 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Points138"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Points138"]
 shape = SubResource( 13 )
 
 [node name="Points99" type="Area2D" parent="."]
@@ -1371,7 +1767,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points85" type="Area2D" parent="."]
-position = Vector2( 645.761, 593.205 )
+position = Vector2( 646.653, 600.935 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1383,7 +1779,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points86" type="Area2D" parent="."]
-position = Vector2( 696.294, 592.555 )
+position = Vector2( 696.294, 599.987 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1395,7 +1791,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points87" type="Area2D" parent="."]
-position = Vector2( 743.608, 591.806 )
+position = Vector2( 743.608, 600.725 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1407,7 +1803,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points89" type="Area2D" parent="."]
-position = Vector2( 783.268, 592.181 )
+position = Vector2( 783.565, 600.208 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1515,7 +1911,7 @@ texture = ExtResource( 8 )
 shape = SubResource( 13 )
 
 [node name="Points77" type="Area2D" parent="."]
-position = Vector2( 598.151, 592.616 )
+position = Vector2( 600.232, 600.643 )
 __meta__ = {
 "_edit_group_": true
 }

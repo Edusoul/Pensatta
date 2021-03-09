@@ -1,0 +1,636 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/Box/Rectangle 5.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Box/Rectangle 7.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/Box/Rectangle 6.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Box/Ellipse 6.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Box/Ellipse 7.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/Box/Rectangle 8.png" type="Texture" id=10]
+[ext_resource path="res://scenes/DropZone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Draggable.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/img/Box/Rectangle 1.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoxBlack" type="Area2D" parent="."]
+position = Vector2( 0.0120697, 0.606678 )
+
+[node name="Sprite" type="Sprite" parent="BoxBlack"]
+position = Vector2( 678, 453 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="BoxBlack"]
+position = Vector2( 717.297, 274.153 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="BoxBlack"]
+position = Vector2( 882.798, 410.026 )
+texture = ExtResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="BoxBlack"]
+position = Vector2( 895.294, 400.945 )
+texture = ExtResource( 8 )
+
+[node name="Sprite5" type="Sprite" parent="BoxBlack"]
+position = Vector2( 933.759, 399.556 )
+texture = ExtResource( 10 )
+
+[node name="Sprite6" type="Sprite" parent="BoxBlack"]
+position = Vector2( 971.062, 399.516 )
+texture = ExtResource( 9 )
+
+[node name="DropZone2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 676.126, 363.039 )
+
+[node name="Sprite2" type="Sprite" parent="DropZone2"]
+modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="DropZone2"]
+margin_left = -80.4359
+margin_top = -18.6908
+margin_right = 82.5641
+margin_bottom = 19.3092
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.517647, 0.517647, 0.517647, 1 )
+text = "ENTRADA"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropZone" parent="." instance=ExtResource( 11 )]
+position = Vector2( 673.194, 508.686 )
+
+[node name="Sprite3" type="Sprite" parent="DropZone"]
+modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+position = Vector2( 1.77563, 25.2082 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="DropZone"]
+margin_left = -71.3774
+margin_top = 5.73575
+margin_right = 88.6226
+margin_bottom = 43.7357
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.517647, 0.517647, 0.517647, 1 )
+text = "FUNCIÓN"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable" parent="." instance=ExtResource( 12 )]
+position = Vector2( 169, 721 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable"]
+margin_left = -54.7653
+margin_top = -21.4299
+margin_right = 34.2347
+margin_bottom = 16.5701
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "sumar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable9" parent="." instance=ExtResource( 12 )]
+position = Vector2( 211.966, 311.667 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable9"]
+modulate = Color( 0, 0.847059, 0.8, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable9"]
+margin_left = -33.7526
+margin_top = -21.9885
+margin_right = 32.2474
+margin_bottom = 16.0115
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "1 y 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable10" parent="." instance=ExtResource( 12 )]
+position = Vector2( 211.966, 395.667 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable10"]
+modulate = Color( 0, 0.847059, 0.8, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable10"]
+margin_left = -38.0165
+margin_top = -15.0803
+margin_right = 50.9835
+margin_bottom = 22.9197
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "32 y 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable11" parent="." instance=ExtResource( 12 )]
+position = Vector2( 208.184, 477.449 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable11"]
+modulate = Color( 0.572549, 0.380392, 0.976471, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable11"]
+margin_left = -37.8382
+margin_top = -15.1936
+margin_right = 51.1618
+margin_bottom = 22.8064
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "A y B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable12" parent="." instance=ExtResource( 12 )]
+position = Vector2( 209.966, 557.667 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable12"]
+modulate = Color( 0, 0.847059, 0.8, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable12"]
+margin_left = -126.198
+margin_top = -19.8426
+margin_right = 132.802
+margin_bottom = 18.1574
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "MUNDO DIGITAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 523, 721 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable2"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable2"]
+margin_left = -50.1933
+margin_top = -21.7255
+margin_right = 50.8067
+margin_bottom = 16.2745
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "restar"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 523, 832 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable3"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable3"]
+margin_left = -88.7103
+margin_top = -22.0
+margin_right = 102.29
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "desaparecer"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 169, 832 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable4"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable4"]
+margin_left = -85.4666
+margin_top = -20.0951
+margin_right = 85.5334
+margin_bottom = 17.9049
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "concatenar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 868, 721 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable5"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable5"]
+margin_left = -50.1933
+margin_top = -21.7255
+margin_right = 50.8067
+margin_bottom = 16.2745
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "dividir"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 868, 832 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable6"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable6"]
+margin_left = -67.3529
+margin_top = -20.6652
+margin_right = 60.6471
+margin_bottom = 17.3348
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "duplicar"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1221, 721 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable7"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable7"]
+margin_left = -84.7058
+margin_top = -23.3348
+margin_right = 84.2942
+margin_bottom = 14.6652
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "multiplicar"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable8" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1221, 832 )
+
+[node name="Sprite2" type="Sprite" parent="Draggable8"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="Draggable8"]
+margin_left = -59.3439
+margin_top = -22.0
+margin_right = 54.6561
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 223.144, 548.881 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+text = "invertir"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1072.0
+margin_top = 535.0
+margin_right = 1377.0
+margin_bottom = 604.0
+icon = ExtResource( 14 )
+flat = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 88.6396
+margin_top = 15.568
+margin_right = 221.64
+margin_bottom = 53.568
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.913725, 0.862745, 1 )
+text = "REPETIR"
+
+[node name="LabelResult" type="Label" parent="."]
+visible = false
+margin_left = 1092.0
+margin_top = 276.0
+margin_right = 1378.0
+margin_bottom = 408.0
+custom_fonts/font = SubResource( 6 )
+text = "El resultado de sumar 1 y 3 es:
+            4"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTickets" type="Label" parent="."]
+margin_left = 137.15
+margin_top = 230.95
+margin_right = 288.15
+margin_bottom = 262.95
+custom_fonts/font = SubResource( 7 )
+text = "Entradas"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelResult2" type="Label" parent="."]
+visible = false
+margin_left = 1104.41
+margin_top = 261.682
+margin_right = 1371.41
+margin_bottom = 381.682
+custom_fonts/font = SubResource( 9 )
+text = "El resultado de sumar 32 y 4 es : 36"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSubtraction" type="Label" parent="."]
+visible = false
+margin_left = 1089.89
+margin_top = 321.854
+margin_right = 1345.89
+margin_bottom = 441.854
+custom_fonts/font = SubResource( 10 )
+text = "El resultado de restar 1 y  3 es :
+2"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSubtraction2" type="Label" parent="."]
+visible = false
+margin_left = 1093.3
+margin_top = 322.422
+margin_right = 1346.3
+margin_bottom = 442.422
+custom_fonts/font = SubResource( 11 )
+text = "El resultado de restar 32 y 4 es : 
+28"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelDivision" type="Label" parent="."]
+visible = false
+margin_left = 1088.99
+margin_top = 322.925
+margin_right = 1323.99
+margin_bottom = 442.925
+custom_fonts/font = SubResource( 12 )
+text = "El resultado de dividir 1 y 3 es :
+3"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelDivision2" type="Label" parent="."]
+visible = false
+margin_left = 1089.0
+margin_top = 323.0
+margin_right = 1351.0
+margin_bottom = 443.0
+custom_fonts/font = SubResource( 12 )
+text = "El resultado de dividir 32 y 4 es :
+8"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelMultiplication" type="Label" parent="."]
+visible = false
+margin_left = 1089.0
+margin_top = 323.0
+margin_right = 1384.0
+margin_bottom = 443.0
+custom_fonts/font = SubResource( 12 )
+text = "El resultado de multiplicar 1 y 3 es :
+3"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelMultiplication2" type="Label" parent="."]
+visible = false
+margin_left = 1089.0
+margin_top = 323.0
+margin_right = 1410.0
+margin_bottom = 443.0
+custom_fonts/font = SubResource( 12 )
+text = "El resultado de multiplicar 32 y 4 es :
+128"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelConcat" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1422.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La concatenación de 1 y 3
+tiene como resultado :
+13"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelConcat2" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La concatenación de 32 y 4
+tiene como resultado :
+324"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelConcat3" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La concatenación de A y B
+tiene como resultado :
+AB"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelConcat4" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La concatenación de la frase MUNDO DIGITAL tiene como resultado :
+MUNDODIGITAL"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

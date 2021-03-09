@@ -4,18 +4,20 @@
 [ext_resource path="res://scenes/Katty.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.0818, 21.9155 )
+extents = Vector2( 12.9221, 21.028 )
 
 [node name="Katty" type="KinematicBody2D"]
-position = Vector2( 696.134, 389.472 )
+position = Vector2( 695.243, 387.913 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.162682, 0.986345 )
+scale = Vector2( 1.00651, 0.950735 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3.18198, 3.18199 )
+position = Vector2( -3.11161, 4.13038 )
 shape = SubResource( 1 )
