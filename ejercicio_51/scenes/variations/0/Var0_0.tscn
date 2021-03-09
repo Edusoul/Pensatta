@@ -1,23 +1,24 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/QuestionNode.gd" type="Script" id=6]
-[ext_resource path="res://assets/theme/pensatta-theme_2.tres" type="Theme" id=7]
+[ext_resource path="res://assets/img/variations/0/redsquare.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/variations/0/1200px-Red_Circle(small).svg.png" type="Texture" id=7]
+[ext_resource path="res://scenes/variations/0/BounceBall.gd" type="Script" id=8]
+[ext_resource path="res://assets/img/variations/0/seamless-vector-wood-texture-29518268.jpg" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0.847059, 0.8, 1 )
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+[sub_resource type="CircleShape2D" id=3]
+radius = 80.8051
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 127.066, 12.8004 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,10 +49,10 @@ __meta__ = {
 }
 
 [node name="NextButton" type="Button" parent="."]
-margin_left = 1014.0
-margin_top = 794.0
-margin_right = 1388.0
-margin_bottom = 841.0
+margin_left = 1015.0
+margin_top = 797.0
+margin_right = 1389.0
+margin_bottom = 844.0
 theme = ExtResource( 2 )
 text = "SIGUIENTE"
 __meta__ = {
@@ -60,61 +61,82 @@ __meta__ = {
 
 [node name="TimeSprite" parent="." instance=ExtResource( 5 )]
 
-[node name="Question" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 356.359
-margin_top = 222.725
-margin_right = 356.359
-margin_bottom = 222.725
-size_flags_horizontal = 2
-theme = ExtResource( 7 )
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-question = "Pregunta"
-options = [ "a", "b", "c" ]
+[node name="CircleTransform" type="Sprite" parent="."]
+position = Vector2( 306.738, 299.061 )
+scale = Vector2( 0.137332, 0.137332 )
+texture = ExtResource( 7 )
 
-[node name="PanelContainer" type="PanelContainer" parent="Question"]
-margin_right = 486.0
+[node name="redsquare" type="Sprite" parent="CircleTransform"]
+position = Vector2( -6.56079, -9.27808 )
+scale = Vector2( 4.13526, 4.13526 )
+texture = ExtResource( 6 )
+
+[node name="BounceBall" type="Node2D" parent="."]
+position = Vector2( 615.966, 199.346 )
+script = ExtResource( 8 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="BounceBall"]
+position = Vector2( 116.201, 103.878 )
+gravity_scale = 3.49
+
+[node name="1200px-Red_Circle(small)svg" type="Sprite" parent="BounceBall/RigidBody2D"]
+position = Vector2( -0.723633, -1.61377 )
+scale = Vector2( 0.133026, 0.133026 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BounceBall/RigidBody2D"]
+position = Vector2( -2.15723, -1.74918 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BounceBall"]
+position = Vector2( -17.6388, 187.728 )
+
+[node name="seamless-vector-wood-texture-29518268" type="Sprite" parent="BounceBall/StaticBody2D"]
+position = Vector2( 132.517, 71.7135 )
+scale = Vector2( 1.58807, 0.160217 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BounceBall/StaticBody2D"]
+position = Vector2( 132.188, 71.5815 )
+shape = SubResource( 4 )
+
+[node name="CircleFade" type="Sprite" parent="."]
+position = Vector2( 1167.26, 306.059 )
+scale = Vector2( 0.13124, 0.13124 )
+texture = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 119.0
+margin_top = 133.0
+margin_right = 485.0
 margin_bottom = 180.0
-custom_styles/panel = SubResource( 2 )
+theme = ExtResource( 2 )
+text = "MOSTRAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="Question/PanelContainer"]
-margin_right = 486.0
-margin_bottom = 180.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 30
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 30
-
-[node name="GridContainer" type="GridContainer" parent="Question/PanelContainer/MarginContainer"]
-margin_left = 20.0
-margin_top = 71.0
-margin_right = 466.0
-margin_bottom = 109.0
-size_flags_horizontal = 5
-size_flags_vertical = 4
-custom_constants/vseparation = 20
+[node name="Button2" type="Button" parent="."]
+margin_left = 543.77
+margin_top = 134.891
+margin_right = 909.77
+margin_bottom = 181.891
+theme = ExtResource( 2 )
+text = "MOSTRAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Question" type="Label" parent="Question/PanelContainer/MarginContainer/GridContainer"]
-margin_right = 446.0
-margin_bottom = 38.0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-custom_colors/font_color = Color( 0, 0.388235, 0.364706, 1 )
-text = "Question"
-align = 1
-autowrap = true
+[node name="Button3" type="Button" parent="."]
+margin_left = 983.374
+margin_top = 136.589
+margin_right = 1349.37
+margin_bottom = 183.589
+theme = ExtResource( 2 )
+text = "MOSTRAR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
