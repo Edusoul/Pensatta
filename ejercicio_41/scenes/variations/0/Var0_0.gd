@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	find_node("TimeSprite").hide()
+#	find_node("TimeSprite").hide()
 	find_node("TitleLabel").text = global.title
 	get_node("NextButton").connect("pressed",self,"_on_NextButton_pressed")
 
