@@ -204,6 +204,33 @@ func _concat():
 		$LabelTickets.visible = false
 		$LabelConcat4.visible = true
 		
+func _change_order():
+# Acciones para la invertir el orden de las entradas
+	if $Draggable8.position == Vector2(673, 538) and $Draggable9.position == Vector2(676, 363):
+		$Draggable10.visible = false
+		$Draggable11.visible = false
+		$Draggable12.visible = false
+		$LabelTickets.visible = false
+		$LabelToInvest.visible = true
+	if $Draggable8.position == Vector2(673, 538) and $Draggable10.position == Vector2(676, 363):
+		$Draggable9.visible = false
+		$Draggable11.visible = false
+		$Draggable12.visible = false
+		$LabelTickets.visible = false
+		$LabelToInvest2.visible = true
+	if $Draggable8.position == Vector2(673, 538) and $Draggable11.position == Vector2(676, 363):
+		$Draggable9.visible = false
+		$Draggable10.visible = false
+		$Draggable12.visible = false
+		$LabelTickets.visible = false
+		$LabelToInvest3.visible = true
+	if $Draggable8.position == Vector2(673, 538) and $Draggable12.position == Vector2(676, 363):
+		$Draggable9.visible = false
+		$Draggable10.visible = false
+		$Draggable11.visible = false
+		$LabelTickets.visible = false
+		$LabelToInvest4.visible = true
+		
 func _on_NextButton_pressed():
 	global.scene += 1
 	if global.scene <= global.last_scene:
@@ -221,6 +248,7 @@ func _process(delta):
 	_division()
 	_multiplication()
 	_concat()
+	_change_order()
 	
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/variations/0/Var0_0.tscn")
