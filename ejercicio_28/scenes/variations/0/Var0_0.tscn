@@ -1,0 +1,491 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/img/images/marco.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/images/Rectangle 1 (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/img/images/Rectangle 3 (1).png" type="Texture" id=8]
+[ext_resource path="res://assets/img/images/Vector.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/images/Vector (2).png" type="Texture" id=10]
+[ext_resource path="res://assets/img/images/Vector (1).png" type="Texture" id=11]
+[ext_resource path="res://assets/img/images/Rectangle 16.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/images/Katty 1 (1).png" type="Texture" id=13]
+[ext_resource path="res://assets/img/images/Ellipse 1.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 39
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 14
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 12
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 12
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 5.33936
+margin_right = 1445.34
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteAnimations" type="Sprite" parent="."]
+position = Vector2( 250, 460 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="SpriteAnimations"]
+position = Vector2( 0, 121.97 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="SpriteAnimations"]
+position = Vector2( -6.38898, -44.3834 )
+scale = Vector2( 0.8702, 0.861999 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="SpriteAnimations"]
+margin_left = -151.02
+margin_top = 205.765
+margin_right = 142.98
+margin_bottom = 253.765
+custom_fonts/font = SubResource( 2 )
+text = "ANIMACIONES"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteREctangle" type="Sprite" parent="."]
+position = Vector2( 950.397, 460.595 )
+texture = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="SpriteREctangle"]
+margin_left = -385.645
+margin_top = -175.871
+margin_right = -99.6445
+margin_bottom = 18.1291
+custom_colors/font_color_disabled = Color( 0.670588, 0.545098, 0.113725, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button"]
+position = Vector2( 139.849, 52.9731 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="SpriteREctangle/Button/Sprite"]
+margin_left = -100.902
+margin_top = -4.3269
+margin_right = -56.902
+margin_bottom = 13.6731
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.552941, 0.156863, 0.560784, 1 )
+text = "Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="SpriteREctangle/Button"]
+position = Vector2( 140.09, 118.5 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="SpriteREctangle/Button/Sprite2"]
+margin_left = -104.056
+margin_top = -38.0546
+margin_right = -58.0556
+margin_bottom = -22.0546
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.670588, 0.545098, 0.113725, 1 )
+text = "Repetir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="SpriteREctangle/Button"]
+position = Vector2( 150.675, 119 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="SpriteREctangle/Button/Sprite3"]
+margin_left = -83.0
+margin_top = -8.0
+margin_right = -53.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button/Sprite3"]
+position = Vector2( -36.9328, -1.63304 )
+scale = Vector2( 1.26546, 1.20647 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="SpriteREctangle/Button/Sprite3/Sprite"]
+margin_left = -4.29596
+margin_top = -8.0307
+margin_right = 3.70404
+margin_bottom = 7.9693
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.427451, 0.427451, 0.427451, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="SpriteREctangle/Button/Sprite3"]
+margin_left = -23.1896
+margin_top = -8.32443
+margin_right = 94.8104
+margin_bottom = 5.67557
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "veces a la derecha"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="SpriteREctangle"]
+margin_left = -381.407
+margin_top = 50.8542
+margin_right = -95.4067
+margin_bottom = 244.854
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button3"]
+position = Vector2( 143.469, 50.9691 )
+texture = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="SpriteREctangle/Button3/Sprite"]
+margin_left = -102.033
+margin_top = -6.1629
+margin_right = -58.0334
+margin_bottom = 11.8371
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.552941, 0.156863, 0.560784, 1 )
+text = "Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="SpriteREctangle/Button3"]
+position = Vector2( 154, 87 )
+texture = ExtResource( 11 )
+
+[node name="Label3" type="Label" parent="SpriteREctangle/Button3/Sprite2"]
+margin_left = -83.4424
+margin_top = -8.88843
+margin_right = 47.5576
+margin_bottom = 7.11157
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Mirar hacia la derecha"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="SpriteREctangle/Button3"]
+position = Vector2( 154, 116 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button3/Sprite3"]
+position = Vector2( -22.4181, -3.18201 )
+scale = Vector2( 1.08839, 1.0442 )
+texture = ExtResource( 12 )
+
+[node name="Label2" type="Label" parent="SpriteREctangle/Button3/Sprite3/Sprite"]
+margin_left = -3.8335
+margin_top = -7.66214
+margin_right = 4.1665
+margin_bottom = 8.33786
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.427451, 0.427451, 0.427451, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="SpriteREctangle/Button3/Sprite3"]
+margin_left = -87.8354
+margin_top = -8.79987
+margin_right = -32.8354
+margin_bottom = 7.20013
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="SpriteREctangle/Button3/Sprite3"]
+margin_left = -7.77795
+margin_top = -8.60315
+margin_right = 27.222
+margin_bottom = 7.39685
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "pasos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="SpriteREctangle/Button3"]
+position = Vector2( 154, 145 )
+texture = ExtResource( 11 )
+
+[node name="Label4" type="Label" parent="SpriteREctangle/Button3/Sprite4"]
+margin_left = -85.8235
+margin_top = -9.34515
+margin_right = 45.1765
+margin_bottom = 6.65485
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Detenerse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="SpriteREctangle"]
+margin_left = 108.065
+margin_top = -175.871
+margin_right = 394.065
+margin_bottom = 18.1291
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button2"]
+position = Vector2( 147, 41 )
+texture = ExtResource( 9 )
+
+[node name="Label3" type="Label" parent="SpriteREctangle/Button2/Sprite"]
+margin_left = -101.327
+margin_top = -5.72891
+margin_right = -57.3269
+margin_bottom = 12.2711
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.552941, 0.156863, 0.560784, 1 )
+text = "Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="SpriteREctangle/Button2"]
+position = Vector2( 157, 76 )
+texture = ExtResource( 11 )
+
+[node name="Label4" type="Label" parent="SpriteREctangle/Button2/Sprite2"]
+margin_left = -86.9705
+margin_top = -8.92188
+margin_right = 69.0295
+margin_bottom = 7.07813
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar el brazo derecho"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="SpriteREctangle/Button2"]
+position = Vector2( 157, 105 )
+texture = ExtResource( 11 )
+
+[node name="Label5" type="Label" parent="SpriteREctangle/Button2/Sprite3"]
+margin_left = -87.7642
+margin_top = -10.1424
+margin_right = 68.2358
+margin_bottom = 5.85764
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Sacudir la mano"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="SpriteREctangle/Button2"]
+position = Vector2( 157, 134 )
+texture = ExtResource( 11 )
+
+[node name="Label6" type="Label" parent="SpriteREctangle/Button2/Sprite4"]
+margin_left = -87.3673
+margin_top = -9.37857
+margin_right = 68.6327
+margin_bottom = 6.62143
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Bajar el brazo derecho"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="SpriteREctangle"]
+margin_left = 108.065
+margin_top = 46.6163
+margin_right = 394.065
+margin_bottom = 240.616
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button4"]
+position = Vector2( 139.693, 47.1937 )
+texture = ExtResource( 9 )
+
+[node name="Label4" type="Label" parent="SpriteREctangle/Button4/Sprite"]
+margin_left = -103.27
+margin_top = -6.52698
+margin_right = -59.2701
+margin_bottom = 11.473
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.552941, 0.156863, 0.560784, 1 )
+text = "Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="SpriteREctangle/Button4"]
+position = Vector2( 151, 83 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="SpriteREctangle/Button4/Sprite2"]
+position = Vector2( -33.401, -2.71509 )
+texture = ExtResource( 12 )
+
+[node name="Label3" type="Label" parent="SpriteREctangle/Button4/Sprite2/Sprite"]
+margin_left = -4.2865
+margin_top = -7.60486
+margin_right = 3.7135
+margin_bottom = 8.39514
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.427451, 0.427451, 0.427451, 1 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="SpriteREctangle/Button4/Sprite2"]
+margin_left = -88.0
+margin_top = -11.0
+margin_right = -46.0
+margin_bottom = 5.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Correr"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="SpriteREctangle/Button4/Sprite2"]
+margin_left = -17.5872
+margin_top = -10.6663
+margin_right = 24.4128
+margin_bottom = 5.33368
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "cuadros"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="SpriteREctangle/Button4"]
+position = Vector2( 151, 112 )
+texture = ExtResource( 11 )
+
+[node name="Label7" type="Label" parent="SpriteREctangle/Button4/Sprite3"]
+margin_left = -86.0
+margin_top = -9.0
+margin_right = -23.0
+margin_bottom = 7.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Detenerse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SpriteREctangle"]
+margin_left = -147.244
+margin_top = -241.632
+margin_right = 142.756
+margin_bottom = -210.632
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0.388235, 0.364706, 1 )
+text = "Selecciona tu respuesta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
