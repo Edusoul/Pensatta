@@ -19,18 +19,13 @@
 size = 41
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=8]
-size = 30
-use_filter = true
-font_data = ExtResource( 13 )
-
 [sub_resource type="DynamicFont" id=2]
 size = 30
+use_filter = true
 font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 30
-use_filter = true
 font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=4]
@@ -45,9 +40,14 @@ font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 30
+use_filter = true
 font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 24
 font_data = ExtResource( 13 )
 
@@ -146,7 +146,7 @@ margin_left = -80.4359
 margin_top = -18.6908
 margin_right = 82.5641
 margin_bottom = 19.3092
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.517647, 0.517647, 0.517647, 1 )
 text = "ENTRADA"
 align = 1
@@ -168,7 +168,7 @@ margin_left = -71.3774
 margin_top = 5.73575
 margin_right = 88.6226
 margin_bottom = 43.7357
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.517647, 0.517647, 0.517647, 1 )
 text = "FUNCIÓN"
 autowrap = true
@@ -188,7 +188,7 @@ margin_left = -54.7653
 margin_top = -21.4299
 margin_right = 34.2347
 margin_bottom = 16.5701
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "sumar"
 __meta__ = {
@@ -207,7 +207,7 @@ margin_left = -33.7526
 margin_top = -21.9885
 margin_right = 32.2474
 margin_bottom = 16.0115
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "1 y 3"
 __meta__ = {
@@ -226,7 +226,7 @@ margin_left = -38.0165
 margin_top = -15.0803
 margin_right = 50.9835
 margin_bottom = 22.9197
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "32 y 4"
 __meta__ = {
@@ -245,7 +245,7 @@ margin_left = -37.8382
 margin_top = -15.1936
 margin_right = 51.1618
 margin_bottom = 22.8064
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "A y B"
 __meta__ = {
@@ -264,7 +264,7 @@ margin_left = -126.198
 margin_top = -19.8426
 margin_right = 132.802
 margin_bottom = 18.1574
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "MUNDO DIGITAL"
 __meta__ = {
@@ -284,7 +284,7 @@ margin_top = -21.7255
 margin_right = 50.8067
 margin_bottom = 16.2745
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "restar"
 autowrap = true
@@ -305,7 +305,7 @@ margin_top = -22.0
 margin_right = 102.29
 margin_bottom = 17.0
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "desaparecer"
 autowrap = true
@@ -325,7 +325,7 @@ margin_left = -85.4666
 margin_top = -20.0951
 margin_right = 85.5334
 margin_bottom = 17.9049
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "concatenar"
 __meta__ = {
@@ -345,7 +345,7 @@ margin_top = -21.7255
 margin_right = 50.8067
 margin_bottom = 16.2745
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "dividir"
 autowrap = true
@@ -366,7 +366,7 @@ margin_top = -20.6652
 margin_right = 60.6471
 margin_bottom = 17.3348
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "duplicar"
 autowrap = true
@@ -387,7 +387,7 @@ margin_top = -23.3348
 margin_right = 84.2942
 margin_bottom = 14.6652
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "multiplicar"
 autowrap = true
@@ -408,7 +408,7 @@ margin_top = -22.0
 margin_right = 54.6561
 margin_bottom = 16.0
 rect_pivot_offset = Vector2( 223.144, 548.881 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
 text = "invertir"
 autowrap = true
@@ -433,7 +433,7 @@ margin_left = 88.6396
 margin_top = 15.568
 margin_right = 221.64
 margin_bottom = 53.568
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0.913725, 0.862745, 1 )
@@ -445,7 +445,7 @@ margin_left = 1092.0
 margin_top = 276.0
 margin_right = 1378.0
 margin_bottom = 408.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "El resultado de sumar 1 y 3 es:
             4"
 autowrap = true
@@ -458,7 +458,7 @@ margin_left = 137.15
 margin_top = 230.95
 margin_right = 288.15
 margin_bottom = 262.95
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "Entradas"
 align = 1
 autowrap = true
@@ -627,6 +627,66 @@ margin_bottom = 401.0
 custom_fonts/font = SubResource( 13 )
 text = "La concatenación de la frase MUNDO DIGITAL tiene como resultado :
 MUNDODIGITAL"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelToInvest" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La primera entrada invertida se ve asi :
+3 y 1"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelToInvest2" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La segunda entrada invertida se ve asi :
+4 y 32"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelToInvest3" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La tercera entrada invertida se ve asi :
+B y A"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelToInvest4" type="Label" parent="."]
+visible = false
+margin_left = 1024.0
+margin_top = 281.0
+margin_right = 1438.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 13 )
+text = "La cuarta entrada invertida se ve asi :
+LATIGID ODNUM"
 align = 1
 autowrap = true
 __meta__ = {
