@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
 [ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
@@ -17,10 +17,33 @@
 [ext_resource path="res://assets/img/images/Ellipse 2.png" type="Texture" id=15]
 [ext_resource path="res://assets/img/images/Vector 5.png" type="Texture" id=16]
 [ext_resource path="res://assets/img/images/Polygon 2.png" type="Texture" id=17]
+[ext_resource path="res://scenes/DropZone.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://assets/img/images/Rectangle 12.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
 font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+use_filter = true
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+use_filter = true
+font_data = ExtResource( 19 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -52,6 +75,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NextButton2" type="Button" parent="."]
+visible = false
+margin_left = 893.358
+margin_top = 603.512
+margin_right = 1413.36
+margin_bottom = 650.512
+theme = ExtResource( 2 )
+text = "ACTIVAR COMPUERTA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton3" type="Button" parent="."]
+visible = false
+margin_left = 947.329
+margin_top = 692.406
+margin_right = 1321.33
+margin_bottom = 739.406
+theme = ExtResource( 2 )
+text = "REPETIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SpriteGate" type="Sprite" parent="."]
 position = Vector2( 463, 715 )
 texture = ExtResource( 5 )
@@ -60,40 +107,118 @@ texture = ExtResource( 5 )
 position = Vector2( 181.224, 347.346 )
 texture = ExtResource( 6 )
 
-[node name="SpriteZoneGate" type="Sprite" parent="."]
-position = Vector2( 810, 344.126 )
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 803.516, 338.752 )
 texture = ExtResource( 9 )
 
+[node name="SpriteZoneGate" type="Sprite" parent="."]
+modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+position = Vector2( 805.929, 340.735 )
+scale = Vector2( 0.38, 0.364 )
+texture = ExtResource( 9 )
+
+[node name="DropZone" parent="." instance=ExtResource( 18 )]
+position = Vector2( 806.243, 341.719 )
+
 [node name="SpriteTicketA" type="Sprite" parent="."]
-position = Vector2( 551, 277.686 )
+visible = false
+position = Vector2( 665, 290 )
+scale = Vector2( 0.5, 1 )
 texture = ExtResource( 7 )
+
+[node name="LineEdit" type="LineEdit" parent="SpriteTicketA"]
+modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+self_modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+margin_left = -51.9251
+margin_top = -19.8214
+margin_right = 56.0749
+margin_bottom = 23.1786
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+max_length = 1
+placeholder_text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SpriteTicketB" type="Sprite" parent="."]
-position = Vector2( 551, 390.327 )
+visible = false
+position = Vector2( 665, 390.327 )
+scale = Vector2( 0.5, 1 )
 texture = ExtResource( 7 )
 
+[node name="LineEdit2" type="LineEdit" parent="SpriteTicketB"]
+modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+self_modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+margin_left = -54.0441
+margin_top = -19.4995
+margin_right = 53.9559
+margin_bottom = 23.5005
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+max_length = 1
+placeholder_text = "B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteTicketB2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 956.85, 337.943 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 7 )
+
+[node name="LabelAnswer" type="Label" parent="SpriteTicketB2"]
+margin_left = -9.9679
+margin_top = -25.7348
+margin_right = 17.0321
+margin_bottom = 24.2652
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 658, 277.248 )
+visible = false
+position = Vector2( 735, 290 )
 texture = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 658, 392.68 )
+visible = false
+position = Vector2( 735, 392.68 )
 texture = ExtResource( 8 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 962.289, 334.965 )
+visible = false
+position = Vector2( 885, 340 )
+texture = ExtResource( 8 )
+
+[node name="SpriteTicketA2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 654.512, 340.193 )
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 7 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 726, 339.056 )
 texture = ExtResource( 8 )
 
 [node name="AND" parent="." instance=ExtResource( 10 )]
-position = Vector2( 89.242, 716 )
+position = Vector2( 89, 750 )
 
 [node name="Sprite2" type="Sprite" parent="AND"]
 position = Vector2( 0.753543, -0.417183 )
-scale = Vector2( 1.0407, 0.961387 )
 texture = ExtResource( 11 )
 
 [node name="NAND" parent="." instance=ExtResource( 10 )]
-position = Vector2( 241.905, 715.635 )
+position = Vector2( 239, 750 )
 
 [node name="Sprite2" type="Sprite" parent="NAND"]
 texture = ExtResource( 11 )
@@ -103,13 +228,13 @@ position = Vector2( 48.4157, 0 )
 texture = ExtResource( 15 )
 
 [node name="OR" parent="." instance=ExtResource( 10 )]
-position = Vector2( 393.095, 715.635 )
+position = Vector2( 389, 750 )
 
 [node name="Sprite2" type="Sprite" parent="OR"]
 texture = ExtResource( 13 )
 
 [node name="XOR" parent="." instance=ExtResource( 10 )]
-position = Vector2( 541.108, 714.576 )
+position = Vector2( 539, 750 )
 
 [node name="Sprite2" type="Sprite" parent="XOR"]
 position = Vector2( 7.41626, 1.05951 )
@@ -120,13 +245,13 @@ position = Vector2( -32.8433, 1.05945 )
 texture = ExtResource( 16 )
 
 [node name="NOR" parent="." instance=ExtResource( 10 )]
-position = Vector2( 687.917, 715.635 )
+position = Vector2( 689, 750 )
 
 [node name="Sprite2" type="Sprite" parent="NOR"]
 texture = ExtResource( 14 )
 
 [node name="NOT" parent="." instance=ExtResource( 10 )]
-position = Vector2( 831.548, 715.635 )
+position = Vector2( 839, 750 )
 
 [node name="Sprite2" type="Sprite" parent="NOT"]
 texture = ExtResource( 17 )
@@ -134,4 +259,194 @@ texture = ExtResource( 17 )
 [node name="Sprite3" type="Sprite" parent="NOT"]
 position = Vector2( 49.6099, 0.313843 )
 texture = ExtResource( 15 )
+
+[node name="LabelGates" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 612.322
+margin_right = 276.0
+margin_bottom = 650.322
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Compuertas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTickets" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 179.878
+margin_right = 276.0
+margin_bottom = 217.878
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Entradas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTicketsA" type="Label" parent="."]
+margin_left = 144.696
+margin_top = 239.74
+margin_right = 188.696
+margin_bottom = 277.74
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.380392, 0.976471, 0.654902, 1 )
+text = "A"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 23, 67 )
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="LabelTicketsA/Sprite"]
+margin_left = -22.0
+margin_top = -21.0
+margin_right = 18.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 155, 67 )
+texture = ExtResource( 20 )
+
+[node name="Label2" type="Label" parent="LabelTicketsA/Sprite5"]
+margin_left = -22.3383
+margin_top = -19.1101
+margin_right = 17.6617
+margin_bottom = 18.8899
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite6" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 155, 125 )
+texture = ExtResource( 20 )
+
+[node name="Label6" type="Label" parent="LabelTicketsA/Sprite6"]
+margin_left = -20.4483
+margin_top = -19.7837
+margin_right = 19.5517
+margin_bottom = 18.2163
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite7" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 155, 183 )
+texture = ExtResource( 20 )
+
+[node name="Label3" type="Label" parent="LabelTicketsA/Sprite7"]
+margin_left = -21.0783
+margin_top = -17.9375
+margin_right = 18.9217
+margin_bottom = 20.0625
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite8" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 155, 241 )
+texture = ExtResource( 20 )
+
+[node name="Label5" type="Label" parent="LabelTicketsA/Sprite8"]
+margin_left = -20.4483
+margin_top = -19.241
+margin_right = 19.5517
+margin_bottom = 18.759
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 23, 125 )
+texture = ExtResource( 20 )
+
+[node name="Label2" type="Label" parent="LabelTicketsA/Sprite2"]
+margin_left = -21.37
+margin_top = -18.5238
+margin_right = 18.63
+margin_bottom = 19.4762
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 23, 183 )
+texture = ExtResource( 20 )
+
+[node name="Label3" type="Label" parent="LabelTicketsA/Sprite3"]
+margin_left = -21.37
+margin_top = -18.5674
+margin_right = 18.63
+margin_bottom = 19.4326
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="LabelTicketsA"]
+position = Vector2( 23, 241 )
+texture = ExtResource( 20 )
+
+[node name="Label4" type="Label" parent="LabelTicketsA/Sprite4"]
+margin_left = -20.7401
+margin_top = -18.611
+margin_right = 19.2599
+margin_bottom = 19.389
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelTicketsB" type="Label" parent="."]
+margin_left = 276.241
+margin_top = 239.74
+margin_right = 320.241
+margin_bottom = 277.74
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.380392, 0.976471, 0.654902, 1 )
+text = "B"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="NextButton2" to="." method="_on_NextButton2_pressed"]
+[connection signal="pressed" from="NextButton3" to="." method="_on_NextButton3_pressed"]
+[connection signal="text_changed" from="SpriteTicketA/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_changed" from="SpriteTicketB/LineEdit2" to="." method="_on_LineEdit2_text_changed"]

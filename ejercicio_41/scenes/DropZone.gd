@@ -7,6 +7,7 @@ on user click up
 
 func _input(event):
 	
-	if event.is_action_released("ui_touch"):
+	if event.is_action_released("click_left"):
 		for _a in get_overlapping_areas():
-			_a.queue_free()
+#			_a.queue_free()
+			pass
