@@ -32,15 +32,15 @@ size = 35
 use_filter = true
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 24
 font_data = ExtResource( 19 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 30
 use_filter = true
 font_data = ExtResource( 19 )
@@ -65,10 +65,11 @@ __meta__ = {
 }
 
 [node name="NextButton" type="Button" parent="."]
-margin_left = 1014.0
-margin_top = 794.0
-margin_right = 1388.0
-margin_bottom = 841.0
+visible = false
+margin_left = 947.258
+margin_top = 783.321
+margin_right = 1321.26
+margin_bottom = 830.321
 theme = ExtResource( 2 )
 text = "SIGUIENTE"
 __meta__ = {
@@ -122,9 +123,12 @@ position = Vector2( 806.243, 341.719 )
 
 [node name="SpriteTicketA" type="Sprite" parent="."]
 visible = false
-position = Vector2( 665, 290 )
-scale = Vector2( 0.5, 1 )
+position = Vector2( 568, 287.373 )
+scale = Vector2( 0.751181, 1 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="LineEdit" type="LineEdit" parent="SpriteTicketA"]
 modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
@@ -145,17 +149,20 @@ __meta__ = {
 
 [node name="SpriteTicketB" type="Sprite" parent="."]
 visible = false
-position = Vector2( 665, 390.327 )
-scale = Vector2( 0.5, 1 )
+position = Vector2( 568, 415.72 )
+scale = Vector2( 0.732852, 1 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="LineEdit2" type="LineEdit" parent="SpriteTicketB"]
 modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
 self_modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
 margin_left = -54.0441
-margin_top = -19.4995
+margin_top = -22.3247
 margin_right = 53.9559
-margin_bottom = 23.5005
+margin_bottom = 20.6753
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -168,16 +175,19 @@ __meta__ = {
 
 [node name="SpriteTicketB2" type="Sprite" parent="."]
 visible = false
-position = Vector2( 956.85, 337.943 )
-scale = Vector2( 0.5, 1 )
+position = Vector2( 1031.19, 336.608 )
+scale = Vector2( 0.600346, 1 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="LabelAnswer" type="Label" parent="SpriteTicketB2"]
 margin_left = -9.9679
 margin_top = -25.7348
 margin_right = 17.0321
 margin_bottom = 24.2652
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 __meta__ = {
@@ -186,28 +196,47 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
-position = Vector2( 735, 290 )
+position = Vector2( 657.5, 287 )
+scale = Vector2( 1.0141, 1 )
 texture = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 visible = false
-position = Vector2( 735, 392.68 )
+position = Vector2( 656.832, 415.384 )
+scale = Vector2( 1.0329, 1 )
 texture = ExtResource( 8 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 visible = false
-position = Vector2( 885, 340 )
+position = Vector2( 952.241, 338.849 )
 texture = ExtResource( 8 )
 
 [node name="SpriteTicketA2" type="Sprite" parent="."]
 visible = false
-position = Vector2( 654.512, 340.193 )
+position = Vector2( 580.83, 341.78 )
 scale = Vector2( 0.5, 1 )
 texture = ExtResource( 7 )
 
+[node name="LineEdit3" type="LineEdit" parent="SpriteTicketA2"]
+modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+self_modulate = Color( 0.956863, 0.968627, 0.956863, 1 )
+margin_left = -54.8726
+margin_top = -22.385
+margin_right = 53.1274
+margin_bottom = 20.615
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+max_length = 1
+placeholder_text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite5" type="Sprite" parent="."]
 visible = false
-position = Vector2( 726, 339.056 )
+position = Vector2( 651.922, 341.787 )
 texture = ExtResource( 8 )
 
 [node name="AND" parent="." instance=ExtResource( 10 )]
@@ -265,7 +294,7 @@ margin_left = 88.0
 margin_top = 612.322
 margin_right = 276.0
 margin_bottom = 650.322
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Compuertas"
 __meta__ = {
@@ -277,7 +306,7 @@ margin_left = 88.0
 margin_top = 179.878
 margin_right = 276.0
 margin_bottom = 217.878
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Entradas"
 __meta__ = {
@@ -289,7 +318,7 @@ margin_left = 144.696
 margin_top = 239.74
 margin_right = 188.696
 margin_bottom = 277.74
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.380392, 0.976471, 0.654902, 1 )
 text = "A"
 align = 1
@@ -306,7 +335,7 @@ margin_left = -22.0
 margin_top = -21.0
 margin_right = 18.0
 margin_bottom = 17.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -323,7 +352,7 @@ margin_left = -22.3383
 margin_top = -19.1101
 margin_right = 17.6617
 margin_bottom = 18.8899
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -340,7 +369,7 @@ margin_left = -20.4483
 margin_top = -19.7837
 margin_right = 19.5517
 margin_bottom = 18.2163
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 align = 1
@@ -357,7 +386,7 @@ margin_left = -21.0783
 margin_top = -17.9375
 margin_right = 18.9217
 margin_bottom = 20.0625
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -374,7 +403,7 @@ margin_left = -20.4483
 margin_top = -19.241
 margin_right = 19.5517
 margin_bottom = 18.759
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 align = 1
@@ -391,7 +420,7 @@ margin_left = -21.37
 margin_top = -18.5238
 margin_right = 18.63
 margin_bottom = 19.4762
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -408,7 +437,7 @@ margin_left = -21.37
 margin_top = -18.5674
 margin_right = 18.63
 margin_bottom = 19.4326
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 align = 1
@@ -425,7 +454,7 @@ margin_left = -20.7401
 margin_top = -18.611
 margin_right = 19.2599
 margin_bottom = 19.389
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 align = 1
@@ -438,15 +467,64 @@ margin_left = 276.241
 margin_top = 239.74
 margin_right = 320.241
 margin_bottom = 277.74
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.380392, 0.976471, 0.654902, 1 )
 text = "B"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GateAnd" type="Sprite" parent="."]
+visible = false
+position = Vector2( 805.049, 338.43 )
+scale = Vector2( 2.62475, 2.68661 )
+texture = ExtResource( 11 )
+
+[node name="GateNand" type="Sprite" parent="."]
+visible = false
+position = Vector2( 795.768, 338.43 )
+scale = Vector2( 2.40635, 2.68661 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="GateNand"]
+position = Vector2( 48.4031, 0.394356 )
+texture = ExtResource( 15 )
+
+[node name="GateOr" type="Sprite" parent="."]
+visible = false
+position = Vector2( 806.81, 339.93 )
+scale = Vector2( 2.96315, 2.75184 )
+texture = ExtResource( 13 )
+
+[node name="GateNor" type="Sprite" parent="."]
+visible = false
+position = Vector2( 802.572, 339.93 )
+scale = Vector2( 2.62983, 2.75184 )
+texture = ExtResource( 14 )
+
+[node name="GateXor" type="Sprite" parent="."]
+visible = false
+position = Vector2( 826.939, 339.93 )
+scale = Vector2( 2.43342, 2.75184 )
+texture = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="GateXor"]
+position = Vector2( -40.0452, 0.770002 )
+texture = ExtResource( 16 )
+
+[node name="GateNot" type="Sprite" parent="."]
+visible = false
+position = Vector2( 796.238, 339.97 )
+scale = Vector2( 2.19345, 2.70389 )
+texture = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="GateNot"]
+position = Vector2( 49.791, 1.29499 )
+texture = ExtResource( 15 )
 [connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="pressed" from="NextButton2" to="." method="_on_NextButton2_pressed"]
 [connection signal="pressed" from="NextButton3" to="." method="_on_NextButton3_pressed"]
 [connection signal="text_changed" from="SpriteTicketA/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="text_changed" from="SpriteTicketB/LineEdit2" to="." method="_on_LineEdit2_text_changed"]
+[connection signal="text_changed" from="SpriteTicketA2/LineEdit3" to="." method="_on_LineEdit3_text_changed"]
