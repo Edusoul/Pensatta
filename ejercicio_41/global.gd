@@ -1,5 +1,7 @@
 extends Node
 
+var answers = []
+
 var title = "Compuertas y binarios"
 var timer = 181 #s
 var timeout = false
