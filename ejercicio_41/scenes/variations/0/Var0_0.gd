@@ -164,6 +164,7 @@ func _on_LineEdit2_text_changed(new_text):
 func _on_NextButton3_pressed():
 	get_tree().change_scene("res://scenes/variations/0/Var0_0.tscn")
 	
+	
 func _on_NextButton2_pressed():
 # AND gate responses
 	if $GateAnd.visible == true and A == str(0) and B == str(0):
