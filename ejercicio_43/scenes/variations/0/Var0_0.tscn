@@ -1,0 +1,711 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/img/Images Avatar/marco.png" type="Texture" id=5]
+[ext_resource path="res://assets/img/Images Avatar/Ojos 1.png" type="Texture" id=6]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/img/Images Avatar/Color 1.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Images Avatar/Color 3.png" type="Texture" id=9]
+[ext_resource path="res://assets/img/Images Avatar/Color 2.png" type="Texture" id=10]
+[ext_resource path="res://assets/img/Images Avatar/Color 12.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/Images Avatar/Color 11.png" type="Texture" id=12]
+[ext_resource path="res://assets/img/Images Avatar/Color 9.png" type="Texture" id=13]
+[ext_resource path="res://assets/img/Images Avatar/Color 10.png" type="Texture" id=14]
+[ext_resource path="res://assets/img/Images Avatar/Color 7.png" type="Texture" id=15]
+[ext_resource path="res://assets/img/Images Avatar/Color 4.png" type="Texture" id=16]
+[ext_resource path="res://assets/img/Images Avatar/Color 5.png" type="Texture" id=17]
+[ext_resource path="res://assets/img/Images Avatar/Color 8.png" type="Texture" id=18]
+[ext_resource path="res://assets/img/Images Avatar/Color 6.png" type="Texture" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 7 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteFace" type="Sprite" parent="."]
+position = Vector2( 269.603, 408.99 )
+scale = Vector2( 0.998078, 1.04241 )
+texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 230.0
+margin_right = 616.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 610.0
+margin_top = 230.0
+margin_right = 696.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 690.0
+margin_top = 230.0
+margin_right = 776.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 770.0
+margin_top = 230.0
+margin_right = 856.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 230.0
+margin_right = 936.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="."]
+margin_left = 980.0
+margin_top = 230.0
+margin_right = 1066.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button18" type="Button" parent="."]
+margin_left = 980.0
+margin_top = 310.0
+margin_right = 1066.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button19" type="Button" parent="."]
+margin_left = 1060.0
+margin_top = 310.0
+margin_right = 1146.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button20" type="Button" parent="."]
+margin_left = 1140.0
+margin_top = 310.0
+margin_right = 1226.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button21" type="Button" parent="."]
+margin_left = 1220.0
+margin_top = 310.0
+margin_right = 1306.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button22" type="Button" parent="."]
+margin_left = 1300.0
+margin_top = 310.0
+margin_right = 1386.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="."]
+margin_left = 1060.0
+margin_top = 230.0
+margin_right = 1146.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="."]
+margin_left = 1140.0
+margin_top = 230.0
+margin_right = 1226.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="."]
+margin_left = 1220.0
+margin_top = 230.0
+margin_right = 1306.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button11" type="Button" parent="."]
+margin_left = 1300.0
+margin_top = 230.0
+margin_right = 1386.0
+margin_bottom = 310.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 310.0
+margin_right = 616.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button14" type="Button" parent="."]
+margin_left = 610.0
+margin_top = 310.0
+margin_right = 696.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button15" type="Button" parent="."]
+margin_left = 690.0
+margin_top = 310.0
+margin_right = 776.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button16" type="Button" parent="."]
+margin_left = 770.0
+margin_top = 310.0
+margin_right = 856.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button17" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 310.0
+margin_right = 936.0
+margin_bottom = 390.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button12" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 550.0
+margin_right = 616.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button41" type="Button" parent="."]
+margin_left = 58.0
+margin_top = 681.0
+margin_right = 139.0
+margin_bottom = 756.0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button47" type="Button" parent="."]
+margin_left = 58.0
+margin_top = 749.0
+margin_right = 139.0
+margin_bottom = 824.0
+icon = ExtResource( 15 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button48" type="Button" parent="."]
+margin_left = 126.0
+margin_top = 749.0
+margin_right = 207.0
+margin_bottom = 824.0
+icon = ExtResource( 18 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button49" type="Button" parent="."]
+margin_left = 194.0
+margin_top = 749.0
+margin_right = 275.0
+margin_bottom = 824.0
+icon = ExtResource( 13 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button50" type="Button" parent="."]
+margin_left = 262.0
+margin_top = 749.0
+margin_right = 343.0
+margin_bottom = 824.0
+icon = ExtResource( 14 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button51" type="Button" parent="."]
+margin_left = 330.0
+margin_top = 749.0
+margin_right = 411.0
+margin_bottom = 824.0
+icon = ExtResource( 12 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button52" type="Button" parent="."]
+margin_left = 398.0
+margin_top = 749.0
+margin_right = 479.0
+margin_bottom = 824.0
+icon = ExtResource( 11 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button42" type="Button" parent="."]
+margin_left = 126.0
+margin_top = 681.0
+margin_right = 207.0
+margin_bottom = 756.0
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button43" type="Button" parent="."]
+margin_left = 194.0
+margin_top = 681.0
+margin_right = 275.0
+margin_bottom = 756.0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button44" type="Button" parent="."]
+margin_left = 262.0
+margin_top = 681.0
+margin_right = 343.0
+margin_bottom = 756.0
+icon = ExtResource( 16 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button45" type="Button" parent="."]
+margin_left = 330.0
+margin_top = 681.0
+margin_right = 411.0
+margin_bottom = 756.0
+icon = ExtResource( 17 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button46" type="Button" parent="."]
+margin_left = 398.0
+margin_top = 681.0
+margin_right = 479.0
+margin_bottom = 756.0
+icon = ExtResource( 19 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button32" type="Button" parent="."]
+margin_left = 610.0
+margin_top = 550.0
+margin_right = 696.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button33" type="Button" parent="."]
+margin_left = 690.0
+margin_top = 550.0
+margin_right = 776.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button34" type="Button" parent="."]
+margin_left = 770.0
+margin_top = 550.0
+margin_right = 856.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button35" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 550.0
+margin_right = 936.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button13" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 470.0
+margin_right = 616.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button23" type="Button" parent="."]
+margin_left = 610.0
+margin_top = 470.0
+margin_right = 696.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button24" type="Button" parent="."]
+margin_left = 690.0
+margin_top = 470.0
+margin_right = 776.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button25" type="Button" parent="."]
+margin_left = 770.0
+margin_top = 470.0
+margin_right = 856.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button26" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 470.0
+margin_right = 936.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button27" type="Button" parent="."]
+margin_left = 980.0
+margin_top = 470.0
+margin_right = 1066.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button36" type="Button" parent="."]
+margin_left = 980.0
+margin_top = 550.0
+margin_right = 1066.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button37" type="Button" parent="."]
+margin_left = 1060.0
+margin_top = 550.0
+margin_right = 1146.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button38" type="Button" parent="."]
+margin_left = 1140.0
+margin_top = 550.0
+margin_right = 1226.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button39" type="Button" parent="."]
+margin_left = 1220.0
+margin_top = 550.0
+margin_right = 1306.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button40" type="Button" parent="."]
+margin_left = 1300.0
+margin_top = 550.0
+margin_right = 1386.0
+margin_bottom = 630.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button28" type="Button" parent="."]
+margin_left = 1060.0
+margin_top = 470.0
+margin_right = 1146.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button29" type="Button" parent="."]
+margin_left = 1140.0
+margin_top = 470.0
+margin_right = 1226.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button30" type="Button" parent="."]
+margin_left = 1220.0
+margin_top = 470.0
+margin_right = 1306.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button31" type="Button" parent="."]
+margin_left = 1300.0
+margin_top = 470.0
+margin_right = 1386.0
+margin_bottom = 550.0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 706.0
+margin_top = 191.0
+margin_right = 752.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Ojos"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 698.0
+margin_top = 436.0
+margin_right = 750.0
+margin_bottom = 462.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Nariz"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 202.42
+margin_top = 645.177
+margin_right = 330.42
+margin_bottom = 671.177
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Color de piel"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 1153.0
+margin_top = 436.0
+margin_right = 1218.0
+margin_bottom = 462.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Orejas"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1159.0
+margin_top = 191.0
+margin_right = 1210.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Boca"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

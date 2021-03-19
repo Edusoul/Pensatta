@@ -1,7 +1,6 @@
 extends Node
 
-
-var title = "Compuertas y binarios"
+var title = "Tu avatar"
 var timer = 181 #s
 var timeout = false
 var scene = 0
