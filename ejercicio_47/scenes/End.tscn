@@ -12,15 +12,15 @@
 size = 41
 font_data = ExtResource( 4 )
 
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="StreamTexture" id=2]
 flags = 4
 load_path = "res://.import/ThoughtBubble2.png-8975b7f99465471035aa56a3f9a2c259.stex"
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 36
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 36
 font_data = ExtResource( 6 )
 
@@ -71,9 +71,9 @@ texture = ExtResource( 8 )
 modulate = Color( 0.184314, 0.419608, 0.396078, 1 )
 margin_left = 895.0
 margin_top = 150.0
-margin_right = 1388.0
-margin_bottom = 333.0
-texture = SubResource( 4 )
+margin_right = 1386.0
+margin_bottom = 397.0
+texture = SubResource( 2 )
 patch_margin_left = 33
 patch_margin_top = 33
 patch_margin_right = 33
@@ -86,8 +86,8 @@ __meta__ = {
 margin_left = 891.0
 margin_top = 145.0
 margin_right = 1384.0
-margin_bottom = 328.0
-texture = SubResource( 4 )
+margin_bottom = 387.0
+texture = SubResource( 2 )
 patch_margin_left = 33
 patch_margin_top = 33
 patch_margin_right = 33
@@ -101,7 +101,7 @@ margin_left = 42.7899
 margin_top = 20.2274
 margin_right = 272.79
 margin_bottom = 68.2274
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "¡Resultado!"
 __meta__ = {
@@ -113,7 +113,7 @@ margin_left = 40.6899
 margin_top = 64.982
 margin_right = 466.69
 margin_bottom = 157.982
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.541176, 0.541176, 0.541176, 1 )
 text = "Resumen de tus respuestas."
 autowrap = true

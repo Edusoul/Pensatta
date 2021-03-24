@@ -5,6 +5,7 @@ var timer = 181 #s
 var timeout = false
 var scene = 0
 var last_scene = 0
+var answer_correct
 
 var possible_variations = 1
 var variation_number
