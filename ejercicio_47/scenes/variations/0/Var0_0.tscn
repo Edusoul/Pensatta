@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
-[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
 [ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/img/images/Vector.png" type="Texture" id=5]
@@ -10,6 +9,7 @@
 [ext_resource path="res://assets/img/images/Rectangle 3.png" type="Texture" id=8]
 [ext_resource path="res://assets/img/images/Vector (3).png" type="Texture" id=9]
 [ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/img/images/Rectangle 16.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 41
@@ -20,12 +20,27 @@ size = 12
 use_filter = true
 font_data = ExtResource( 10 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 12
+use_filter = true
+font_data = ExtResource( 10 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 12
 use_filter = true
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
+size = 12
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=7]
 size = 30
 use_filter = true
 font_data = ExtResource( 10 )
@@ -58,19 +73,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NextButton" type="Button" parent="."]
-margin_left = 1014.0
-margin_top = 794.0
-margin_right = 1388.0
-margin_bottom = 841.0
-theme = ExtResource( 2 )
-text = "SIGUIENTE"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 721.829, 450 )
+position = Vector2( 720.829, 449 )
 texture = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="Sprite"]
@@ -101,7 +105,7 @@ __meta__ = {
 }
 
 [node name="Sprite2" type="Sprite" parent="Sprite/Button"]
-position = Vector2( 145.336, 134.848 )
+position = Vector2( 143.654, 165.12 )
 texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="Sprite/Button/Sprite2"]
@@ -109,16 +113,104 @@ margin_left = -98.0
 margin_top = -35.0
 margin_right = -54.0
 margin_bottom = -19.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.670588, 0.545098, 0.113725, 1 )
 text = "Repetir"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="Sprite/Button/Sprite2"]
+margin_left = -22.6931
+margin_top = -34.2929
+margin_right = 21.3069
+margin_bottom = -18.2929
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.670588, 0.545098, 0.113725, 1 )
+text = "veces"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Sprite/Button/Sprite2"]
+position = Vector2( -37.6588, -27.3125 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Sprite/Button/Sprite2/Sprite"]
+margin_left = -3.53552
+margin_top = -7.42462
+margin_right = 5.46448
+margin_bottom = 8.57538
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite3" type="Sprite" parent="Sprite/Button"]
-position = Vector2( 155.739, 134.974 )
+position = Vector2( 154.057, 107.224 )
 texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button/Sprite3"]
+margin_left = -88.8245
+margin_top = -6.92957
+margin_right = -7.82446
+margin_bottom = 7.07043
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "contador = 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="Sprite/Button"]
+position = Vector2( 154.806, 164.909 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button/Sprite4"]
+margin_left = -88.8245
+margin_top = -6.92957
+margin_right = -7.82446
+margin_bottom = 7.07043
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "contador += 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="Sprite/Button"]
+position = Vector2( 153.308, 223.343 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button/Sprite5"]
+margin_left = -88.8245
+margin_top = -6.92957
+margin_right = -7.82446
+margin_bottom = 7.07043
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "res = contador / 15"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite6" type="Sprite" parent="Sprite/Button"]
+position = Vector2( 154.057, 251.811 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button/Sprite6"]
+margin_left = -88.8245
+margin_top = -6.92957
+margin_right = -7.82446
+margin_bottom = 7.07043
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "mostrar (res)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button2" type="Button" parent="Sprite"]
 margin_left = 88.6171
@@ -132,7 +224,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Sprite/Button2"]
-position = Vector2( 144.678, 72.7596 )
+position = Vector2( 142.216, 70.3816 )
 texture = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="Sprite/Button2/Sprite"]
@@ -148,26 +240,111 @@ __meta__ = {
 }
 
 [node name="Sprite2" type="Sprite" parent="Sprite/Button2"]
-position = Vector2( 153.345, 106.816 )
+position = Vector2( 153, 106 )
 texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite2"]
+margin_left = -82.0
+margin_top = -8.0
+margin_right = -53.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "a = 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite3" type="Sprite" parent="Sprite/Button2"]
-position = Vector2( 152.985, 135.9 )
+position = Vector2( 153, 135 )
 texture = ExtResource( 9 )
 
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite3"]
+margin_left = -82.0
+margin_top = -8.0
+margin_right = -53.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "b = 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite4" type="Sprite" parent="Sprite/Button2"]
-position = Vector2( 153.092, 165 )
+position = Vector2( 153, 164 )
 texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite4"]
+margin_left = -82.0
+margin_top = -8.0
+margin_right = -53.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "c = 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="Sprite/Button2"]
+position = Vector2( 153, 193 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite5"]
+margin_left = -80.5858
+margin_top = -8.0
+margin_right = 14.4142
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "suma = a + b + c"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite6" type="Sprite" parent="Sprite/Button2"]
+position = Vector2( 153, 222 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite6"]
+margin_left = -80.5858
+margin_top = -8.0
+margin_right = 14.4142
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "res = suma / 15"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite7" type="Sprite" parent="Sprite/Button2"]
+position = Vector2( 153, 251 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/Button2/Sprite7"]
+margin_left = -80.5858
+margin_top = -8.0
+margin_right = 14.4142
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "mostrar (res)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Sprite"]
 margin_left = -176.199
 margin_top = -240.271
 margin_right = 181.801
 margin_bottom = -202.271
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0.388235, 0.364706, 1 )
 text = "Selecciona tu respuesta"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
