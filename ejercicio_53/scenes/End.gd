@@ -30,7 +30,7 @@ func _ready():
 	if global.correct_answers_no.size() == 1 and global.incorrect_answers_no.size() == 9:
 		result_title.text = "¡Sigue intentando!"
 		result_summary.text = "Respondiste 1 correctas, fallaste 6"
-	if global.incorrect_answers_no.size() == 10:
+	if global.incorrect_answers_no.size() == 7:
 		result_title.text = "¡No acertaste ninguna!"
 func _on_FinishButton_pressed():
 	JavaScript.eval("window.top.postMessage('finished_problem', '*')")

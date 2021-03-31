@@ -9,7 +9,7 @@ extents = Vector2( 16.1113, 21.4617 )
 [node name="EnemyGhost" type="KinematicBody2D"]
 position = Vector2( 177.172, 120.206 )
 script = ExtResource( 2 )
-velocity = 50
+velocity = 43
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.500565, 0 )

@@ -18,40 +18,41 @@ func _on_NextButton_pressed():
 		get_tree().change_scene("res://scenes/End.tscn")
 
 func _answers():
-	if $Sprite/Button11.visible == true:
+	if $Sprite/Button11.visible == false:
 		global.correct_answers_no.append(1)
-	if $Sprite/Button12.visible == true:
+	if $Sprite/Button12.visible == false:
 		global.correct_answers_no.append(2)
-	if $Sprite/Button13.visible == true:
+	if $Sprite/Button13.visible == false:
 		global.correct_answers_no.append(3)
-	if $Sprite/Button14.visible == true:
+	if $Sprite/Button14.visible == false:
 		global.correct_answers_no.append(4)
-	if $Sprite/Button16.visible == true:
+	if $Sprite/Button16.visible == false:
 		global.correct_answers_no.append(5)
-	if $Sprite/Button17.visible == true:
+	if $Sprite/Button17.visible == false:
 		global.correct_answers_no.append(6)
-	if $Sprite/Button18.visible == true:
+	if $Sprite/Button18.visible == false:
 		global.correct_answers_no.append(7)
 		
-	if $Sprite/Button15.visible == false:
+		
+	if $Sprite/Button15.visible == true:
 		global.incorrect_answers_no.append(11)
-	if $Sprite/Button19.visible == false:
+	if $Sprite/Button19.visible == true:
 		global.incorrect_answers_no.append(12)
-	if $Sprite/Button20.visible == false:
+	if $Sprite/Button20.visible == true:
 		global.incorrect_answers_no.append(13)
-	if $Sprite/Button11.visible == false:
+	if $Sprite/Button11.visible == true:
 		global.incorrect_answers_no.append(14)
-	if $Sprite/Button12.visible == false:
+	if $Sprite/Button12.visible == true:
 		global.incorrect_answers_no.append(15)
-	if $Sprite/Button13.visible == false:
+	if $Sprite/Button13.visible == true:
 		global.incorrect_answers_no.append(16)
-	if $Sprite/Button14.visible == false:
+	if $Sprite/Button14.visible == true:
 		global.incorrect_answers_no.append(17)
-	if $Sprite/Button16.visible == false:
+	if $Sprite/Button16.visible == true:
 		global.incorrect_answers_no.append(18)
-	if $Sprite/Button17.visible == false:
+	if $Sprite/Button17.visible == true:
 		global.incorrect_answers_no.append(19)
-	if $Sprite/Button18.visible == false:
+	if $Sprite/Button18.visible == true:
 		global.incorrect_answers_no.append(20)	
 # Estas dos funciones dan visibilidad para sobreponerse un
 # boton sobre el otro los dos botones estan en la misma 
