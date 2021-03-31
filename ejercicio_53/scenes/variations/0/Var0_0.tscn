@@ -13,16 +13,16 @@
 size = 41
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 24
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 1230, 49 )
 
@@ -71,11 +71,12 @@ scale = Vector2( 1, 1.06778 )
 texture = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = -275.0
 margin_right = 627.0
 margin_bottom = -221.0
-custom_styles/normal = SubResource( 4 )
+custom_styles/normal = SubResource( 2 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -88,7 +89,7 @@ margin_left = 55.52
 margin_top = 9.33923
 margin_right = 1132.52
 margin_bottom = 40.3392
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mantener los sensores activos todo el tiempo para percibir el entorno y manejar el tráfico"
 align = 1
@@ -97,12 +98,11 @@ __meta__ = {
 }
 
 [node name="Button11" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = -275.0
 margin_right = 627.0
 margin_bottom = -220.0
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -115,7 +115,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mantener los sensores activos todo el tiempo para percibir el entorno y manejar el tráfico"
 __meta__ = {
@@ -123,11 +123,12 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = -220.0
 margin_right = 627.0
 margin_bottom = -166.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -140,7 +141,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mantener las conexiones activas para conocer las condiciones de tráfico en tiempo real"
 align = 1
@@ -149,12 +150,11 @@ __meta__ = {
 }
 
 [node name="Button12" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = -220.0
 margin_right = 627.0
 margin_bottom = -166.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -167,7 +167,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mantener las conexiones activas para conocer las condiciones de tráfico en tiempo real"
 align = 1
@@ -176,11 +176,12 @@ __meta__ = {
 }
 
 [node name="Button3" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = -165.0
 margin_right = 627.0
 margin_bottom = -111.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -193,7 +194,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Realizar cálculo de trayectorias para acortar los tiempos de llegada"
 align = 1
@@ -202,12 +203,11 @@ __meta__ = {
 }
 
 [node name="Button13" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = -165.0
 margin_right = 627.0
 margin_bottom = -111.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -220,7 +220,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Realizar cálculo de trayectorias para acortar los tiempos de llegada"
 align = 1
@@ -229,11 +229,12 @@ __meta__ = {
 }
 
 [node name="Button4" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = -110.0
 margin_right = 627.0
 margin_bottom = -56.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -246,7 +247,7 @@ margin_left = 27.1116
 margin_top = 10.3083
 margin_right = 1203.11
 margin_bottom = 41.3083
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Sincronización entre los sensores y la respuesta de frenado (para realizar frenado de emergencia)"
 __meta__ = {
@@ -254,12 +255,11 @@ __meta__ = {
 }
 
 [node name="Button14" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = -110.0
 margin_right = 627.0
 margin_bottom = -56.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -272,7 +272,7 @@ margin_left = 27.1116
 margin_top = 10.3083
 margin_right = 1203.11
 margin_bottom = 41.3083
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Sincronización entre los sensores y la respuesta de frenado (para realizar frenado de emergencia)"
 __meta__ = {
@@ -280,11 +280,12 @@ __meta__ = {
 }
 
 [node name="Button5" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = -55.0
 margin_right = 627.0
 margin_bottom = -1.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -297,7 +298,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Grabar a los peatones por medio de una cámara y mostrarlo en pantalla"
 align = 1
@@ -306,12 +307,11 @@ __meta__ = {
 }
 
 [node name="Button15" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = -55.0
 margin_right = 627.0
 margin_bottom = -1.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -324,7 +324,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Grabar a los peatones por medio de una cámara y mostrarlo en pantalla"
 align = 1
@@ -333,10 +333,11 @@ __meta__ = {
 }
 
 [node name="Button6" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_right = 627.0
 margin_bottom = 54.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -349,7 +350,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar en pantalla los niveles de combustible y velocidad"
 align = 1
@@ -358,11 +359,10 @@ __meta__ = {
 }
 
 [node name="Button16" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_right = 627.0
 margin_bottom = 54.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -375,7 +375,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar en pantalla los niveles de combustible y velocidad"
 align = 1
@@ -384,11 +384,12 @@ __meta__ = {
 }
 
 [node name="Button7" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = 55.0
 margin_right = 627.0
 margin_bottom = 109.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -401,7 +402,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar alertas en pantalla de fallas mecánicas"
 align = 1
@@ -410,12 +411,11 @@ __meta__ = {
 }
 
 [node name="Button17" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = 55.0
 margin_right = 627.0
 margin_bottom = 109.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -428,7 +428,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar alertas en pantalla de fallas mecánicas"
 align = 1
@@ -437,11 +437,12 @@ __meta__ = {
 }
 
 [node name="Button8" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = 110.0
 margin_right = 627.0
 margin_bottom = 164.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -454,7 +455,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar funcionalidad de intercambio entre piloto manual y automático"
 align = 1
@@ -463,12 +464,11 @@ __meta__ = {
 }
 
 [node name="Button18" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = 110.0
 margin_right = 627.0
 margin_bottom = 164.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -481,7 +481,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar funcionalidad de intercambio entre piloto manual y automático"
 align = 1
@@ -490,11 +490,12 @@ __meta__ = {
 }
 
 [node name="Button9" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = 165.0
 margin_right = 627.0
 margin_bottom = 219.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -507,7 +508,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar las noticias y actualidad en pantalla"
 align = 1
@@ -516,12 +517,11 @@ __meta__ = {
 }
 
 [node name="Button19" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = 165.0
 margin_right = 627.0
 margin_bottom = 219.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -534,7 +534,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar las noticias y actualidad en pantalla"
 align = 1
@@ -543,11 +543,12 @@ __meta__ = {
 }
 
 [node name="Button10" type="Button" parent="Sprite"]
+visible = false
 margin_left = -615.0
 margin_top = 220.0
 margin_right = 627.0
 margin_bottom = 274.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -560,7 +561,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar el interior de vehículo por medio de un sistema de cámaras"
 align = 1
@@ -569,12 +570,11 @@ __meta__ = {
 }
 
 [node name="Button20" type="Button" parent="Sprite"]
-visible = false
 margin_left = -615.0
 margin_top = 220.0
 margin_right = 627.0
 margin_bottom = 274.0
-custom_styles/pressed = SubResource( 3 )
+custom_styles/pressed = SubResource( 5 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
@@ -587,7 +587,7 @@ margin_left = 63.071
 margin_top = 13.1147
 margin_right = 1140.07
 margin_bottom = 44.1147
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Mostrar el interior de vehículo por medio de un sistema de cámaras"
 align = 1
