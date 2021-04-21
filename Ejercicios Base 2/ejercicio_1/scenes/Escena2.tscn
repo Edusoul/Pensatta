@@ -1,0 +1,275 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/Escena2.gd" type="Script" id=3]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/images/Rec.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/images/Rectangle 3 (4).png" type="Texture" id=8]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="Node2D"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="Node2D/RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Node2D"]
+visible = false
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 9 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 256, 488 )
+scale = Vector2( 1.10475, 1.00649 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="Button" type="Button" parent="Node2D"]
+margin_left = 736.0
+margin_top = 256.0
+margin_right = 1356.0
+margin_bottom = 319.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button"]
+margin_left = 184.0
+margin_top = 8.0
+margin_right = 439.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 4 )
+text = "Reiniciar el WI-FI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="Node2D"]
+visible = false
+margin_left = 736.0
+margin_top = 256.0
+margin_right = 1356.0
+margin_bottom = 319.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button5"]
+margin_left = 232.0
+margin_top = 8.0
+margin_right = 379.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 4 )
+text = "¡Correcto!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Node2D"]
+margin_left = 736.0
+margin_top = 330.0
+margin_right = 1356.0
+margin_bottom = 393.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button2"]
+margin_left = 136.0
+margin_top = 6.0
+margin_right = 486.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = " Descargar un antivirus"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="Node2D"]
+visible = false
+margin_left = 736.0
+margin_top = 330.0
+margin_right = 1356.0
+margin_bottom = 393.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button6"]
+margin_left = 72.0
+margin_top = 6.0
+margin_right = 219.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "¡Esto no es lo que debes hacer!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Node2D"]
+margin_left = 736.0
+margin_top = 404.0
+margin_right = 1356.0
+margin_bottom = 467.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button3"]
+margin_left = 112.0
+margin_top = 12.0
+margin_right = 522.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 4 )
+text = "Reducir el brillo de pantalla"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="Node2D"]
+visible = false
+margin_left = 736.0
+margin_top = 404.0
+margin_right = 1356.0
+margin_bottom = 467.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button7"]
+margin_left = 88.0
+margin_top = 12.0
+margin_right = 567.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 4 )
+text = " ¡Esto no es lo que debes hacer!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Node2D"]
+margin_left = 736.0
+margin_top = 478.0
+margin_right = 1356.0
+margin_bottom = 541.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button4"]
+margin_left = 80.0
+margin_top = 10.0
+margin_right = 550.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 4 )
+text = " Reinstalar el sistema operativo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="Node2D"]
+visible = false
+margin_left = 736.0
+margin_top = 478.0
+margin_right = 1356.0
+margin_bottom = 541.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button8"]
+margin_left = 71.9999
+margin_top = 9.99997
+margin_right = 559.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 4 )
+text = " ¡Esto no es lo que debes hacer!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = 96.0
+margin_top = 456.0
+margin_right = 369.0
+margin_bottom = 494.0
+custom_fonts/font = SubResource( 3 )
+text = "Conectividad nula"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Node2D/NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Node2D/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Node2D/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Node2D/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Node2D/Button4" to="." method="_on_Button4_pressed"]
