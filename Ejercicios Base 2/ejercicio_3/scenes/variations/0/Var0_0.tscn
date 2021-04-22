@@ -1,0 +1,796 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/img/images/Rueda.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/images/Ruleta.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/images/Rectangle 3 (4).png" type="Texture" id=8]
+[ext_resource path="res://assets/img/BubbleTail2.png" type="Texture" id=9]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/img/ThoughtBubble2.png" type="Texture" id=11]
+[ext_resource path="res://assets/img/Katty2.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 10 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSprite" parent="." instance=ExtResource( 5 )]
+
+[node name="wheel" type="Sprite" parent="."]
+position = Vector2( 308.046, 412.506 )
+rotation = 1.3439
+scale = Vector2( 1.05268, 1.02944 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 317.247, 439.877 )
+scale = Vector2( 1.02028, 1.03403 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 289.292
+margin_top = 386.0
+margin_right = 340.292
+margin_bottom = 436.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 650.735
+margin_top = 763.288
+margin_right = 811.735
+margin_bottom = 894.288
+text = "reiniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestionsOne" type="Sprite" parent="."]
+visible = false
+position = Vector2( 920.398, 451.23 )
+scale = Vector2( 1.26281, 1 )
+
+[node name="Button3" type="Button" parent="QuestionsOne"]
+margin_left = -229.162
+margin_top = -162.663
+margin_right = 390.838
+margin_bottom = -99.6633
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button3"]
+margin_left = 181.027
+margin_top = 11.0
+margin_right = 424.027
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "Información discreta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="QuestionsOne"]
+visible = false
+margin_left = -229.162
+margin_top = -162.663
+margin_right = 390.838
+margin_bottom = -99.6633
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button7"]
+margin_left = 247.443
+margin_top = 12.4983
+margin_right = 361.443
+margin_bottom = 50.4983
+custom_fonts/font = SubResource( 2 )
+text = "¡Correcto!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="QuestionsOne"]
+margin_left = -230.923
+margin_top = -66.9093
+margin_right = 389.077
+margin_bottom = -3.90927
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button4"]
+margin_left = 180.913
+margin_top = 6.0
+margin_right = 435.913
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+text = "Información continua"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="QuestionsOne"]
+visible = false
+margin_left = -230.923
+margin_top = -66.9093
+margin_right = 389.077
+margin_bottom = -3.90927
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button8"]
+margin_left = 83.6208
+margin_top = 8.99664
+margin_right = 542.621
+margin_bottom = 46.9966
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="QuestionsOne"]
+margin_left = -230.923
+margin_top = 31.3646
+margin_right = 389.077
+margin_bottom = 94.3646
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button5"]
+margin_left = 210.399
+margin_top = 4.0
+margin_right = 399.399
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 2 )
+text = "Proceso digital"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="QuestionsOne"]
+visible = false
+margin_left = -225.279
+margin_top = 15.0534
+margin_right = 394.721
+margin_bottom = 78.0534
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button9"]
+margin_left = 83.6208
+margin_top = 8.99664
+margin_right = 542.621
+margin_bottom = 46.9966
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="QuestionsOne"]
+margin_left = -232.683
+margin_top = 134.678
+margin_right = 387.317
+margin_bottom = 197.678
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button6"]
+margin_left = 229.11
+margin_top = 9.77551
+margin_right = 391.11
+margin_bottom = 47.7755
+custom_fonts/font = SubResource( 2 )
+text = "Identificador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="QuestionsOne"]
+visible = false
+margin_left = -223.868
+margin_top = 105.925
+margin_right = 396.132
+margin_bottom = 168.925
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne/Button10"]
+margin_left = 83.6208
+margin_top = 8.99664
+margin_right = 542.621
+margin_bottom = 46.9966
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsOne"]
+margin_left = -90.8776
+margin_top = -282.243
+margin_right = 245.122
+margin_bottom = -205.243
+custom_fonts/font = SubResource( 3 )
+text = "Qué tipo de información recibe un sistema digital?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Questionstwo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 920.397, 451.23 )
+scale = Vector2( 1.26281, 1 )
+
+[node name="Button3Two" type="Button" parent="Questionstwo"]
+margin_left = -229.162
+margin_top = -162.663
+margin_right = 390.838
+margin_bottom = -99.6633
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button3Two"]
+margin_left = 182.075
+margin_top = 11.0
+margin_right = 420.075
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "Sistema complejo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7Two" type="Button" parent="Questionstwo"]
+visible = false
+margin_left = -229.162
+margin_top = -162.663
+margin_right = 390.838
+margin_bottom = -99.6633
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button7Two"]
+margin_left = 79.0736
+margin_top = 11.0
+margin_right = 538.074
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4Two" type="Button" parent="Questionstwo"]
+margin_left = -230.923
+margin_top = -66.9093
+margin_right = 389.077
+margin_bottom = -3.90927
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button4Two"]
+margin_left = 113.684
+margin_top = 6.0
+margin_right = 523.684
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+text = "Sistema de numeración decimal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8Two" type="Button" parent="Questionstwo"]
+visible = false
+margin_left = -230.573
+margin_top = -71.7913
+margin_right = 389.427
+margin_bottom = -8.79132
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button8Two"]
+margin_left = 80.4846
+margin_top = 14.5636
+margin_right = 539.485
+margin_bottom = 52.5636
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5Two" type="Button" parent="Questionstwo"]
+margin_left = -230.923
+margin_top = 31.3646
+margin_right = 389.077
+margin_bottom = 94.3646
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button5Two"]
+margin_left = 130.685
+margin_top = 6.18494
+margin_right = 483.685
+margin_bottom = 44.1849
+custom_fonts/font = SubResource( 2 )
+text = " Sistema de numeración Octal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9Two" type="Button" parent="Questionstwo"]
+visible = false
+margin_left = -229.162
+margin_top = 19.0803
+margin_right = 390.838
+margin_bottom = 82.0803
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button9Two"]
+margin_left = 83.3065
+margin_top = 11.0
+margin_right = 542.307
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6Two" type="Button" parent="Questionstwo"]
+margin_left = -232.683
+margin_top = 134.678
+margin_right = 387.317
+margin_bottom = 197.678
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button6Two"]
+margin_left = 125.642
+margin_top = 7.88776
+margin_right = 523.642
+margin_bottom = 45.8878
+custom_fonts/font = SubResource( 2 )
+text = "Sistema de numeración binario"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10Two" type="Button" parent="Questionstwo"]
+visible = false
+margin_left = -227.751
+margin_top = 104.607
+margin_right = 392.249
+margin_bottom = 167.607
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo/Button10Two"]
+margin_left = 231.384
+margin_top = 11.0
+margin_right = 357.384
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "¡Correcto!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Questionstwo"]
+margin_left = -108.601
+margin_top = -277.865
+margin_right = 306.399
+margin_bottom = -175.865
+custom_fonts/font = SubResource( 3 )
+text = "Qué sistema de numeración utilizan los    sistemas digitales?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestionsThree" type="Sprite" parent="."]
+visible = false
+position = Vector2( 889.904, 438.63 )
+scale = Vector2( 1.32812, 0.991819 )
+
+[node name="Button3Three" type="Button" parent="QuestionsThree"]
+margin_left = -229.0
+margin_top = -163.0
+margin_right = 391.0
+margin_bottom = -100.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button3Three"]
+margin_left = 74.7406
+margin_top = 13.0
+margin_right = 561.741
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "Facilidad de diseño, exactitud y precisión."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7Three" type="Button" parent="QuestionsThree"]
+visible = false
+margin_left = -229.0
+margin_top = -163.0
+margin_right = 391.0
+margin_bottom = -100.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button7Three"]
+margin_left = 245.165
+margin_top = 13.0
+margin_right = 350.165
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "¡Correcto!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4Three" type="Button" parent="QuestionsThree"]
+margin_left = -230.923
+margin_top = -66.9093
+margin_right = 389.077
+margin_bottom = -3.90927
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button4Three"]
+margin_left = 44.7407
+margin_top = 13.0
+margin_right = 578.741
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "Soporte a altas temperaturas e intermitencia."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8Three" type="Button" parent="QuestionsThree"]
+visible = false
+margin_left = -230.923
+margin_top = -66.9093
+margin_right = 389.077
+margin_bottom = -3.90927
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button8Three"]
+margin_left = 84.153
+margin_top = 8.96698
+margin_right = 543.153
+margin_bottom = 46.967
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5Three" type="Button" parent="QuestionsThree"]
+margin_left = -230.923
+margin_top = 31.3646
+margin_right = 389.077
+margin_bottom = 94.3646
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button5Three"]
+margin_left = 176.062
+margin_top = 6.0
+margin_right = 392.062
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+text = "Color y ergonomia"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9Three" type="Button" parent="QuestionsThree"]
+visible = false
+margin_left = -230.923
+margin_top = 31.3646
+margin_right = 389.077
+margin_bottom = 94.3646
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button9Three"]
+margin_left = 87.2147
+margin_top = 8.01648
+margin_right = 546.215
+margin_bottom = 46.0165
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6Three" type="Button" parent="QuestionsThree"]
+margin_left = -232.683
+margin_top = 134.678
+margin_right = 387.317
+margin_bottom = 197.678
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button6Three"]
+margin_left = 88.4603
+margin_top = 15.1674
+margin_right = 535.46
+margin_bottom = 53.1674
+custom_fonts/font = SubResource( 2 )
+text = " Baja frecuencia, circulación de aire."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10Three" type="Button" parent="QuestionsThree"]
+visible = false
+margin_left = -232.683
+margin_top = 134.678
+margin_right = 387.317
+margin_bottom = 197.678
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree/Button10Three"]
+margin_left = 88.4603
+margin_top = 15.1674
+margin_right = 535.46
+margin_bottom = 53.1674
+custom_fonts/font = SubResource( 2 )
+text = "¡Upss esta no es la respuesta correcta!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="QuestionsThree"]
+margin_left = -139.322
+margin_top = -287.0
+margin_right = 305.678
+margin_bottom = -210.0
+custom_fonts/font = SubResource( 3 )
+text = "Cuales son algunas de las ventajas de los sistemas digitales?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1209.82, 481.461 )
+scale = Vector2( 0.73152, 0.699058 )
+texture = ExtResource( 12 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 795.674, 329.715 )
+scale = Vector2( 0.640345, 0.465156 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 654.791
+margin_top = 307.888
+margin_right = 918.791
+margin_bottom = 350.888
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 4 )
+text = "Presiona el botón"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 946.42, 332.185 )
+scale = Vector2( 0.73152, 0.699058 )
+texture = ExtResource( 9 )
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="QuestionsOne/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="QuestionsOne/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="QuestionsOne/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="QuestionsOne/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="Questionstwo/Button3Two" to="." method="_on_Button3Two_pressed"]
+[connection signal="pressed" from="Questionstwo/Button4Two" to="." method="_on_Button4two_pressed"]
+[connection signal="pressed" from="Questionstwo/Button5Two" to="." method="_on_Button5Two_pressed"]
+[connection signal="pressed" from="Questionstwo/Button6Two" to="." method="_on_Button6Two_pressed"]
+[connection signal="pressed" from="QuestionsThree/Button3Three" to="." method="_on_Button3Three_pressed"]
+[connection signal="pressed" from="QuestionsThree/Button4Three" to="." method="_on_Button4Three_pressed"]
+[connection signal="pressed" from="QuestionsThree/Button5Three" to="." method="_on_Button5Three_pressed"]
+[connection signal="pressed" from="QuestionsThree/Button6Three" to="." method="_on_Button6Three_pressed"]
