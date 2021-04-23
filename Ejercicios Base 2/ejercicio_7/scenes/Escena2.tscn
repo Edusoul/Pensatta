@@ -1,0 +1,387 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/img/images/Rectangle 3.png" type="Texture" id=1]
+[ext_resource path="res://assets/img/images/Rectangle 3 (1).png" type="Texture" id=3]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=4]
+[ext_resource path="res://assets/img/images/Rectangle 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Escena2.gd" type="Script" id=9]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+use_filter = true
+font_data = ExtResource( 7 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 725.109, 426.587 )
+scale = Vector2( 1.00177, 0.811809 )
+texture = ExtResource( 5 )
+
+[node name="RectTitleSprite" type="Sprite" parent="Node2D"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="Node2D/RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Node2D"]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 10 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSprite" parent="Node2D" instance=ExtResource( 8 )]
+
+[node name="Button" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 226.0
+margin_right = 1347.0
+margin_bottom = 281.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button"]
+margin_left = 148.936
+margin_top = 6.57626
+margin_right = 1123.94
+margin_bottom = 44.5763
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Procurar y trabajar por lograr el acceso a internet para todos y todas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 226.0
+margin_right = 1347.0
+margin_bottom = 281.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button9"]
+margin_left = 165.887
+margin_top = 6.57626
+margin_right = 1140.89
+margin_bottom = 44.5763
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Procurar y trabajar por lograr el acceso a internet para todos y todas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 290.0
+margin_right = 1347.0
+margin_bottom = 345.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button2"]
+margin_left = 449.0
+margin_top = 7.0
+margin_right = 699.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Producir ingresos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 290.0
+margin_right = 1347.0
+margin_bottom = 345.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button10"]
+margin_left = 461.714
+margin_top = 7.0
+margin_right = 711.714
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Producir ingresos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 354.0
+margin_right = 1347.0
+margin_bottom = 409.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button3"]
+margin_left = 211.387
+margin_top = 6.57626
+margin_right = 1075.39
+margin_bottom = 44.5763
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Defender y promover la privacidad, vigilancia y encriptación."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button11" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 354.0
+margin_right = 1347.0
+margin_bottom = 409.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button11"]
+margin_left = 224.101
+margin_top = 6.57626
+margin_right = 1088.1
+margin_bottom = 44.5763
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Defender y promover la privacidad, vigilancia y encriptación."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 420.0
+margin_right = 1347.0
+margin_bottom = 475.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button4"]
+margin_left = 412.747
+margin_top = 3.57965
+margin_right = 870.747
+margin_bottom = 41.5797
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Manejar finanzas virtualmente"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button12" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 420.0
+margin_right = 1347.0
+margin_bottom = 475.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button12"]
+margin_left = 412.747
+margin_top = 3.57965
+margin_right = 870.747
+margin_bottom = 41.5797
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Manejar finanzas virtualmente"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 484.0
+margin_right = 1347.0
+margin_bottom = 539.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button5"]
+margin_left = 57.0769
+margin_top = 3.57965
+margin_right = 1207.08
+margin_bottom = 41.5797
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Contribuir a la difusión de la conciencia, protección y realización de los derechos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button13" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 484.0
+margin_right = 1347.0
+margin_bottom = 539.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button13"]
+margin_left = 52.8391
+margin_top = 5.69858
+margin_right = 1202.84
+margin_bottom = 43.6986
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Contribuir a la difusión de la conciencia, protección y realización de los derechos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="Node2D"]
+margin_left = 105.0
+margin_top = 544.0
+margin_right = 1347.0
+margin_bottom = 599.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button6"]
+margin_left = 313.019
+margin_top = 3.44922
+margin_right = 987.019
+margin_bottom = 41.4492
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Garantizar la libertad de expresión y asociación "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button14" type="Button" parent="Node2D"]
+visible = false
+margin_left = 105.0
+margin_top = 544.0
+margin_right = 1347.0
+margin_bottom = 599.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Node2D/Button14"]
+margin_left = 308.782
+margin_top = 1.88104
+margin_right = 982.782
+margin_bottom = 39.881
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Garantizar la libertad de expresión y asociación"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Node2D/NextButton" to="Node2D" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Node2D/Button" to="Node2D" method="_on_Button_pressed"]
+[connection signal="pressed" from="Node2D/Button9" to="Node2D" method="_on_Button9_pressed"]
+[connection signal="pressed" from="Node2D/Button2" to="Node2D" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Node2D/Button10" to="Node2D" method="_on_Button10_pressed"]
+[connection signal="pressed" from="Node2D/Button3" to="Node2D" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Node2D/Button11" to="Node2D" method="_on_Button11_pressed"]
+[connection signal="pressed" from="Node2D/Button4" to="Node2D" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Node2D/Button12" to="Node2D" method="_on_Button12_pressed"]
+[connection signal="pressed" from="Node2D/Button5" to="Node2D" method="_on_Button5_pressed"]
+[connection signal="pressed" from="Node2D/Button13" to="Node2D" method="_on_Button13_pressed"]
+[connection signal="pressed" from="Node2D/Button6" to="Node2D" method="_on_Button6_pressed"]
+[connection signal="pressed" from="Node2D/Button14" to="Node2D" method="_on_Button14_pressed"]
