@@ -1,0 +1,818 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Draggable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/img/Group.png" type="Texture" id=7]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/img/Bloque.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0470588, 0.0627451, 0.333333, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.588235, 0.176471, 0.0823529, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSprite" parent="." instance=ExtResource( 5 )]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 15.0
+margin_top = 151.0
+margin_right = 555.0
+margin_bottom = 185.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+max_value = 504.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 312 )
+
+[node name="Label" type="Label" parent="Draggable"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 384 )
+
+[node name="Label" type="Label" parent="Draggable2"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 456 )
+
+[node name="Label" type="Label" parent="Draggable3"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 528 )
+
+[node name="Label" type="Label" parent="Draggable4"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 600 )
+
+[node name="Label" type="Label" parent="Draggable5"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1232, 672 )
+
+[node name="Label" type="Label" parent="Draggable6"]
+margin_left = -123.024
+margin_top = -15.0803
+margin_right = -71.0236
+margin_bottom = 7.91971
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 760, 344 )
+texture = ExtResource( 7 )
+
+[node name="sprBloque1" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 56 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque1"]
+margin_left = -129.142
+margin_top = -13.9692
+margin_right = -77.1419
+margin_bottom = 9.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque2" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 17.0755, 61.3353 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque2"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque3" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 17.0755, 61.3353 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque3"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque4" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 17.0755, 61.3353 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque4"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque5" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 17.0755, 61.3353 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque5"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque6" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 17.0755, 61.3353 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque6"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque7" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 104 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque7"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque8" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16, 104 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque8"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque9" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16, 104 )
+scale = Vector2( 0.986322, 1.02459 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque9"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque10" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16, 104 )
+scale = Vector2( 0.986322, 1.02459 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque10"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque11" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16, 104 )
+scale = Vector2( 0.986322, 1.02459 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque11"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque12" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16, 104 )
+scale = Vector2( 0.986322, 1.02459 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque12"]
+margin_left = -129.142
+margin_top = -15.9692
+margin_right = 141.858
+margin_bottom = 7.03076
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque13" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque13"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque14" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque14"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque15" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque15"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque16" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque16"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque17" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque17"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque18" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 152 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque18"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque19" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 200 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque19"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque20" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque20"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque21" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque21"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque22" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque22"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque23" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque23"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque24" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque24"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque25" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque25"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque26" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque26"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque27" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque27"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque28" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque28"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque29" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque29"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque30" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 248 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque30"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque31" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque31"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Saltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque32" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque32"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la derecha un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque33" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque33"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Caminar a la izquierda un paso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque34" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque34"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Levantar los brazos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque35" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque35"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar la cabeza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprBloque36" type="Sprite" parent="Sprite"]
+visible = false
+position = Vector2( 16.0001, 296 )
+scale = Vector2( 0.979483, 1.03689 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Sprite/sprBloque36"]
+margin_left = -129.533
+margin_top = -16.8017
+margin_right = 141.467
+margin_bottom = 6.19828
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0.423529, 0.556863, 1 )
+text = "Girar todo el cuerpo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

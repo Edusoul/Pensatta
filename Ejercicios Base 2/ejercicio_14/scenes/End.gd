@@ -1,0 +1,29 @@
+extends Node2D
+
+var result_title;
+var result_summary;
+
+func _ready():
+	find_node("TitleLabel").text = global.title
+	
+	result_title = find_node("ResultLabel")
+	result_summary = find_node("SummaryLabel")
+	if global.timeout == false: #Generally timeout is false when there is no timer
+		if global.correct_answers_no.size() == 4: #Change accordingly
+			result_title.text = "¡Felicitaciones!"
+			result_summary.text = "Respondiste todo bien."
+		if global.correct_answers_no.size() == 3 and global.incorrect_answers_no.size() == 1:
+			result_title.text = "¡Bien!"
+			result_summary.text = "Respondiste 3 acertadamente."
+		if global.correct_answers_no.size() == 2 and global.incorrect_answers_no.size() == 2:
+			result_title.text = "¡Puedes mejorar!"
+			result_summary.text = "Respondiste 2 correctas."
+		if global.correct_answers_no.size() == 1 and global.incorrect_answers_no.size() == 3:
+			result_title.text = "¡Continúa intentando!"
+			result_summary.text = "Acertaste solo una."			
+	else:
+		result_title.text = "¡Continúa intentando!"
+		result_summary.text = "Se agotó tu tiempo."
+
+func _on_FinishButton_pressed():
+	JavaScript.eval("window.top.postMessage('finished_problem', '*')")
