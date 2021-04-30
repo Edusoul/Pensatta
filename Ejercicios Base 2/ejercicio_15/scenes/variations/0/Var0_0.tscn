@@ -1,0 +1,437 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/variations/0/Var0_0.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/pensatta-theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/img/TitleRect.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/Montserrat-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://TimeSprite.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/font/Montserrat-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/img/Rectangle 3 (3).png" type="Texture" id=7]
+[ext_resource path="res://assets/img/Rectangle 1 (1).png" type="Texture" id=8]
+[ext_resource path="res://assets/img/Rectangle 3 (2).png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1440.0
+margin_bottom = 900.0
+color = Color( 0.254902, 0.560784, 0.529412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RectTitleSprite" type="Sprite" parent="."]
+position = Vector2( 0, 40 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TitleLabel" type="Label" parent="RectTitleSprite"]
+margin_left = 88.2626
+margin_top = 7.93414
+margin_right = 507.263
+margin_bottom = 58.9341
+custom_fonts/font = SubResource( 1 )
+text = "Título del problema"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="."]
+margin_left = 1014.0
+margin_top = 794.0
+margin_right = 1388.0
+margin_bottom = 841.0
+theme = ExtResource( 2 )
+text = "SIGUIENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeSprite" parent="." instance=ExtResource( 5 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 723.747, 442.319 )
+texture = ExtResource( 8 )
+
+[node name="AnswerOne" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 214.0
+margin_right = 1354.0
+margin_bottom = 274.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AnswerOne"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Sistemas de búsqueda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerOne2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 214.0
+margin_right = 1354.0
+margin_bottom = 274.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AnswerOne2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerTwo" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 280.0
+margin_right = 1354.0
+margin_bottom = 340.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AnswerTwo"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 886.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Cantidad de operaciones realizadas en el tiempo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerTwo2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 280.0
+margin_right = 1354.0
+margin_bottom = 340.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AnswerTwo2"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 886.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerThree" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 344.0
+margin_right = 1354.0
+margin_bottom = 404.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="AnswerThree"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Producción de alimentos en planta automatizada"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerThree2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 344.0
+margin_right = 1354.0
+margin_bottom = 404.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="AnswerThree2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerFour" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 408.0
+margin_right = 1354.0
+margin_bottom = 468.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="AnswerFour"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Investigación en medicamentos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerFour2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 408.0
+margin_right = 1354.0
+margin_bottom = 468.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="AnswerFour2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerFive" type="Button" parent="."]
+margin_left = 113.888
+margin_top = 472.0
+margin_right = 1355.89
+margin_bottom = 532.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="AnswerFive"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Sistemas de cámaras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerFive2" type="Button" parent="."]
+visible = false
+margin_left = 113.888
+margin_top = 472.0
+margin_right = 1355.89
+margin_bottom = 532.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="AnswerFive2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerSix" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 540.0
+margin_right = 1354.0
+margin_bottom = 600.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="AnswerSix"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Educación: Optimización del aprendizaje"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerSix2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 540.0
+margin_right = 1354.0
+margin_bottom = 600.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="AnswerSix2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answerseven" type="Button" parent="."]
+margin_left = 112.0
+margin_top = 608.0
+margin_right = 1354.0
+margin_bottom = 668.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Answerseven"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Asistentes de voz"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answerseven2" type="Button" parent="."]
+visible = false
+margin_left = 112.0
+margin_top = 608.0
+margin_right = 1354.0
+margin_bottom = 668.0
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Answerseven2"]
+margin_left = 82.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restricción de contenido por edades en plataformas de streaming"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="pressed" from="AnswerOne" to="." method="_on_AnswerOne_pressed"]
+[connection signal="pressed" from="AnswerOne2" to="." method="_on_AnswerOne2_pressed"]
+[connection signal="pressed" from="AnswerTwo" to="." method="_on_AnswerTwo_pressed"]
+[connection signal="pressed" from="AnswerTwo2" to="." method="_on_AnswerTwo2_pressed"]
+[connection signal="pressed" from="AnswerThree" to="." method="_on_AnswerThree_pressed"]
+[connection signal="pressed" from="AnswerThree2" to="." method="_on_AnswerThree2_pressed"]
+[connection signal="pressed" from="AnswerFour" to="." method="_on_AnswerFour_pressed"]
+[connection signal="pressed" from="AnswerFour2" to="." method="_on_AnswerFour2_pressed"]
+[connection signal="pressed" from="AnswerFive" to="." method="_on_AnswerFive_pressed"]
+[connection signal="pressed" from="AnswerFive2" to="." method="_on_AnswerFive2_pressed"]
+[connection signal="pressed" from="AnswerSix" to="." method="_on_AnswerSix_pressed"]
+[connection signal="pressed" from="AnswerSix2" to="." method="_on_AnswerSix2_pressed"]
+[connection signal="pressed" from="Answerseven" to="." method="_on_Answerseven_pressed"]
+[connection signal="pressed" from="Answerseven2" to="." method="_on_Answerseven2_pressed"]
